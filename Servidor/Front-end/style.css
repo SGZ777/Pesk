@@ -17,11 +17,15 @@
 }
 
 .icon-perfil {
-    width: 35px;
+    width: 32px;
+    margin-right: 20px;
 }
 
 .icon-carrinho {
     width: 40px;
+}
+.assineja{
+    color: white !important
 }
 
 .txt-header {
@@ -421,19 +425,16 @@
     margin: 0;
 }
 
+
+
 .texto1 {
-    width: 90%;
-    max-width: 600px;
-    position: relative;
-    top: -8rem; /* ou outro valor pequeno ajustável */
-    z-index: 3;
     font-family: 'Nunito', sans-serif;
     font-size: clamp(1rem, 2vw, 1.5rem);
-    text-align: center;
-    margin: 0 auto; /* centraliza horizontalmente */
+    color: #000;
+    margin: 0;
+    margin-top:-12rem;
+    max-width: 60%;
 }
-
-
 
 
 

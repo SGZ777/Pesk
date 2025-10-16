@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,16 +12,75 @@
     <link href="https://fonts.cdnfonts.com/css/lovelo" rel="stylesheet">
 </head>
 <body>
+    <!-- header -->
     <header class="header-club">
-        <div class="container-fluid d-flex justify-content-center align-items-center">
-          <img src="imagens/icones/logo.png" class="logo-header" alt="Logo">
-          <p class="club mb-0">CLUB<span class="estrela">✦</span></p>
-        </div>
-      </header>
-      <div class="faixa_amarela">
-        <p class="texto_faixa">ASSINE O PESK CLUB E LEVE SUA PAIXÃO PELA PESCA A OUTRO NÍVEL!</p>
+        <img src="imagens/icones/logo.png" class="logo-header" alt="Logo">
+        <p class="club mb-0">CLUB<span class="estrela">✦</span></p>
+    </header>
+
+    <!--faixa amarela- -->
+    <div class="faixa_amarela">
+        <p class="texto_faixa">
+            ASSINE O PESK CLUB E LEVE SUA PAIXÃO PELA PESCA A OUTRO NÍVEL!
+        </p>
     </div>
-    <div class="brasil-preto"><img src="imagens/sobre/Brasil-preto-club.png"></div>
-       <div class="texto1">Por apenas R$79,90 por mês, você tem acesso a um mapa exclusivo de peixes atualizado mensalmente, com os melhores pontos de pesca e informações detalhadas sobre espécies e temporadas.</div> 
+
+    <!-- brasil-preto -->
+    <div class="brasil-preto">
+        <img src="imagens/sobre/Brasil-preto-club.png" alt="Brasil">
+    </div>
+
+    <!-- Texto1  -->
+    <div class="container my-4">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-8 col-lg-6 text-center">
+                <p class="texto1">
+                    Por apenas R$79,90 por mês, você tem acesso a um mapa exclusivo de peixes atualizado mensalmente,
+                    com os melhores pontos de pesca e informações detalhadas sobre espécies e temporadas.
+                </p>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
+
+<!-- container → cria margens automáticas e centraliza horizontalmente todo o conteúdo.
+
+row → cria uma “linha” no grid; dentro dela você coloca as colunas (col).
+
+justify-content-center → alinha horizontalmente o conteúdo da linha, útil pra centralizar colunas menores.
+
+col-12 col-md-8 col-lg-6 → define a largura da coluna em diferentes telas:
+
+col-12 → ocupa 100% em telas pequenas (celular)
+
+col-md-8 → ocupa 8/12 da largura no tablet
+
+
+col-lg-6 → ocupa metade da tela no desktop
+
+text-center → centraliza o texto dentro da coluna.
+
+my-4 → adiciona margem vertical (top e bottom) de tamanho padrão do Bootstrap. -->
+
+
+
+
+
+
+
+
+
+
+
+<!-- .texto1 {
+  width: 90%;
+  max-width: 600px;
+  position: relative;
+  top: -32rem; /* ou outro valor pequeno ajustável */
+  z-index: 3;
+  font-family: 'Nunito', sans-serif;
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  text-align: center;
+  margin: 0 auto; /* centraliza horizontalmente */
+}  -->

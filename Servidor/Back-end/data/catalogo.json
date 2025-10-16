@@ -3,147 +3,147 @@
     "id": 1,
     "nome": "Vara de Pesca Shimano FX 6'6\"",
     "preco": 249.90,
-    "descricao": "Vara de carbono leve e resistente, ideal para pesca em rios e lagos.",
-    "imagens": ["img1.jpg", "img2.jpg", "img3.jpg"]
+    "descricao": "A Vara Shimano FX 6'6\" é perfeita para quem busca desempenho, leveza e resistência. Fabricada em carbono de alta qualidade, oferece excelente sensibilidade para detectar toques sutis dos peixes. Ideal para pescarias em rios, lagos e represas, proporciona arremessos longos e precisos. Seu cabo em EVA garante firmeza e conforto durante o uso prolongado. Compatível com carretilhas e molinetes de diversas marcas.",
+    "imagens": ["Varas/varaShimanoFX6-6/VaraShimano66.png", "Varas/varaShimanoFX6-6/VaraShimano66-1.png", "Varas/varaShimanoFX6-6/VaraShimano66-2.png"]
   },
   {
     "id": 2,
     "nome": "Molinete Marine Sports Arena 4000",
     "preco": 199.50,
-    "descricao": "Molinete com sistema de 5 rolamentos e carretel de alumínio reforçado.",
+    "descricao": "O Molinete Marine Sports Arena 4000 combina força e suavidade em um único equipamento. Conta com 5 rolamentos de alta durabilidade, carretel de alumínio reforçado e sistema anti-reverso instantâneo. Ideal para pescadores que valorizam desempenho e confiabilidade, é indicado tanto para água doce quanto salgada. O design ergonômico e o recolhimento rápido tornam a experiência de pesca mais confortável e eficiente.",
     "imagens": ["img1.jpg", "img2.jpg", "img3.jpg"]
   },
   {
     "id": 3,
     "nome": "Linha Multifilamento Power Pro 0.20mm",
     "preco": 159.90,
-    "descricao": "Linha de alta resistência e baixa elasticidade para arremessos longos.",
+    "descricao": "A Linha Multifilamento Power Pro 0.20mm é referência em resistência e desempenho. Produzida com fibras de Spectra, oferece alta sensibilidade, baixa elasticidade e maior capacidade de arremesso. Ideal para pescarias onde é necessário sentir o menor toque do peixe. Possui revestimento especial que reduz o atrito nos passadores, aumentando a durabilidade e garantindo maior suavidade nas recolhidas.",
     "imagens": ["img1.jpg", "img2.jpg", "img3.jpg"]
   },
   {
     "id": 4,
     "nome": "Isca Artificial Rapala X-Rap 08",
     "preco": 89.90,
-    "descricao": "Isca flutuante com ação realista, ideal para tucunarés e robalos.",
+    "descricao": "A Isca Rapala X-Rap 08 é uma das preferidas entre pescadores esportivos. Sua ação flutuante e design hidrodinâmico proporcionam um nado extremamente realista, imitando perfeitamente o movimento de um peixe ferido. Ideal para capturar tucunarés, robalos e traíras, possui garatéias afiadas e corpo reforçado. Pode ser usada em diferentes profundidades, garantindo ataques certeiros em qualquer condição de pesca.",
     "imagens": ["img1.jpg", "img2.jpg", "img3.jpg"]
   },
   {
     "id": 5,
     "nome": "Caixa de Pesca Plano 6203",
     "preco": 129.00,
-    "descricao": "Caixa organizadora com múltiplos compartimentos e alça retrátil.",
+    "descricao": "A Caixa de Pesca Plano 6203 é a solução ideal para quem busca organização e praticidade. Fabricada em material resistente, possui múltiplos compartimentos ajustáveis para armazenar iscas, anzóis, chumbadas e outros acessórios. Sua alça retrátil e trava de segurança garantem transporte fácil e seguro. Ideal tanto para pescadores iniciantes quanto experientes, mantendo todo o equipamento bem protegido.",
     "imagens": ["img1.jpg", "img2.jpg", "img3.jpg"]
   },
   {
     "id": 6,
     "nome": "Anzol Marine Sports Maruseigo nº 16",
     "preco": 14.90,
-    "descricao": "Pacote com 25 anzóis forjados, de alta durabilidade e ponta afiada.",
+    "descricao": "O Anzol Marine Sports Maruseigo nº 16 é projetado para máxima eficiência e durabilidade. Forjado em aço de alta resistência, possui ponta super afiada que garante melhor penetração no momento da fisgada. Ideal para capturas de peixes de médio porte, tanto em água doce quanto salgada. O pacote contém 25 unidades, oferecendo excelente custo-benefício para o pescador esportivo ou amador.",
     "imagens": ["img1.jpg", "img2.jpg", "img3.jpg"]
   },
   {
     "id": 7,
     "nome": "Chapéu de Pesca com Proteção Solar UV50+",
     "preco": 69.90,
-    "descricao": "Chapéu leve, com aba larga e proteção contra raios ultravioleta.",
+    "descricao": "O Chapéu de Pesca UV50+ foi desenvolvido especialmente para quem passa horas sob o sol. Feito com tecido leve e respirável, oferece proteção contra os raios ultravioleta, evitando queimaduras e desconfortos. Conta com aba larga e ajuste na parte traseira, proporcionando conforto e segurança. Ideal para pesca, trilhas e atividades ao ar livre. Lavável e de secagem rápida.",
     "imagens": ["img1.jpg", "img2.jpg", "img3.jpg"]
   },
   {
     "id": 8,
     "nome": "Alicate de Bico Inox para Pesca 6\"",
     "preco": 49.90,
-    "descricao": "Ferramenta essencial para retirada de anzóis e corte de linhas.",
+    "descricao": "O Alicate de Bico Inox 6\" é uma ferramenta indispensável para qualquer pescador. Produzido em aço inoxidável de alta qualidade, possui corte preciso e resistência à corrosão. Ideal para retirar anzóis, cortar linhas e fazer pequenos ajustes no equipamento. Seu cabo ergonômico com grip emborrachado garante firmeza e conforto durante o uso, mesmo em condições de umidade.",
     "imagens": ["img1.jpg", "img2.jpg", "img3.jpg"]
   },
   {
     "id": 9,
     "nome": "Coletor de Vara Duplo em Nylon",
     "preco": 39.90,
-    "descricao": "Suporte ajustável para transporte seguro de até duas varas de pesca.",
+    "descricao": "O Coletor de Vara Duplo em Nylon é perfeito para transportar suas varas de pesca com segurança e praticidade. Fabricado com nylon reforçado e costuras resistentes, comporta até duas varas montadas. Possui alça ajustável e fecho com zíper, protegendo o equipamento contra riscos e impactos. Ideal para viagens, torneios ou deslocamentos até o ponto de pesca.",
     "imagens": ["img1.jpg", "img2.jpg", "img3.jpg"]
   },
   {
     "id": 10,
     "nome": "Boia Cevadeira 80g Barão",
     "preco": 24.90,
-    "descricao": "Boia de alta flutuação, ideal para pescarias de superfície.",
+    "descricao": "A Boia Cevadeira 80g Barão é essencial para pescarias de superfície com iscas vivas ou artificiais. Fabricada em material de alta flutuação, permite lançar grandes quantidades de ração com precisão. Seu design aerodinâmico facilita arremessos longos e evita emaranhados. Ideal para pesqueiros e pesca esportiva, garantindo excelentes resultados na atração dos peixes.",
     "imagens": ["img1.jpg", "img2.jpg", "img3.jpg"]
   },
   {
     "id": 11,
     "nome": "Carretilha Daiwa Fuego CT 100HS",
     "preco": 849.00,
-    "descricao": "Carretilha de alto desempenho, leve e precisa, com 7 rolamentos.",
+    "descricao": "A Carretilha Daiwa Fuego CT 100HS é sinônimo de performance e tecnologia. Com corpo em alumínio super leve e sistema de 7 rolamentos, oferece recolhimento suave e preciso. Seu freio magnético ajustável proporciona controle total durante o arremesso, evitando cabeleiras. Ideal para quem busca eficiência em pescarias de tucunaré, robalo e black bass. Um equipamento de alto padrão para pescadores exigentes.",
     "imagens": ["img1.jpg", "img2.jpg", "img3.jpg"]
   },
   {
     "id": 12,
     "nome": "Caixa Térmica Coleman 26L",
     "preco": 299.00,
-    "descricao": "Caixa térmica com isolamento de longa duração, ideal para conservar iscas e bebidas.",
+    "descricao": "A Caixa Térmica Coleman 26L mantém suas bebidas, iscas e alimentos frescos por muito mais tempo. Seu isolamento térmico de alta densidade garante conservação por até 24 horas. Possui tampa com suporte para copos e alça ergonômica para transporte fácil. Ideal para pescarias, camping e passeios ao ar livre. Resistente, prática e com excelente vedação.",
     "imagens": ["img1.jpg", "img2.jpg", "img3.jpg"]
   },
   {
     "id": 13,
     "nome": "Cadeira Dobrável Nautika Aventura",
     "preco": 159.90,
-    "descricao": "Cadeira portátil e confortável, com porta-copos e estrutura em aço.",
+    "descricao": "A Cadeira Dobrável Nautika Aventura oferece conforto e praticidade em qualquer pescaria ou acampamento. Feita com estrutura em aço e tecido reforçado, suporta até 110 kg. Conta com porta-copos embutido no braço e bolsa para transporte. Leve e compacta, é fácil de montar e desmontar. Ideal para quem busca comodidade em suas aventuras ao ar livre.",
     "imagens": ["img1.jpg", "img2.jpg", "img3.jpg"]
   },
   {
     "id": 14,
     "nome": "Rede de Pesca de Nylon 3m",
     "preco": 89.00,
-    "descricao": "Rede leve e resistente, ideal para capturas em águas rasas.",
+    "descricao": "A Rede de Pesca de Nylon 3m é ideal para capturas rápidas e eficientes em águas rasas. Fabricada com malha fina e resistente, proporciona excelente desempenho e durabilidade. O nylon de alta qualidade garante resistência à abrasão e fácil secagem. Leve e prática, pode ser usada tanto por pescadores amadores quanto profissionais.",
     "imagens": ["img1.jpg", "img2.jpg", "img3.jpg"]
   },
   {
     "id": 15,
     "nome": "Kit de Chumbadas Sortidas 50 Unidades",
     "preco": 34.90,
-    "descricao": "Kit com diversos pesos e formatos de chumbo para diferentes modalidades.",
+    "descricao": "O Kit de Chumbadas Sortidas contém 50 unidades com diferentes pesos e formatos, ideais para diversas modalidades de pesca. Produzidas em chumbo de alta pureza, garantem afundamento rápido e estável. Acompanha compartimento organizador, facilitando o transporte e o uso no dia a dia. Excelente custo-benefício para quem busca versatilidade e praticidade.",
     "imagens": ["img1.jpg", "img2.jpg", "img3.jpg"]
   },
   {
     "id": 16,
     "nome": "Lanterna de Cabeça Recarregável 300lm",
     "preco": 119.90,
-    "descricao": "Lanterna com ajuste de intensidade e bateria de longa duração.",
+    "descricao": "A Lanterna de Cabeça Recarregável 300lm é perfeita para pescarias noturnas e atividades ao ar livre. Possui feixe de luz ajustável, bateria recarregável via USB e até 8 horas de autonomia. Seu design leve e confortável permite o uso prolongado sem incômodos. Resistente à água e com diferentes modos de iluminação, é um item indispensável no seu kit de pesca.",
     "imagens": ["img1.jpg", "img2.jpg", "img3.jpg"]
   },
   {
     "id": 17,
     "nome": "Suporte de Vara para Barranco Ajustável",
     "preco": 44.90,
-    "descricao": "Suporte metálico com ângulo regulável para varas de pesca.",
+    "descricao": "O Suporte de Vara para Barranco Ajustável é fabricado em aço galvanizado de alta durabilidade. Permite ajustar o ângulo da vara conforme o tipo de pescaria e terreno. Seu sistema de fixação firme evita que o equipamento tombe durante a fisgada. Compacto, leve e fácil de transportar, é ideal para pescarias em barrancos, margens e represas.",
     "imagens": ["img1.jpg", "img2.jpg", "img3.jpg"]
   },
   {
     "id": 18,
     "nome": "Isca de Silicone Soft Shad 10cm",
     "preco": 19.90,
-    "descricao": "Isca macia e realista, ideal para predadores de médio porte.",
+    "descricao": "A Isca de Silicone Soft Shad 10cm oferece ação natural e atrativa, simulando pequenos peixes. Sua textura macia e formato hidrodinâmico garantem movimento realista e irresistível para predadores como traíras, tucunarés e dourados. Pode ser usada com jig head ou anzóis offset. Altamente durável e eficiente, é ideal para pescadores que buscam resultados rápidos.",
     "imagens": ["img1.jpg", "img2.jpg", "img3.jpg"]
   },
   {
     "id": 19,
     "nome": "Camiseta de Pesca Manga Longa UV50+",
     "preco": 119.00,
-    "descricao": "Camiseta leve e respirável, com proteção solar e secagem rápida.",
+    "descricao": "A Camiseta de Pesca Manga Longa UV50+ é ideal para quem busca conforto e proteção solar durante as pescarias. Confeccionada em tecido leve, respirável e de secagem rápida, mantém o corpo ventilado mesmo em dias quentes. O fator UV50+ bloqueia até 98% dos raios ultravioleta. Design moderno e costuras reforçadas garantem durabilidade e liberdade de movimento.",
     "imagens": ["img1.jpg", "img2.jpg", "img3.jpg"]
   },
   {
     "id": 20,
     "nome": "Balança Digital de Pesca 40kg",
     "preco": 89.90,
-    "descricao": "Balança portátil com visor digital e precisão de 10g.",
+    "descricao": "A Balança Digital de Pesca 40kg é compacta, precisa e fácil de usar. Ideal para pesar peixes e equipamentos com exatidão. Possui visor digital iluminado, função tara e desligamento automático para economia de energia. Mede até 40 kg com precisão de 10g. Seu gancho metálico e estrutura reforçada garantem segurança e durabilidade em qualquer situação.",
     "imagens": ["img1.jpg", "img2.jpg", "img3.jpg"]
   },
   {
     "id": 21,
-    "nome": "Vara Telescopica Gomo Longo Traira 3,00 M (3003) Jaú Pesca",
+    "nome": "Vara Telescópica Gomo Longo Traíra 3,00 M (3003) Jaú Pesca",
     "preco": 39.90,
-    "descricao": "Vara Telescopio de 3m e aguenta até 10lbs",
+    "descricao": "A Vara Telescópica Gomo Longo Traíra 3,00 M da Jaú Pesca é ideal para pescadores que buscam praticidade e leveza. Com estrutura telescópica de fácil transporte, alcança até 3 metros de comprimento e suporta até 10 lbs. Feita em fibra de vidro resistente, garante ótimo equilíbrio entre flexibilidade e força. Ideal para pescarias de barranco, lagos e represas.",
     "imagens": ["img1.jpg", "img2.jpg", "img3.jpg"]
   }
 ]
