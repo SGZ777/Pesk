@@ -17,11 +17,11 @@
 }
 
 .icon-perfil {
-    width: 25px;
+    width: 35px;
 }
 
 .icon-carrinho {
-    width: 30px;
+    width: 40px;
 }
 
 .txt-header {
@@ -31,15 +31,8 @@
     text-shadow: 1px solid black;
     font-size: 17px;
 }
-
-.searchbar {
-    width: 90%;
-    height: 40px;
-    background-color: white;
-    border-radius: 30px;
-    outline: none;
-    border: none;
-    padding-left: 5%;
+.alinhar-searchbar{
+    margin-right: 200px;
 }
 
 .assineja {
@@ -273,6 +266,11 @@
 /*↑↑↑↑↑↑↑↑↑↑↑↑ ------------------Cadastro --------------------------------- Cadastro ----------------------------------- Cadastro --------------- Cadastro-↑↑↑↑↑↑↑↑↑↑↑↑*/
 /*↓↓↓↓↓↓↓↓↓↓↓↓ ------------------Login ------------------------------------ Login -------------------------------------- Login ------------------ Login----↓↓↓↓↓↓↓↓↓↓↓↓*/
 
+ 
+.body-cadastro{
+    font-family: 'Nunito', sans-serif ;
+    font-weight: bold; 
+}
 .cad-tlogin {
     position: absolute;
     top: 100%;
@@ -332,7 +330,9 @@
     top: 100%;
     z-index: 3;
     font-weight: bold;
-    margin-top: 10r
+    margin-top: 10;
+    
+
 }
 
 .cad-tloginn a {
@@ -381,60 +381,67 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 9%;
-
+    height: clamp(50px, 10vh, 80px); /* se adapta ao tamanho da tela */
 }
 
 .logo-header {
-    height: 100px;
-    /*tamanho da logo */
-    width: 160px;
+    height: auto;
+    width: clamp(80px, 12vw, 160px); /* muda o tamanho conforme a tela */
 }
 
 .club {
     color: orange;
     font-weight: bold;
-    font-size: 2rem;
-}
-.estrela{
-    color: yellow;
-    margin-left: 5px;
-    
+    font-size: clamp(1.2rem, 3vw, 2rem); /* responsivo */
 }
 
+.estrela {
+    color: yellow;
+    margin-left: 0.5vw;
+}
 
 .faixa_amarela {
-    position: absolute; 
-    top: 15%;          
-    left: 0;            
-    right: 0;          
-    width: 100%;        
-    padding: 1.5rem 0;  /* controla altura da faixa */
-    background: linear-gradient(to right,#ffde59 ,#ff914d);
-    border-radius: 0;   
+    position: relative; /* tira o absolute pra não quebrar o fluxo */
+    width: 100%;
+    margin-top:1.5%;
+    padding: clamp(0.8rem, 2vw, 1.5rem) 0;
+    background: linear-gradient(to right, #ffde59, #ff914d);
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 1;
 }
 
-.texto_faixa{
+.texto_faixa {
     color: white;
     font-family: lovelo;
     font-weight: 900;
-     font-size: clamp(1.5rem, 2.5vw, 2.8rem); /*muda o tamanho de acordo ao tamanho da pagina, menor ao maior */
+    font-size: clamp(1.2rem, 2.5vw, 2.8rem);
     text-align: center;
     margin: 0;
 }
 
-
-.texto1{
-    width: 100%;
-    margin-top:10%;
+.texto1 {
+    width: 90%;
+    max-width: 600px;
+    position: relative;
+    top: -8rem; /* ou outro valor pequeno ajustável */
     z-index: 3;
-    text-decoration: bold;
     font-family: 'Nunito', sans-serif;
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    text-align: center;
+    margin: 0 auto; /* centraliza horizontalmente */
 }
 
+
+
+
+
+.brasil-preto img {
+    width: clamp(180px, 30vw, 620px);
+    display: block;
+    margin: 5% auto;
+    margin-left:65%
+}
 
 /*↑↑↑↑↑↑↑↑↑↑↑↑ ------------------Clube ------------------------------------ Clube -------------------------------------- Clube ------------------ Clube----↑↑↑↑↑↑↑↑↑↑↑↑*/

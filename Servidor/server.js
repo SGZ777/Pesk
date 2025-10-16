@@ -6,7 +6,7 @@ const path = require('path')
 const rotaCatalogo = require('./Back-end/rotas/catalogo')
 const rotaEntrar = require('./Back-end/rotas/login')
 const logger = require('./Back-end/middlewares/logger')
-const autenticar = require('./Back-end/middlewares/autenticacao')
+// const autenticar = require('./Back-end/middlewares/autenticacao')
 
 app.use('/catalogo', rotaCatalogo)
 app.use('/entrar', rotaEntrar)

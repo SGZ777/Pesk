@@ -1,0 +1,149 @@
+[
+  {
+    "id": 1,
+    "nome": "Vara de Pesca Shimano FX 6'6\"",
+    "preco": 249.90,
+    "descricao": "Vara de carbono leve e resistente, ideal para pesca em rios e lagos.",
+    "imagens": ["img1.jpg", "img2.jpg", "img3.jpg"]
+  },
+  {
+    "id": 2,
+    "nome": "Molinete Marine Sports Arena 4000",
+    "preco": 199.50,
+    "descricao": "Molinete com sistema de 5 rolamentos e carretel de alumínio reforçado.",
+    "imagens": ["img1.jpg", "img2.jpg", "img3.jpg"]
+  },
+  {
+    "id": 3,
+    "nome": "Linha Multifilamento Power Pro 0.20mm",
+    "preco": 159.90,
+    "descricao": "Linha de alta resistência e baixa elasticidade para arremessos longos.",
+    "imagens": ["img1.jpg", "img2.jpg", "img3.jpg"]
+  },
+  {
+    "id": 4,
+    "nome": "Isca Artificial Rapala X-Rap 08",
+    "preco": 89.90,
+    "descricao": "Isca flutuante com ação realista, ideal para tucunarés e robalos.",
+    "imagens": ["img1.jpg", "img2.jpg", "img3.jpg"]
+  },
+  {
+    "id": 5,
+    "nome": "Caixa de Pesca Plano 6203",
+    "preco": 129.00,
+    "descricao": "Caixa organizadora com múltiplos compartimentos e alça retrátil.",
+    "imagens": ["img1.jpg", "img2.jpg", "img3.jpg"]
+  },
+  {
+    "id": 6,
+    "nome": "Anzol Marine Sports Maruseigo nº 16",
+    "preco": 14.90,
+    "descricao": "Pacote com 25 anzóis forjados, de alta durabilidade e ponta afiada.",
+    "imagens": ["img1.jpg", "img2.jpg", "img3.jpg"]
+  },
+  {
+    "id": 7,
+    "nome": "Chapéu de Pesca com Proteção Solar UV50+",
+    "preco": 69.90,
+    "descricao": "Chapéu leve, com aba larga e proteção contra raios ultravioleta.",
+    "imagens": ["img1.jpg", "img2.jpg", "img3.jpg"]
+  },
+  {
+    "id": 8,
+    "nome": "Alicate de Bico Inox para Pesca 6\"",
+    "preco": 49.90,
+    "descricao": "Ferramenta essencial para retirada de anzóis e corte de linhas.",
+    "imagens": ["img1.jpg", "img2.jpg", "img3.jpg"]
+  },
+  {
+    "id": 9,
+    "nome": "Coletor de Vara Duplo em Nylon",
+    "preco": 39.90,
+    "descricao": "Suporte ajustável para transporte seguro de até duas varas de pesca.",
+    "imagens": ["img1.jpg", "img2.jpg", "img3.jpg"]
+  },
+  {
+    "id": 10,
+    "nome": "Boia Cevadeira 80g Barão",
+    "preco": 24.90,
+    "descricao": "Boia de alta flutuação, ideal para pescarias de superfície.",
+    "imagens": ["img1.jpg", "img2.jpg", "img3.jpg"]
+  },
+  {
+    "id": 11,
+    "nome": "Carretilha Daiwa Fuego CT 100HS",
+    "preco": 849.00,
+    "descricao": "Carretilha de alto desempenho, leve e precisa, com 7 rolamentos.",
+    "imagens": ["img1.jpg", "img2.jpg", "img3.jpg"]
+  },
+  {
+    "id": 12,
+    "nome": "Caixa Térmica Coleman 26L",
+    "preco": 299.00,
+    "descricao": "Caixa térmica com isolamento de longa duração, ideal para conservar iscas e bebidas.",
+    "imagens": ["img1.jpg", "img2.jpg", "img3.jpg"]
+  },
+  {
+    "id": 13,
+    "nome": "Cadeira Dobrável Nautika Aventura",
+    "preco": 159.90,
+    "descricao": "Cadeira portátil e confortável, com porta-copos e estrutura em aço.",
+    "imagens": ["img1.jpg", "img2.jpg", "img3.jpg"]
+  },
+  {
+    "id": 14,
+    "nome": "Rede de Pesca de Nylon 3m",
+    "preco": 89.00,
+    "descricao": "Rede leve e resistente, ideal para capturas em águas rasas.",
+    "imagens": ["img1.jpg", "img2.jpg", "img3.jpg"]
+  },
+  {
+    "id": 15,
+    "nome": "Kit de Chumbadas Sortidas 50 Unidades",
+    "preco": 34.90,
+    "descricao": "Kit com diversos pesos e formatos de chumbo para diferentes modalidades.",
+    "imagens": ["img1.jpg", "img2.jpg", "img3.jpg"]
+  },
+  {
+    "id": 16,
+    "nome": "Lanterna de Cabeça Recarregável 300lm",
+    "preco": 119.90,
+    "descricao": "Lanterna com ajuste de intensidade e bateria de longa duração.",
+    "imagens": ["img1.jpg", "img2.jpg", "img3.jpg"]
+  },
+  {
+    "id": 17,
+    "nome": "Suporte de Vara para Barranco Ajustável",
+    "preco": 44.90,
+    "descricao": "Suporte metálico com ângulo regulável para varas de pesca.",
+    "imagens": ["img1.jpg", "img2.jpg", "img3.jpg"]
+  },
+  {
+    "id": 18,
+    "nome": "Isca de Silicone Soft Shad 10cm",
+    "preco": 19.90,
+    "descricao": "Isca macia e realista, ideal para predadores de médio porte.",
+    "imagens": ["img1.jpg", "img2.jpg", "img3.jpg"]
+  },
+  {
+    "id": 19,
+    "nome": "Camiseta de Pesca Manga Longa UV50+",
+    "preco": 119.00,
+    "descricao": "Camiseta leve e respirável, com proteção solar e secagem rápida.",
+    "imagens": ["img1.jpg", "img2.jpg", "img3.jpg"]
+  },
+  {
+    "id": 20,
+    "nome": "Balança Digital de Pesca 40kg",
+    "preco": 89.90,
+    "descricao": "Balança portátil com visor digital e precisão de 10g.",
+    "imagens": ["img1.jpg", "img2.jpg", "img3.jpg"]
+  },
+  {
+    "id": 21,
+    "nome": "Vara Telescopica Gomo Longo Traira 3,00 M (3003) Jaú Pesca",
+    "preco": 39.90,
+    "descricao": "Vara Telescopio de 3m e aguenta até 10lbs",
+    "imagens": ["img1.jpg", "img2.jpg", "img3.jpg"]
+  }
+]

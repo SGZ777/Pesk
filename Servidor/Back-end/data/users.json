@@ -1,0 +1,128 @@
+[
+  {
+    "id": 1,
+    "email": "ana.silva@gmail.com",
+    "password": "senha123",
+    "nome": "Ana Silva"
+  },
+  {
+    "id": 2,
+    "email": "bruno.souza@hotmail.com",
+    "password": "abc123",
+    "nome": "Bruno Souza"
+  },
+  {
+    "id": 3,
+    "email": "carla.mendes@yahoo.com",
+    "password": "123456",
+    "nome": "Carla Mendes"
+  },
+  {
+    "id": 4,
+    "email": "daniel.alves@gmail.com",
+    "password": "senha456",
+    "nome": "Daniel Alves"
+  },
+  {
+    "id": 5,
+    "email": "eduardo.lima@outlook.com",
+    "password": "pass789",
+    "nome": "Eduardo Lima"
+  },
+  {
+    "id": 6,
+    "email": "fernanda.costa@gmail.com",
+    "password": "minhasenha",
+    "nome": "Fernanda Costa"
+  },
+  {
+    "id": 7,
+    "email": "gabriel.santos@hotmail.com",
+    "password": "senha321",
+    "nome": "Gabriel Santos"
+  },
+  {
+    "id": 8,
+    "email": "helen.rocha@yahoo.com",
+    "password": "abc789",
+    "nome": "Helen Rocha"
+  },
+  {
+    "id": 9,
+    "email": "igor.pereira@gmail.com",
+    "password": "teste123",
+    "nome": "Igor Pereira"
+  },
+  {
+    "id": 10,
+    "email": "julia.oliveira@outlook.com",
+    "password": "senha999",
+    "nome": "Júlia Oliveira"
+  },
+  {
+    "id": 11,
+    "email": "kaio.martins@gmail.com",
+    "password": "123abc",
+    "nome": "Kaio Martins"
+  },
+  {
+    "id": 12,
+    "email": "larissa.gomes@hotmail.com",
+    "password": "abc456",
+    "nome": "Larissa Gomes"
+  },
+  {
+    "id": 13,
+    "email": "marcos.dias@yahoo.com",
+    "password": "senhaabc",
+    "nome": "Marcos Dias"
+  },
+  {
+    "id": 14,
+    "email": "natalia.ramos@gmail.com",
+    "password": "987654",
+    "nome": "Natália Ramos"
+  },
+  {
+    "id": 15,
+    "email": "otavio.freitas@hotmail.com",
+    "password": "qwerty",
+    "nome": "Otávio Freitas"
+  },
+  {
+    "id": 16,
+    "email": "paula.barros@outlook.com",
+    "password": "senha2024",
+    "nome": "Paula Barros"
+  },
+  {
+    "id": 17,
+    "email": "rafael.ferreira@gmail.com",
+    "password": "abc2025",
+    "nome": "Rafael Ferreira"
+  },
+  {
+    "id": 18,
+    "email": "sabrina.lopes@yahoo.com",
+    "password": "minhapass",
+    "nome": "Sabrina Lopes"
+  },
+  {
+    "id": 19,
+    "email": "thiago.carvalho@gmail.com",
+    "password": "segredo",
+    "nome": "Thiago Carvalho"
+  },
+  {
+    "id": 20,
+    "email": "vanessa.moraes@hotmail.com",
+    "password": "senha777",
+    "nome": "Vanessa Moraes"
+  },
+  {
+    "id": 21,
+    "email": "souzafugikawamateus@gmail.com",
+    "password": "080908",
+    "nome": "Mateus Fugikawa"
+  }
+]
