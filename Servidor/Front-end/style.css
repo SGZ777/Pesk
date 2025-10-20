@@ -8,6 +8,7 @@
 }
 .header-home{
     height: 130px;
+    background-color: #0096eb !important;
 }
 
 .container1 {
@@ -33,7 +34,8 @@
 .assineja{
     color: white !important;
     margin-top: 5px;
-
+    font-weight: bold !important;
+    font-size: larger !important;
 }
 .search{
     text-align: center;
@@ -41,29 +43,13 @@
     margin-top: 5px;
 }
 
-.txt-header {
-    font-weight: bold;
-    color: white;
-    text-decoration: underline;
-    text-shadow: 1px solid black;
-    font-size: 17px;
-}
-.alinhar-searchbar{
-    margin-right: 200px;
-}
-
-.assineja {
-    font-weight: bold;
-}
-
 .carrossel-home {
     cursor: pointer;
-    max-width: 80%;
+    max-width: 85%;
     margin: 40px auto;
     overflow: hidden;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
 }
-
 .categorias img {
     gap: 40px;
 }
@@ -282,7 +268,7 @@
     text-align: center;
     font-size: 1.1rem;
     color: #fff;
-    margin-top: 1.1rem;
+    margin-top: -6.9rem;
 }
 
 .cad-tcadas a {
@@ -420,12 +406,14 @@
 /*↑↑↑↑↑↑↑↑↑↑↑↑ ------------------Login ------------------------------------ Login -------------------------------------- Login ------------------ Login----↑↑↑↑↑↑↑↑↑↑↑↑*/
 /*↓↓↓↓↓↓↓↓↓↓↓↓ ------------------Clube ------------------------------------ Clube -------------------------------------- Clube ------------------ Clube----↓↓↓↓↓↓↓↓↓↓↓↓*/
 /* cor da faixa laranja e amarela #ff914d e #ffde59*/
+/* Reset básico */
 html, body {
     overflow-x: hidden;
     margin: 0;
     padding: 0;
 }
 
+/* Header e faixa amarela */
 .pagina-club .header-club,
 .pagina-club .faixa_amarela {
     width: 100vw;
@@ -477,27 +465,35 @@ html, body {
     margin: 0;
 }
 
-.row.align-items-center {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between; /* opcional, já está no Bootstrap */
-    align-items: center;
-    /* gap: 1rem; <- remova */
+/* Texto à esquerda */
+.col-texto {
+    text-align: left;
+    padding-left: 30px;  /* afasta do lado esquerdo */
+    padding-right: 30px; /* afasta da imagem */
 }
 
+/* Texto interno */
 .texto1 {
     font-family: 'Nunito', sans-serif;
-    font-size: clamp(1rem, 2vw, 1.5rem);
+    font-size: clamp(2rem, 4vw, 2.0rem);
     color: #000;
-    text-align: justify; /* força o texto para esquerda */ 
-    padding-right: 200px;   
+    margin: 0;
 }
 
-/* Imagem do Brasil à direita */
-.brasil-preto-img {
-    width: auto;
-    height: auto;
+/* Imagem à direita */
+.col-imagem {
+    text-align: right;
+    padding-right: 30px; /* afasta da borda direita */
 }
+
+.brasil-preto-img {
+    width: 80%;
+   
+    height: auto;
+    margin-top:10%;
+    margin-right:5%;
+}
+
 
 
 /*↑↑↑↑↑↑↑↑↑↑↑↑ ------------------Clube ------------------------------------ Clube -------------------------------------- Clube ------------------ Clube----↑↑↑↑↑↑↑↑↑↑↑↑*/

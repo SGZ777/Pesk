@@ -155,9 +155,9 @@
   },
   {
     "id": 15,
-    "nome": "Kit de Chumbadas Sortidas 50 Unidades",
-    "preco": 34.90,
-    "descricao": "O Kit de Chumbadas Sortidas contém 50 unidades com diferentes pesos e formatos, ideais para diversas modalidades de pesca. Produzidas em chumbo de alta pureza, garantem afundamento rápido e estável. Acompanha compartimento organizador, facilitando o transporte e o uso no dia a dia. Excelente custo-benefício para quem busca versatilidade e praticidade.",
+    "nome": "Kit Pesca Esportiva Estojo Premium Anzol Chumbo Girador Boia",
+    "preco": 149.90,
+    "descricao": "O Kit Pesca Esportiva Estojo Premium é a escolha ideal para quem busca praticidade e eficiência nas pescarias. Composto por uma seleção completa de acessórios, inclui anzóis de diversos tamanhos, chumbadas, giradores, boias e outros itens essenciais para diferentes modalidades de pesca. Todos os componentes vêm organizados em um estojo rígido e resistente, que facilita o transporte e a visualização rápida do material. Ideal tanto para iniciantes quanto para pescadores experientes, este kit oferece excelente custo-benefício e garante que você esteja sempre preparado à beira d’água.",
     "imagens": [
       "img1.jpg",
       "img2.jpg",
@@ -224,6 +224,17 @@
     "nome": "Vara Telescópica Gomo Longo Traíra 3,00 M (3003) Jaú Pesca",
     "preco": 39.90,
     "descricao": "A Vara Telescópica Gomo Longo Traíra 3,00 M da Jaú Pesca é ideal para pescadores que buscam praticidade e leveza. Com estrutura telescópica de fácil transporte, alcança até 3 metros de comprimento e suporta até 10 lbs. Feita em fibra de vidro resistente, garante ótimo equilíbrio entre flexibilidade e força. Ideal para pescarias de barranco, lagos e represas.",
+    "imagens": [
+      "img1.jpg",
+      "img2.jpg",
+      "img3.jpg"
+    ]
+  },
+  {
+    "id": 22,
+    "nome": "Lanterna de Cabeça Recarregável 300lm",
+    "preco": 119.90,
+    "descricao": "A Lanterna de Cabeça Recarregável 300lm é perfeita para pescarias noturnas e atividades ao ar livre. Possui feixe de luz ajustável, bateria recarregável via USB e até 8 horas de autonomia. Seu design leve e confortável permite o uso prolongado sem incômodos. Resistente à água e com diferentes modos de iluminação, é um item indispensável no seu kit de pesca.",
     "imagens": [
       "img1.jpg",
       "img2.jpg",
