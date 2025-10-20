@@ -6,6 +6,9 @@
     height: 100%;
     font-family: 'Nunito', sans-serif;
 }
+.header-home{
+    height: 130px;
+}
 
 .container1 {
     background-color: #2495ed;
@@ -13,19 +16,29 @@
 }
 
 .logo-header {
-    width: 140px;
+    width: 100px;
+    margin-top: 10px;
 }
 
 .icon-perfil {
     width: 32px;
     margin-right: 20px;
+    margin-top: 5px;
 }
 
 .icon-carrinho {
-    width: 40px;
+    width: 40px;   
+    margin-top: 5px;
 }
 .assineja{
-    color: white !important
+    color: white !important;
+    margin-top: 5px;
+
+}
+.search{
+    text-align: center;
+    max-width: 100px;
+    margin-top: 5px;
 }
 
 .txt-header {
@@ -137,6 +150,35 @@
     overflow: hidden;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
 }
+.carousel-scroll {
+    display: flex;
+  
+    gap: 40px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 10px;
+  }
+  
+  .carousel-scroll::-webkit-scrollbar {
+    height: 8px;
+  }
+  .carousel-scroll::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 4px;
+  }
+  
+  .carousel-scroll .card {
+    flex: 0 0 auto;
+    width: 220px;
+    scroll-snap-align: start;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    transition: transform 0.3s;
+  }
+  
+  .carousel-scroll .card:hover {
+    transform: scale(1.05);
+  }
 
 
 /*↑↑↑↑↑↑↑↑↑↑↑↑ ----------------- Home ---------------------------------------- Home ---------------------------------------- Home ----------------------- ↑↑↑↑↑↑↑↑↑↑↑↑*/
@@ -378,6 +420,18 @@
 /*↑↑↑↑↑↑↑↑↑↑↑↑ ------------------Login ------------------------------------ Login -------------------------------------- Login ------------------ Login----↑↑↑↑↑↑↑↑↑↑↑↑*/
 /*↓↓↓↓↓↓↓↓↓↓↓↓ ------------------Clube ------------------------------------ Clube -------------------------------------- Clube ------------------ Clube----↓↓↓↓↓↓↓↓↓↓↓↓*/
 /* cor da faixa laranja e amarela #ff914d e #ffde59*/
+html, body {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.pagina-club .header-club,
+.pagina-club .faixa_amarela {
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    position: relative;
+}
 
 .header-club {
     background: #2495ed;
@@ -385,18 +439,18 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: clamp(50px, 10vh, 80px); /* se adapta ao tamanho da tela */
+    height: clamp(50px, 10vh, 80px);
 }
 
 .logo-header {
     height: auto;
-    width: clamp(80px, 12vw, 160px); /* muda o tamanho conforme a tela */
+    width: clamp(80px, 12vw, 160px);
 }
 
 .club {
     color: orange;
     font-weight: bold;
-    font-size: clamp(1.2rem, 3vw, 2rem); /* responsivo */
+    font-size: clamp(1.2rem, 3vw, 2rem);
 }
 
 .estrela {
@@ -405,9 +459,7 @@
 }
 
 .faixa_amarela {
-    position: relative; /* tira o absolute pra não quebrar o fluxo */
-    width: 100%;
-    margin-top:1.5%;
+    margin-top: 1.5%;
     padding: clamp(0.8rem, 2vw, 1.5rem) 0;
     background: linear-gradient(to right, #ffde59, #ff914d);
     display: flex;
@@ -418,31 +470,34 @@
 
 .texto_faixa {
     color: white;
-    font-family: lovelo;
+    font-family: 'Lovelo', sans-serif;
     font-weight: 900;
     font-size: clamp(1.2rem, 2.5vw, 2.8rem);
     text-align: center;
     margin: 0;
 }
 
-
+.row.align-items-center {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* opcional, já está no Bootstrap */
+    align-items: center;
+    /* gap: 1rem; <- remova */
+}
 
 .texto1 {
     font-family: 'Nunito', sans-serif;
     font-size: clamp(1rem, 2vw, 1.5rem);
     color: #000;
-    margin: 0;
-    margin-top:-12rem;
-    max-width: 60%;
+    text-align: justify; /* força o texto para esquerda */ 
+    padding-right: 200px;   
 }
 
-
-
-.brasil-preto img {
-    width: clamp(180px, 30vw, 620px);
-    display: block;
-    margin: 5% auto;
-    margin-left:65%
+/* Imagem do Brasil à direita */
+.brasil-preto-img {
+    width: auto;
+    height: auto;
 }
+
 
 /*↑↑↑↑↑↑↑↑↑↑↑↑ ------------------Clube ------------------------------------ Clube -------------------------------------- Clube ------------------ Clube----↑↑↑↑↑↑↑↑↑↑↑↑*/
