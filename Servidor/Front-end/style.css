@@ -13,7 +13,7 @@
 }
 
 .container1 {
-    background-color: #2495ed;
+    background-color: #0096eb;
     width: 100%;
 }
 
@@ -285,7 +285,7 @@
 .cad-tcadas a {
     color: orange;
     font-weight: bold;
-    
+
 }
 
 .cad-tcadas a:hover {
@@ -304,6 +304,7 @@
     font-weight: bold;
     z-index: 2;
 }
+
 
 
 /*↑↑↑↑↑↑↑↑↑↑↑↑ ------------------Cadastro --------------------------------- Cadastro ----------------------------------- Cadastro --------------- Cadastro-↑↑↑↑↑↑↑↑↑↑↑↑*/
@@ -357,7 +358,7 @@
 
 .cad-tlogin a {
     color: orange;
-    
+
     font-weight: bold;
 
 }
@@ -413,6 +414,18 @@
     transform: scale(1.05);
     box-shadow: 0 0 15px #ffffff88;
 }
+
+/* Deixar bordas arredondadas no grupo de senha */
+/* Campo de senha somente com o lado direito arredondado  ------- parte direita da senha redonda*/
+.input-group .form-control {
+    border-radius: 0 20px 20px 0 !important; /* arredonda apenas à direita */
+}
+
+/* Ícone (lado esquerdo) permanece quadrado */
+.input-group .input-group-text {
+    border-radius: 0 !important; /* sem arredondamento */
+}
+
 
 
 /*↑↑↑↑↑↑↑↑↑↑↑↑ ------------------Login ------------------------------------ Login -------------------------------------- Login ------------------ Login----↑↑↑↑↑↑↑↑↑↑↑↑*/
@@ -491,7 +504,7 @@ body {
 .texto1 {
     font-family: 'Nunito', sans-serif;
     font-size: clamp(2rem, 4vw, 2.0rem);
-    color: #000;
+    color: #0096eb;
     margin: 0;
 }
 
@@ -526,44 +539,77 @@ body {
 
 /*---------*/
 
-
-.presente-preto-img {
-    width: 45%;
-    height: auto;
-    margin-top: 10%;
-    margin-right: 5%;
-}
-
-.texto2 {
-    font-family: 'Nunito', sans-serif;
-    font-size: clamp(2rem, 4vw, 2.0rem);
-    color: #000;
-    margin: 0;
-}
-
-/* Imagem à direita */
-.col-imagem2 {
-    text-align: right;
-    padding-right: 3000px;
-}
-
-/* 🔄 Inverter ordem */
 .secao-troca .row {
-    display: flex;
-    flex-direction: row-reverse;
+    display: flex !important;
+    /* sobrescreve o Bootstrap */
+    flex-direction: row-reverse !important;
     align-items: center;
 }
 
+.col-imagem2 {
+    display: flex;
+    justify-content: flex-start;
+    /* imagem vai para o lado esquerdo depois da inversão */
+}
+
+.presente-preto-img {
+    width: 50%;
+    /* ajuste conforme desejar */
+    height: auto;
+    margin-left: 10%;
+    /* empurra mais para o lado */
+}
+
+.col-texto2 {
+    font-family: 'Nunito', sans-serif;
+    font-size: clamp(2rem, 4vw, 2.0rem);
+}
+
+.col-imagem3 {
+    display: flex;
+    justify-content: flex-end; /* empurra pra direita */
+}
+
+.promo {
+    width: 50%;    /* ajuste de tamanho */
+    height: auto;
+    margin-right: 5%; /* controla o espaço da borda direita */
+}
 
 
 
 
 /*↑↑↑↑↑↑↑↑↑↑↑↑ ------------------Clube ------------------------------------ Clube -------------------------------------- Clube ------------------ Clube----↑↑↑↑↑↑↑↑↑↑↑↑*/
-/* ------------------------------------------------------------------------------ Carrinho --------------------------------------------------------------------------- */
+/*↓↓↓↓↓↓↓↓↓↓↓↓ ------------------Carrinho --------------------------------- Carrinho ----------------------------------- Carrinho -------------------------↓↓↓↓↓↓↓↓↓↓↓↓*/
 
 .produtos-carrinhos {
-
-
     padding-top: 3%;
     padding-bottom: 9.6%
 }
+
+/*↑↑↑↑↑↑↑↑↑↑↑↑ ------------------Carrinho --------------------------------- Carrinho ----------------------------------- Carrinho -------------------------↑↑↑↑↑↑↑↑↑↑↑↑*/
+/*↓↓↓↓↓↓↓↓↓↓↓↓ ------------------ Acesso não autorizado ------------------------------------ Acesso não autorizado ----------------------------------------↓↓↓↓↓↓↓↓↓↓↓↓*/
+.title-acessonaoautorizado {
+    font-family: 'Nunito', sans-serif;
+    justify-self: center;
+    font-size: 40px;
+    margin-top: 10%;
+    font-weight: bold;
+}
+
+.icon-naoautorizado img {
+    width: 200px;
+    display: block;
+    margin: auto;
+}
+
+.btt-voltar {
+    background-color: #0096eb !important;
+    border-radius: 50px !important;
+    width: 250px !important;
+    height: 50px !important;
+    font-family: 'Nunito', sans-serif !important;
+    font-size: 20px !important;
+}
+
+/*↑↑↑↑↑↑↑↑↑↑↑↑ ------------------ Acesso não autorizado ------------------------------------ Acesso não autorizado ----------------------------------------↑↑↑↑↑↑↑↑↑↑↑↑*/
