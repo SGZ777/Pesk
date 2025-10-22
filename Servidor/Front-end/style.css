@@ -6,7 +6,8 @@
     height: 100%;
     font-family: 'Nunito', sans-serif;
 }
-.header-home{
+
+.header-home {
     height: 130px;
     background-color: #0096eb !important;
 }
@@ -28,16 +29,20 @@
 }
 
 .icon-carrinho {
-    width: 40px;   
+    width: 40px;
     margin-top: 5px;
+    transition: transform 0.5s ease, width 0.5s ease, height 0.5s ease;
 }
-.assineja{
-    color: white !important;
+
+.assineja {
+    color: whitesmoke !important;
     margin-top: 5px;
     font-weight: bold !important;
     font-size: larger !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15) !;
 }
-.search{
+
+.search {
     text-align: center;
     max-width: 100px;
     margin-top: 5px;
@@ -50,27 +55,30 @@
     overflow: hidden;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
 }
+
 .categorias img {
     gap: 40px;
     cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
 }
+
 .alinhar-categorias {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center; 
+    align-items: center;
     text-align: center;
     gap: 5%;
 }
 
 .alinhar-categorias .col {
     flex: 0 0 auto;
-    width: 120px; 
+    width: 120px;
 }
 
 .alinhar-categorias img {
     width: 100%;
-    max-width: 100px; 
+    max-width: 100px;
     height: auto;
     display: block;
     margin: 0 auto;
@@ -105,9 +113,10 @@
     justify-self: center;
     font-weight: bold;
 }
-.carrosel-lancamentos{
-   justify-items: center;
-   gap: 100px;
+
+.carrosel-lancamentos {
+    justify-items: center;
+    gap: 100px;
 }
 
 .carousel-indicators {
@@ -128,8 +137,8 @@
     width: 250px;
     height: 250px;
 }
-.ad-peskclub{
-   
+
+.ad-peskclub {
     width: 90%;
     cursor: pointer;
     max-width: 80%;
@@ -137,35 +146,36 @@
     overflow: hidden;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
 }
+
 .carousel-scroll {
     display: flex;
-  
     gap: 40px;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     padding-bottom: 10px;
-  }
-  
-  .carousel-scroll::-webkit-scrollbar {
+}
+
+.carousel-scroll::-webkit-scrollbar {
     height: 8px;
-  }
-  .carousel-scroll::-webkit-scrollbar-thumb {
+}
+
+.carousel-scroll::-webkit-scrollbar-thumb {
     background: #ccc;
     border-radius: 4px;
-  }
-  
-  .carousel-scroll .card {
+}
+
+.carousel-scroll .card {
     flex: 0 0 auto;
     width: 220px;
     scroll-snap-align: start;
     border: 1px solid #eee;
     border-radius: 10px;
     transition: transform 0.3s;
-  }
-  
-  .carousel-scroll .card:hover {
+}
+
+.carousel-scroll .card:hover {
     transform: scale(1.05);
-  }
+}
 
 
 /*↑↑↑↑↑↑↑↑↑↑↑↑ ----------------- Home ---------------------------------------- Home ---------------------------------------- Home ----------------------- ↑↑↑↑↑↑↑↑↑↑↑↑*/
@@ -275,7 +285,7 @@
 .cad-tcadas a {
     color: orange;
     font-weight: bold;
-    text-decoration: none;
+    
 }
 
 .cad-tcadas a:hover {
@@ -299,11 +309,12 @@
 /*↑↑↑↑↑↑↑↑↑↑↑↑ ------------------Cadastro --------------------------------- Cadastro ----------------------------------- Cadastro --------------- Cadastro-↑↑↑↑↑↑↑↑↑↑↑↑*/
 /*↓↓↓↓↓↓↓↓↓↓↓↓ ------------------Login ------------------------------------ Login -------------------------------------- Login ------------------ Login----↓↓↓↓↓↓↓↓↓↓↓↓*/
 
- 
-.body-cadastro{
-    font-family: 'Nunito', sans-serif ;
-    font-weight: bold; 
+
+.body-cadastro {
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
 }
+
 .cad-tlogin {
     position: absolute;
     top: 100%;
@@ -346,7 +357,7 @@
 
 .cad-tlogin a {
     color: orange;
-    text-decoration: none;
+    
     font-weight: bold;
 
 }
@@ -364,7 +375,7 @@
     z-index: 3;
     font-weight: bold;
     margin-top: 10;
-    
+
 
 }
 
@@ -408,7 +419,8 @@
 /*↓↓↓↓↓↓↓↓↓↓↓↓ ------------------Clube ------------------------------------ Clube -------------------------------------- Clube ------------------ Clube----↓↓↓↓↓↓↓↓↓↓↓↓*/
 /* cor da faixa laranja e amarela #ff914d e #ffde59*/
 /* Reset básico */
-html, body {
+html,
+body {
     overflow-x: hidden;
     margin: 0;
     padding: 0;
@@ -467,10 +479,12 @@ html, body {
 }
 
 /* Texto à esquerda */
-.col-texto {
+.col-texto1 {
     text-align: left;
-    padding-left: 30px;  /* afasta do lado esquerdo */
-    padding-right: 30px; /* afasta da imagem */
+    padding-left: 30px;
+    /* afasta do lado esquerdo */
+    padding-right: 30px;
+    /* afasta da imagem */
 }
 
 /* Texto interno */
@@ -482,19 +496,74 @@ html, body {
 }
 
 /* Imagem à direita */
-.col-imagem {
+.col-imagem1 {
     text-align: right;
-    padding-right: 30px; /* afasta da borda direita */
+    padding-right: 30px;
+    /* afasta da borda direita */
 }
 
 .brasil-preto-img {
     width: 80%;
-   
+
     height: auto;
-    margin-top:10%;
-    margin-right:5%;
+    margin-top: 10%;
+    margin-right: 5%;
+}
+
+.texto1 {
+    font-family: 'Nunito', sans-serif;
+    font-size: clamp(2rem, 4vw, 2.0rem);
+    color: #000;
+    margin: 0;
+}
+
+/* Imagem à direita */
+.col-imagem1 {
+    text-align: right;
+    padding-right: 30px;
+    /* afasta da borda direita */
+}
+
+/*---------*/
+
+
+.presente-preto-img {
+    width: 45%;
+    height: auto;
+    margin-top: 10%;
+    margin-right: 5%;
+}
+
+.texto2 {
+    font-family: 'Nunito', sans-serif;
+    font-size: clamp(2rem, 4vw, 2.0rem);
+    color: #000;
+    margin: 0;
+}
+
+/* Imagem à direita */
+.col-imagem2 {
+    text-align: right;
+    padding-right: 3000px;
+}
+
+/* 🔄 Inverter ordem */
+.secao-troca .row {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
 }
 
 
 
+
+
 /*↑↑↑↑↑↑↑↑↑↑↑↑ ------------------Clube ------------------------------------ Clube -------------------------------------- Clube ------------------ Clube----↑↑↑↑↑↑↑↑↑↑↑↑*/
+/* ------------------------------------------------------------------------------ Carrinho --------------------------------------------------------------------------- */
+
+.produtos-carrinhos {
+
+
+    padding-top: 3%;
+    padding-bottom: 9.6%
+}

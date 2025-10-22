@@ -18,7 +18,7 @@
             <div class="d-flex align-items-center justify-content-between flex-wrap">
 
                 <!-- Logo -->
-                <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+                <a href="home.html" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
                     <img src="imagens/icones/logo.png" class="logo-header" alt="">
                 </a>
 
@@ -49,52 +49,55 @@
         </div>
     </header>
 
-    <div class="container my-5">
+    <div class="container my-5 produtos-carrinhos">
         <h2 class="mb-4 fw-bold">Seu Carrinho</h2>
-      
+
         <!-- Lista de produtos -->
         <div class="row gy-3">
-          <!-- Produto -->
-          <div class="col-12 col-md-8">
-            <div class="card p-3 shadow-sm d-flex flex-row align-items-center justify-content-between">
-              <div class="d-flex align-items-center">
-                <img src="imagens/produto1.jpg" alt="Produto" class="img-fluid rounded me-3" style="width: 80px; height: 80px;">
-                <div>
-                  <h6 class="fw-bold mb-1">Vara de Pesca Premium</h6>
-                  <p class="text-muted mb-1">Tamanho: 2.10m</p>
-                  <p class="text-primary fw-bold mb-0">R$ 199,90</p>
+            <!-- Produto -->
+            <div class="col-12 col-md-8">
+                <div class="card p-3 shadow-sm d-flex flex-row align-items-center justify-content-between">
+                    <div class="d-flex align-items-center">
+                        <img src="imagens/Produtos/Carretilhas/Carretilha11/img1.png" alt="Produto"
+                            class="img-fluid rounded me-3" style="width: 80px; height: 80px;">
+                        <div>
+                            <h6 class="fw-bold mb-1">Vara de Pesca Premium</h6>
+                            <p class="text-muted mb-1">Tamanho: 2.10m</p>
+                            <p class="text-primary fw-bold mb-0">R$ 199,90</p>
+                        </div>
+                    </div>
+
+                    <div class="d-flex align-items-center">
+                        <button class="btn btn-outline-secondary btn-sm"
+                            style="font-size: 20px; color: black; font-weight: bold;">-</button>
+                        <span class="mx-2" style="font-size: 17px;">1</span>
+                        <button class="btn btn-outline-secondary btn-sm"
+                            style="font-size: 20px; color: black; font-weight: bold;">+</button>
+                        <button class="btn btn-link text-danger ms-3">Remover</button>
+                    </div>
                 </div>
-              </div>
-      
-              <div class="d-flex align-items-center">
-                <button class="btn btn-outline-secondary btn-sm">-</button>
-                <span class="mx-2">1</span>
-                <button class="btn btn-outline-secondary btn-sm">+</button>
-                <button class="btn btn-link text-danger ms-3">Remover</button>
-              </div>
             </div>
-          </div>
-      
-          <!-- Resumo -->
-          <div class="col-12 col-md-4">
-            <div class="card p-3 shadow-sm">
-              <h5 class="fw-bold">Resumo</h5>
-              <hr>
-              <p class="d-flex justify-content-between mb-1">
-                <span>Subtotal</span> <span>R$ 199,90</span>
-              </p>
-              <p class="d-flex justify-content-between mb-1">
-                <span>Frete</span> <span>R$ 19,90</span>
-              </p>
-              <hr>
-              <p class="d-flex justify-content-between fw-bold fs-5">
-                <span>Total</span> <span>R$ 219,80</span>
-              </p>
-              <button class="btn btn-warning w-100 fw-bold mt-2">Finalizar Compra</button>
+
+            <!-- Resumo -->
+            <div class="col-12 col-md-4">
+                <div class="card p-3 shadow-sm">
+                    <h5 class="fw-bold">Resumo</h5>
+                    <hr>
+                    <p class="d-flex justify-content-between mb-2">
+                        <span>Subtotal</span> <span>R$ 199,90</span>
+                    </p>
+                    <p class="d-flex justify-content-between mb-1">
+                        <span>Frete</span> <span>R$ 19,90</span>
+                    </p>
+                    <hr>
+                    <p class="d-flex justify-content-between fw-bold fs-5">
+                        <span>Total</span> <span>R$ 219,80</span>
+                    </p>
+                    <button class="btn btn-warning w-100 fw-bold mt-2">Finalizar Compra</button>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
+    </div>
 
 
 
@@ -113,13 +116,23 @@
 
 
 
+    <footer class="py-3 text-bg-primary" style="font-weight: bold; background-color: #0096eb !important;">
+        <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+            <li class="nav-item"><a href="home.html" class="nav-link px-2 " style="color: white;">Home</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 " style="color: white;">Catalogo</a></li>
+            <li class="nav-item"><a href="peskclub.html" class="nav-link px-2 " style="color: white;">PeskClub</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 " style="color: white;">PFQs</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 " style="color: white;">Sobre</a></li>
+        </ul>
+        <p class="text-center " style="color: white;">© 2025 Pesk</p>
+    </footer>
 
-
-
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.js"></script>
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-    crossorigin="anonymous"></script>
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
 
 </body>
+
 </html>
