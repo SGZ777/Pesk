@@ -52,6 +52,7 @@
 }
 .categorias img {
     gap: 40px;
+    cursor: pointer;
 }
 .alinhar-categorias {
     display: flex;

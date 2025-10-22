@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho - Pesk</title>
+    <link rel="icon" href="imagens/icones/icon.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+
+<body class="body-home">
+    <header class="p-3 text-bg-primary header-home" style="background-color: #0096eb !important;">
+        <div class="container">
+            <div class="d-flex align-items-center justify-content-between flex-wrap">
+
+                <!-- Logo -->
+                <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+                    <img src="imagens/icones/logo.png" class="logo-header" alt="">
+                </a>
+
+                <!-- Barra de busca -->
+                <form class="d-flex ms-1 flex-grow-1 search" role="search" style="max-width: 500px;">
+                    <input type="search" class="form-control form-control-dark text-bg-light" placeholder="Buscar"
+                        aria-label="Search">
+                </form>
+
+                <!-- Botões -->
+                <div class="col-13 ">
+                    <a href="peskclub.html">
+                        <button type="button"
+                            class="btn btn-warning me-2 rounded-pill .text-light assineja">Assine-já<span
+                                class="estrela">✦</span></button>
+                    </a>
+                </div>
+                <div class="col-14">
+                    <a href="cadastro.html">
+                        <img src="imagens/icones/icon-perfil.png" class="icon-perfil">
+                    </a>
+                    <a href="carrinho.html">
+                        <img src="imagens/icones/icon-carrinho.png" class="icon-carrinho">
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+    <div class="container my-5">
+        <h2 class="mb-4 fw-bold">Seu Carrinho</h2>
+      
+        <!-- Lista de produtos -->
+        <div class="row gy-3">
+          <!-- Produto -->
+          <div class="col-12 col-md-8">
+            <div class="card p-3 shadow-sm d-flex flex-row align-items-center justify-content-between">
+              <div class="d-flex align-items-center">
+                <img src="imagens/produto1.jpg" alt="Produto" class="img-fluid rounded me-3" style="width: 80px; height: 80px;">
+                <div>
+                  <h6 class="fw-bold mb-1">Vara de Pesca Premium</h6>
+                  <p class="text-muted mb-1">Tamanho: 2.10m</p>
+                  <p class="text-primary fw-bold mb-0">R$ 199,90</p>
+                </div>
+              </div>
+      
+              <div class="d-flex align-items-center">
+                <button class="btn btn-outline-secondary btn-sm">-</button>
+                <span class="mx-2">1</span>
+                <button class="btn btn-outline-secondary btn-sm">+</button>
+                <button class="btn btn-link text-danger ms-3">Remover</button>
+              </div>
+            </div>
+          </div>
+      
+          <!-- Resumo -->
+          <div class="col-12 col-md-4">
+            <div class="card p-3 shadow-sm">
+              <h5 class="fw-bold">Resumo</h5>
+              <hr>
+              <p class="d-flex justify-content-between mb-1">
+                <span>Subtotal</span> <span>R$ 199,90</span>
+              </p>
+              <p class="d-flex justify-content-between mb-1">
+                <span>Frete</span> <span>R$ 19,90</span>
+              </p>
+              <hr>
+              <p class="d-flex justify-content-between fw-bold fs-5">
+                <span>Total</span> <span>R$ 219,80</span>
+              </p>
+              <button class="btn btn-warning w-100 fw-bold mt-2">Finalizar Compra</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+
+</body>
+</html>
