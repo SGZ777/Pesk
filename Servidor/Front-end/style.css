@@ -590,7 +590,9 @@ body {
     background: linear-gradient(to right, #ffde59, #ff914d);
     color: #000000;
     font-weight: bold;
-    font-size: 1.2rem;
+    height: 70px !important;
+    font-size: 25px;
+    text-align: center;
     border-radius: 7px;
     text-decoration: none;
     transition: 0.3s;
@@ -650,3 +652,52 @@ body {
     margin-bottom: 20px;
     font-weight: bold;
 }
+
+
+/*↓↓↓↓↓↓↓↓↓↓↓↓ ------------------- Sobre ----------------------------------- Sobre ------------------------------------- Sobre ----------------------------↓↓↓↓↓↓↓↓↓↓↓↓*/
+
+.texto-geral {
+    font-family: 'Nunito', sans-serif;
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+    color: #000;
+    font-weight: 700;
+     text-align: left;    /*começa da esquerda */
+    line-height: 1.4;
+    margin-bottom: 20px;
+}
+
+/* Textol */
+.texto1-sobre {
+    font-family: 'Nunito', sans-serif;
+    font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+    color: #333;
+    text-align: left;    
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+
+.lista-sobre {
+    font-family: 'Nunito', sans-serif;
+    font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+    color: #000;
+    padding-left: 20px;  /* afasta do, canto */
+    margin-bottom: 20px;
+     list-style-type: "✦ ";  
+}
+
+/* manter o padrao */
+.col-12.col-md-8 {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.header-club {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centraliza tudo horizontalmente */
+    padding: 10px 0;
+}
+
+
+/*↑↑↑↑↑↑↑↑↑↑↑↑ ------------------- Sobre ----------------------------------- Sobre ------------------------------------- Sobre ----------------------------↑↑↑↑↑↑↑↑↑↑↑↑*/

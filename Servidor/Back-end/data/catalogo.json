@@ -112,7 +112,7 @@
   {
     "id": 11,
     "nome": "Carretilha Daiwa Fuego CT 100HS",
-    "preco": 849.00,
+    "preco": 849.90,
     "descricao": "A Carretilha Daiwa Fuego CT 100HS é sinônimo de performance e tecnologia. Com corpo em alumínio super leve e sistema de 7 rolamentos, oferece recolhimento suave e preciso. Seu freio magnético ajustável proporciona controle total durante o arremesso, evitando cabeleiras. Ideal para quem busca eficiência em pescarias de tucunaré, robalo e black bass. Um equipamento de alto padrão para pescadores exigentes.",
     "imagens": [
       "Carretilhas/Carretilha11/img1.png",
@@ -126,9 +126,9 @@
     "preco": 299.00,
     "descricao": "A Caixa Térmica Coleman 26L mantém suas bebidas, iscas e alimentos frescos por muito mais tempo. Seu isolamento térmico de alta densidade garante conservação por até 24 horas. Possui tampa com suporte para copos e alça ergonômica para transporte fácil. Ideal para pescarias, camping e passeios ao ar livre. Resistente, prática e com excelente vedação.",
     "imagens": [
-      "img1.jpg",
-      "img2.jpg",
-      "img3.jpg"
+      "Outros/Caixa12/img1.png",
+      "Outros/Caixa12/img2.png",
+      "Outros/Caixa12/img3.png"
     ]
   },
   {
@@ -137,9 +137,9 @@
     "preco": 159.90,
     "descricao": "A Cadeira Dobrável Nautika Aventura oferece conforto e praticidade em qualquer pescaria ou acampamento. Feita com estrutura em aço e tecido reforçado, suporta até 110 kg. Conta com porta-copos embutido no braço e bolsa para transporte. Leve e compacta, é fácil de montar e desmontar. Ideal para quem busca comodidade em suas aventuras ao ar livre.",
     "imagens": [
-      "img1.jpg",
-      "img2.jpg",
-      "img3.jpg"
+      "Outros/Cadeira13/img1.png",
+      "Outros/Cadeira13/img2.png",
+      "Outros/Cadeira13/img3.png"
     ]
   },
   {
@@ -148,9 +148,9 @@
     "preco": 533.50,
     "descricao": "O Molinete Shimano Nasci FC é ideal para pescadores que buscam desempenho e confiabilidade em qualquer tipo de pescaria. Seu corpo leve em alumínio e o sistema de engrenagem de alta precisão garantem suavidade e potência durante o recolhimento. Equipado com rolamentos de aço inoxidável e carretel forjado a frio, oferece resistência superior à corrosão, sendo indicado para uso em água doce e salgada. O sistema de fricção refinado proporciona controle preciso durante as fisgadas, tornando-o uma excelente escolha para quem busca qualidade e durabilidade em cada arremesso.",
     "imagens": [
-      "img1.jpg",
-      "img2.jpg",
-      "img3.jpg"
+      "Molinets/Molinete14/img1.png",
+      "Molinets/Molinete14/img2.png",
+      "Molinets/Molinete14/img3.png"
     ]
   },
   {
@@ -159,9 +159,9 @@
     "preco": 149.90,
     "descricao": "O Kit Pesca Esportiva Estojo Premium é a escolha ideal para quem busca praticidade e eficiência nas pescarias. Composto por uma seleção completa de acessórios, inclui anzóis de diversos tamanhos, chumbadas, giradores, boias e outros itens essenciais para diferentes modalidades de pesca. Todos os componentes vêm organizados em um estojo rígido e resistente, que facilita o transporte e a visualização rápida do material. Ideal tanto para iniciantes quanto para pescadores experientes, este kit oferece excelente custo-benefício e garante que você esteja sempre preparado à beira d’água.",
     "imagens": [
-      "img1.jpg",
-      "img2.jpg",
-      "img3.jpg"
+      "Iscas/Boia15/img1.png",
+      "Iscas/Boia15/img2.png",
+      "Iscas/Boia15/img3.png"
     ]
   },
   {
@@ -170,9 +170,9 @@
     "preco": 395.90,
     "descricao": "O Porta-Varas KastKing V10 Rod Rack é um suporte moderno e resistente, desenvolvido para armazenar até 10 varas de pesca com total segurança e organização. Construído em alumínio e aço com acabamento anodizado, é altamente resistente à corrosão e ideal para uso em ambientes de pesca, barcos ou garagens. Seu design compacto economiza espaço, e as canaletas revestidas com material macio protegem as varas contra riscos e deformações. Fácil de montar e fixar, é a escolha perfeita para pescadores que desejam manter o equipamento bem cuidado e sempre à mão.",
     "imagens": [
-      "img1.jpg",
-      "img2.jpg",
-      "img3.jpg"
+      "Varas/Porta16/img1.png",
+      "Varas/Porta16/img2.png",
+      "Varas/Porta16/img3.png"
     ]
   },
   {
@@ -181,9 +181,9 @@
     "preco": 44.90,
     "descricao": "O Suporte de Vara para Barranco Ajustável é fabricado em aço galvanizado de alta durabilidade. Permite ajustar o ângulo da vara conforme o tipo de pescaria e terreno. Seu sistema de fixação firme evita que o equipamento tombe durante a fisgada. Compacto, leve e fácil de transportar, é ideal para pescarias em barrancos, margens e represas.",
     "imagens": [
-      "img1.jpg",
-      "img2.jpg",
-      "img3.jpg"
+      "Varas/SupVara17/img1.png",
+      "Varas/SupVara17/img2.png",
+      "Varas/SupVara17/img3.png"
     ]
   },
   {
@@ -192,9 +192,9 @@
     "preco": 19.90,
     "descricao": "A Isca de Silicone Soft Shad 10cm oferece ação natural e atrativa, simulando pequenos peixes. Sua textura macia e formato hidrodinâmico garantem movimento realista e irresistível para predadores como traíras, tucunarés e dourados. Pode ser usada com jig head ou anzóis offset. Altamente durável e eficiente, é ideal para pescadores que buscam resultados rápidos.",
     "imagens": [
-      "img1.jpg",
-      "img2.jpg",
-      "img3.jpg"
+      "Iscas/Isca18/img1.png",
+      "Iscas/Isca18/img2.png",
+      "Iscas/Isca18/img3.png"
     ]
   },
   {
@@ -203,9 +203,9 @@
     "preco": 119.00,
     "descricao": "A Camiseta de Pesca Manga Longa UV50+ é ideal para quem busca conforto e proteção solar durante as pescarias. Confeccionada em tecido leve, respirável e de secagem rápida, mantém o corpo ventilado mesmo em dias quentes. O fator UV50+ bloqueia até 98% dos raios ultravioleta. Design moderno e costuras reforçadas garantem durabilidade e liberdade de movimento.",
     "imagens": [
-      "img1.jpg",
-      "img2.jpg",
-      "img3.jpg"
+      "Outros/Camisa19/img1.png",
+      "Outros/Camisa19/img2.png",
+      "Outros/Camisa19/img3.png"
     ]
   },
   {
@@ -214,9 +214,9 @@
     "preco": 89.90,
     "descricao": "A Balança Digital de Pesca 40kg é compacta, precisa e fácil de usar. Ideal para pesar peixes e equipamentos com exatidão. Possui visor digital iluminado, função tara e desligamento automático para economia de energia. Mede até 40 kg com precisão de 10g. Seu gancho metálico e estrutura reforçada garantem segurança e durabilidade em qualquer situação.",
     "imagens": [
-      "img1.jpg",
-      "img2.jpg",
-      "img3.jpg"
+      "Outros/Balanca20/img1.png",
+      "Outros/Balanca20/img2.png",
+      "Outros/Balanca20/img3.png"
     ]
   },
   {
@@ -225,9 +225,9 @@
     "preco": 39.90,
     "descricao": "A Vara Telescópica Gomo Longo Traíra 3,00 M da Jaú Pesca é ideal para pescadores que buscam praticidade e leveza. Com estrutura telescópica de fácil transporte, alcança até 3 metros de comprimento e suporta até 10 lbs. Feita em fibra de vidro resistente, garante ótimo equilíbrio entre flexibilidade e força. Ideal para pescarias de barranco, lagos e represas.",
     "imagens": [
-      "img1.jpg",
-      "img2.jpg",
-      "img3.jpg"
+      "Varas/varaTelescopiaGomo3m/img1.png",
+      "Varas/varaTelescopiaGomo3m/img2.png",
+      "Varas/varaTelescopiaGomo3m/img3.png"
     ]
   },
   {
@@ -236,9 +236,295 @@
     "preco": 119.90,
     "descricao": "A Lanterna de Cabeça Recarregável 300lm é perfeita para pescarias noturnas e atividades ao ar livre. Possui feixe de luz ajustável, bateria recarregável via USB e até 8 horas de autonomia. Seu design leve e confortável permite o uso prolongado sem incômodos. Resistente à água e com diferentes modos de iluminação, é um item indispensável no seu kit de pesca.",
     "imagens": [
-      "img1.jpg",
-      "img2.jpg",
-      "img3.jpg"
+      "Outros/Lanterna22/img1.jpg",
+      "Outros/Lanterna22/img2.jpg",
+      "Outros/Lanterna22/img3.jpg"
+    ]
+  },
+  {
+    "id": 23,
+    "nome": "Vara Shimano Sojourn 6'4\" 10-20lb",
+    "preco": 419.90,
+    "descricao": "A Vara Shimano Sojourn 6'4\" é construída em grafite de alta resistência, oferecendo leveza e sensibilidade excepcionais. Ideal para pescarias médias e pesadas, suporta linhas de até 20 lb. Seu cabo em cortiça natural proporciona empunhadura firme e confortável, enquanto os passadores em óxido de alumínio garantem durabilidade e arremessos longos. Um excelente custo-benefício para quem busca performance e qualidade.",
+    "imagens": [
+      "Varas/Vara23/img1.png",
+      "Varas/Vara23/img2.png",
+      "Varas/Vara23/img3.png"
+    ]
+  },
+  {
+    "id": 24,
+    "nome": "Vara Daiwa Laguna 6'6\" 10-25lb",
+    "preco": 359.00,
+    "descricao": "A Vara Daiwa Laguna 6'6\" combina força e precisão. Fabricada em grafite IM6, oferece ação rápida e excelente sensibilidade nas fisgadas. Possui cabo em EVA bipartido, passadores reforçados e reel seat ergonômico. Indicada para pesca de tucunaré, robalo e traíra, entrega ótimo desempenho em diferentes modalidades. Uma escolha versátil e durável para quem valoriza qualidade japonesa.",
+    "imagens": [
+      "Varas/Vara24/img1.png",
+      "Varas/Vara24/img2.png",
+      "Varas/Vara24/img3.png"
+    ]
+  },
+  {
+    "id": 25,
+    "nome": "Vara Saint Plus Twister 5'6\" 8-17lb",
+    "preco": 229.90,
+    "descricao": "A Vara Saint Plus Twister 5'6\" é perfeita para pescarias leves e médias. Com estrutura em carbono tubular e ação rápida, garante fisgadas precisas e ótimo controle das iscas. O cabo em EVA de alta densidade e o reel seat anatômico proporcionam conforto e firmeza. Indicada para uso com carretilhas, é ideal para quem busca leveza e desempenho superior.",
+    "imagens": [
+      "Varas/Vara25/img1.png",
+      "Varas/Vara25/img2.png",
+      "Varas/Vara25/img3.png"
+    ]
+  },
+  {
+    "id": 26,
+    "nome": "Molinete Daiwa Crossfire LT 2500",
+    "preco": 279.90,
+    "descricao": "O Molinete Daiwa Crossfire LT 2500 oferece equilíbrio ideal entre leveza e resistência. Conta com corpo em grafite, carretel em alumínio e sistema Digigear de alta precisão. O rotor balanceado reduz vibrações durante o recolhimento, proporcionando operação suave. Indicado para pescas em rios e represas, é um dos modelos mais versáteis e duradouros da categoria.",
+    "imagens": [
+      "Molinets/Molinete26/img1.png",
+      "Molinets/Molinete26/img2.png",
+      "Molinets/Molinete26/img3.png"
+    ]
+  },
+  {
+    "id": 27,
+    "nome": "Molinete Shimano Sahara FJ 3000",
+    "preco": 469.00,
+    "descricao": "O Molinete Shimano Sahara FJ 3000 apresenta design moderno e tecnologia de ponta. Equipado com 5 rolamentos de aço inoxidável e engrenagem SilentDrive, garante recolhimento suave e silencioso. Seu corpo em XT-7 oferece leveza sem comprometer a durabilidade. Ideal para pescas médias e pesadas em água doce e salgada, é sinônimo de confiabilidade e performance.",
+    "imagens": [
+      "Molinets/Molinete27/img1.png",
+      "Molinets/Molinete27/img2.png",
+      "Molinets/Molinete27/img3.png"
+    ]
+  },
+  {
+    "id": 28,
+    "nome": "Molinete Okuma Ceymar C-40",
+    "preco": 369.90,
+    "descricao": "O Molinete Okuma Ceymar C-40 é conhecido por sua suavidade e resistência. Possui corpo em grafite, carretel de alumínio anodizado e 7 rolamentos. Seu sistema de fricção multidisco garante controle total durante as brigas com peixes grandes. Ideal para diversas modalidades de pesca, une leveza e potência em um equipamento de excelente custo-benefício.",
+    "imagens": [
+      "Molinets/Molinete28/img1.png",
+      "Molinets/Molinete28/img2.png",
+      "Molinets/Molinete28/img3.png"
+    ]
+  },
+  {
+    "id": 29,
+    "nome": "Molinete Marine Sports Brisa 3000",
+    "preco": 249.00,
+    "descricao": "O Molinete Marine Sports Brisa 3000 combina design ergonômico e alta durabilidade. Com 5 rolamentos e carretel em alumínio, proporciona recolhimento suave e potente. Ideal para pescarias em água doce, sua manivela bilateral permite adaptação para destros e canhotos. Excelente opção para pescadores que buscam custo-benefício e confiança.",
+    "imagens": [
+      "Molinets/Molinete29/img1.png",
+      "Molinets/Molinete29/img2.png",
+      "Molinets/Molinete29/img3.png"
+    ]
+  },
+  {
+    "id": 30,
+    "nome": "Molinete Saint Plus Shark 5000",
+    "preco": 219.90,
+    "descricao": "O Molinete Saint Plus Shark 5000 é ideal para pescas mais pesadas. Com corpo reforçado, carretel de alumínio e 4 rolamentos, oferece grande capacidade de linha e força de recolhimento. O sistema de anti-reverso instantâneo e o freio dianteiro ajustável garantem controle total. Um equipamento robusto e confiável para capturas maiores.",
+    "imagens": [
+      "Molinets/Molinete30/img1.png",
+      "Molinets/Molinete30/img2.png",
+      "Molinets/Molinete30/img3.png"
+    ]
+  },
+  {
+    "id": 31,
+    "nome": "Molinete Albatroz Viper 4000",
+    "preco": 189.00,
+    "descricao": "O Molinete Albatroz Viper 4000 é leve, resistente e ideal para pescarias em lagos e rios. Conta com 4 rolamentos de esferas, carretel em alumínio e sistema balanceado para recolhimento suave. Seu design moderno e manivela dobrável garantem praticidade e conforto no transporte. Um excelente companheiro para pescadores iniciantes e intermediários.",
+    "imagens": [
+      "Molinets/Molinete31/img1.png",
+      "Molinets/Molinete31/img2.png",
+      "Molinets/Molinete31/img3.png"
+    ]
+  },
+  {
+    "id": 32,
+    "nome": "Carretilha Shimano SLX DC 150XG",
+    "preco": 1199.90,
+    "descricao": "A Carretilha Shimano SLX DC 150XG é equipada com o avançado sistema Digital Control, que ajusta automaticamente o freio magnético conforme a força do arremesso. Com 6 rolamentos e corpo em alumínio HAGANE, oferece resistência e leveza ideais. Recolhimento rápido e suave, perfeita para pescarias de precisão. Um dos modelos mais tecnológicos da Shimano.",
+    "imagens": [
+      "Carretilhas/Carretilha32/img1.png",
+      "Carretilhas/Carretilha32/img2.png",
+      "Carretilhas/Carretilha32/img3.png"
+    ]
+  },
+  {
+    "id": 33,
+    "nome": "Carretilha Marine Sports Titan Pro 12000",
+    "preco": 499.90,
+    "descricao": "A Carretilha Marine Sports Titan Pro 12000 é referência em custo-benefício e desempenho. Com 8 rolamentos e freio magnético ajustável, garante arremessos longos e precisos. Seu chassi em grafite reforçado proporciona leveza e resistência. Ideal para pescarias médias, é uma das carretilhas mais populares entre pescadores esportivos brasileiros.",
+    "imagens": [
+      "Carretilhas/Carretilha33/img1.png",
+      "Carretilhas/Carretilha33/img2.png",
+      "Carretilhas/Carretilha33/img3.png"
+    ]
+  },
+  {
+    "id": 34,
+    "nome": "Carretilha Daiwa Tatula SV TW 103 XSL",
+    "preco": 1249.00,
+    "descricao": "A Carretilha Daiwa Tatula SV TW 103 XSL combina força, leveza e precisão extrema. Com sistema T-Wing e freio SV, evita cabeleiras e melhora a distância dos arremessos. Corpo em alumínio e 7 rolamentos garantem durabilidade e suavidade no uso. Ideal para pescarias de tucunaré, robalo e black bass, é uma escolha de alto desempenho para pescadores exigentes.",
+    "imagens": [
+      "Carretilhas/Carretilha34/img1.png",
+      "Carretilhas/Carretilha34/img2.png",
+      "Carretilhas/Carretilha34/img3.png"
+    ]
+  },
+  {
+    "id": 35,
+    "nome": "Carretilha Abu Garcia Revo X",
+    "preco": 1599.90,
+    "descricao": "A Carretilha Abu Garcia Revo X combina design elegante e performance profissional. Equipada com 7 rolamentos de aço inoxidável, chassi em liga de alumínio e freio magnético MagTrax, garante controle e precisão nos arremessos. Recolhimento rápido e excelente capacidade de linha fazem dela uma ótima opção para diferentes estilos de pesca.",
+    "imagens": [
+      "Carretilhas/Carretilha35/img1.png",
+      "Carretilhas/Carretilha35/img2.png",
+      "Carretilhas/Carretilha35/img3.png"
+    ]
+  },
+  {
+    "id": 36,
+    "nome": "Carretilha Saint Plus Vizel 11000",
+    "preco": 439.00,
+    "descricao": "A Carretilha Saint Plus Vizel 11000 é compacta, leve e poderosa. Possui 10 rolamentos, carretel em alumínio e freio magnético de fácil regulagem. Seu recolhimento de 7.1:1 proporciona rapidez nas fisgadas e controle total do peixe. Ideal para pescarias médias, oferece ótima ergonomia e durabilidade.",
+    "imagens": [
+      "Carretilhas/Carretilha36/img1.png",
+      "Carretilhas/Carretilha36/img2.png",
+      "Carretilhas/Carretilha36/img3.png"
+    ]
+  },
+  {
+    "id": 37,
+    "nome": "Carretilha Marine Sports Venator GS",
+    "preco": 849.00,
+    "descricao": "A Carretilha Marine Sports Venator GS é uma das mais completas do mercado nacional. Construída em alumínio, possui 11 rolamentos e freio centrífugo ajustável. Seu recolhimento de 8.1:1 garante agilidade e precisão nos arremessos. Ideal para pescadores que buscam performance, leveza e robustez em um único equipamento.",
+    "imagens": [
+      "Carretilhas/Carretilha37/img1.png",
+      "Carretilhas/Carretilha37/img2.png",
+      "Carretilhas/Carretilha37/img3.png"
+    ]
+  },
+  {
+    "id": 38,
+    "nome": "Carretilha KastKing Spartacus II",
+    "preco": 559.90,
+    "descricao": "A Carretilha KastKing Spartacus II é resistente à água salgada e equipada com 11 rolamentos de aço inox. Seu freio de carbono de 8 kg e estrutura leve de grafite proporcionam ótimo controle e durabilidade. Ideal para pescas médias e pesadas, é uma opção moderna, potente e de excelente custo-benefício.",
+    "imagens": [
+      "Carretilhas/Carretilha38/img1.png",
+      "Carretilhas/Carretilha38/img2.png",
+      "Carretilhas/Carretilha38/img3.png"
+    ]
+  },
+  {
+    "id": 39,
+    "nome": "Isca Artificial Marine Sports Inna 90",
+    "preco": 74.90,
+    "descricao": "A Isca Artificial Inna 90 da Marine Sports possui ação de meia água e flutuação rápida. Seu nado realista e acabamento detalhado garantem ataques certeiros de robalos e tucunarés. Equipada com garatéias VMC e olhos 3D, é uma das mais versáteis e eficientes do mercado. Ideal para pescadores esportivos exigentes.",
+    "imagens": [
+      "Iscas/Isca39/img1.png",
+      "Iscas/Isca39/img2.png",
+      "Iscas/Isca39/img3.png"
+    ]
+  },
+  {
+    "id": 40,
+    "nome": "Isca Rapala Shadow Rap Shad 09",
+    "preco": 109.90,
+    "descricao": "A Rapala Shadow Rap Shad 09 é uma isca premium com nado super realista e vibração intensa. Seu sistema interno de peso permite arremessos longos e controle total na água. Ideal para predadores como dourados e traíras. Produzida com corpo resistente e garatéias reforçadas, é uma das preferidas entre pescadores profissionais.",
+    "imagens": [
+      "Iscas/Isca40/img1.png",
+      "Iscas/Isca40/img2.png",
+      "Iscas/Isca40/img3.png"
+    ]
+  },
+  {
+    "id": 41,
+    "nome": "Anzol Owner Cutting Point nº 4/0",
+    "preco": 29.90,
+    "descricao": "O Anzol Owner Cutting Point nº 4/0 é sinônimo de resistência e penetração rápida. Produzido em aço carbono de alta qualidade, possui ponta afiada quimicamente e acabamento black chrome. Indicado para peixes de médio e grande porte, garante fisgadas firmes e seguras. O pacote contém 10 unidades.",
+    "imagens": [
+      "Iscas/Isca41/img1.png",
+      "Iscas/Isca41/img2.png",
+      "Iscas/Isca41/img3.png"
+    ]
+  },
+  {
+    "id": 42,
+    "nome": "Linha Daiwa J-Braid x8 0,18mm 150m",
+    "preco": 199.90,
+    "descricao": "A Linha Daiwa J-Braid x8 é fabricada com fibras japonesas de alta resistência. Possui 8 tramas trançadas que garantem suavidade e resistência à abrasão. Diâmetro de 0,18mm, suporta até 9 kg. Ideal para arremessos longos e máxima sensibilidade nas fisgadas. Uma das linhas mais elogiadas pelos pescadores esportivos.",
+    "imagens": [
+      "Linhas/Isca42/img1.png",
+      "Linhas/Isca42/img2.png",
+      "Linhas/Isca42/img3.png"
+    ]
+  },
+  {
+    "id": 43,
+    "nome": "Linha Berkley Trilene XL 0,25mm 300m",
+    "preco": 79.90,
+    "descricao": "A Linha Berkley Trilene XL é conhecida por sua flexibilidade e resistência. Feita em monofilamento de alta qualidade, reduz o atrito nos passadores e melhora os arremessos. Ideal para pescarias leves e médias. Transparente, quase invisível na água, é perfeita para situações em que discrição faz a diferença.",
+    "imagens": [
+      "Linhas/Linha43/img1.png",
+      "Linhas/Linha43/img2.png",
+      "Linhas/Linha43/img3.png"
+    ]
+  },
+  {
+    "id": 44,
+    "nome": "Linha Sufix 832 Advanced Superline 0,20mm 120m",
+    "preco": 189.00,
+    "descricao": "A Linha Sufix 832 Advanced é composta por 8 fibras trançadas, sendo uma de GORE Performance Fiber. Oferece altíssima resistência à abrasão e sensibilidade. Seu revestimento evita absorção de água, mantendo o desempenho em qualquer ambiente. Ideal para pescarias técnicas e arremessos longos.",
+    "imagens": [
+      "Linhas/Linha44/img1.png",
+      "Linhas/Linha44/img2.png",
+      "Linhas/Linha44/img3.png"
+    ]
+  },
+  {
+    "id": 45,
+    "nome": "Linha Vexter X8 0,16mm 150m",
+    "preco": 129.90,
+    "descricao": "A Linha Vexter X8 0,16mm é trançada com tecnologia japonesa, oferecendo resistência e maciez superiores. Ideal para iscas artificiais, possui excelente capacidade de arremesso e durabilidade. Cor verde musgo para melhor camuflagem em ambientes aquáticos. Um dos melhores custos-benefício do mercado.",
+    "imagens": [
+      "Linhas/Linha45/img1.png",
+      "Linhas/Linha45/img2.png",
+      "Linhas/Linha45/img3.png"
+    ]
+  },
+   {
+    "id": 46,
+    "nome": "Linha Power Strike Monofilamento 0,30mm 500m",
+    "preco": 54.90,
+    "descricao": "A Linha Power Strike Monofilamento 0,30mm oferece resistência e durabilidade ideais para pescarias médias e pesadas. Seu monofilamento transparente proporciona discrição na água, enquanto a baixa memória garante arremessos longos e suaves. Excelente para uso com varas e molinetes de médio porte, é uma linha confiável para capturas consistentes.",
+    "imagens": [
+      "Linhas/Linha46/img1.png",
+      "Linhas/Linha46/img2.png",
+      "Linhas/Linha46/img3.png"
+    ]
+  },
+  {
+    "id": 47,
+    "nome": "Linha Marine Sports Fluorocarbon 0,28mm 100m",
+    "preco": 79.90,
+    "descricao": "A Linha Marine Sports Fluorocarbon 0,28mm é praticamente invisível na água, ideal para pescarias onde a discrição é essencial. Alta resistência à abrasão e baixa elasticidade permitem fisgadas precisas e maior controle do peixe. Perfeita para água doce e salgada, é compatível com varas e carretilhas de médio porte, oferecendo performance profissional.",
+    "imagens": [
+      "Linhas/Linha47/img1.png",
+      "Linhas/Linha47/img2.png",
+      "Linhas/Linha47/img3.png"
+    ]
+  },
+  {
+    "id": 48,
+    "nome": "Linha Shimano Clear Casting 0,22mm 200m",
+    "preco": 109.90,
+    "descricao": "A Linha Shimano Clear Casting 0,22mm combina alta resistência e transparência excepcional. Produzida em monofilamento premium, proporciona arremessos longos, baixa elasticidade e ótima durabilidade. Ideal para pescas técnicas com iscas artificiais, garante sensibilidade máxima e controle total sobre o peixe.",
+    "imagens": [
+      "Linhas/Linha48/img1.png",
+      "Linhas/Linha48/img2.png",
+      "Linhas/Linha48/img3.png"
     ]
   }
 ]

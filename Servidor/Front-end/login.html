@@ -14,35 +14,38 @@
 
 <body class="body-cadastro">
 
-  <a href="home.html"><div class="cadastro-logo"><img src="imagens/icones/logo.png"></div></a>
+  <a href="home.html">
+    <div class="cadastro-logo"><img src="imagens/icones/logo.png"></div>
+  </a>
 
   <div class="login-branco">
-    <form action="home.html" method="post" class="cadastro-inputi">
 
       <div class="input-group mb-5">
         <span class="input-group-text"><i class="bi bi-envelope-fill"></i></span>
-        <input type="text" class="form-control" placeholder="Email" aria-label="Email" name="email" required>
+        <input type="text" class="form-control" placeholder="Email" aria-label="Email" name="email" id="email" required>
       </div>
 
       <div class="input-group mb-5 position-relative">
         <span class="input-group-text"><i class="bi bi-lock-fill"></i></span>
-        <input type="password" class="form-control" placeholder="Senha" aria-label="Senha" name="senha" id="senha" required>
-        <i class="bi bi-eye-fill" id="toggleSenha" style="position:absolute; right:15px; top:50%; transform:translateY(-50%); cursor:pointer;"></i>
+        <input type="password" class="form-control" placeholder="Senha" aria-label="Senha" name="senha" id="senha"
+          required>
+        <i class="bi bi-eye-fill" id="toggleSenha"
+          style="position:absolute; right:15px; top:50%; transform:translateY(-50%); cursor:pointer;"></i>
       </div>
 
       <div class="cad-botao">
-        <button type="submit">Entrar</button>
+        <button type="submit" onclick="login()">Entrar</button>
       </div>
+      <div class="mensagem" id="mensagem"></div>
 
       <p class="cad-tlogin">Não possui conta? <a href="cadastro.html">Criar</a></p>
 
-    </form>
   </div>
 
   <div class="cad-tloginn">
-    <h1 style="font-weight: bold;">Login</h1>
+    <h1>Login</h1>
   </div>
-<!-- script do botao pra ver ou nao a senha {nao mexer} -->
+  <!-- script do botao pra ver ou nao a senha {nao mexer} -->
   <script>
     const senha = document.getElementById("senha");
     const toggle = document.getElementById("toggleSenha");
@@ -52,8 +55,42 @@
       senha.setAttribute("type", tipo);
       toggle.classList.toggle("bi-eye-fill");
       toggle.classList.toggle("bi-eye-slash-fill");
-    });
+    })
+    
+    async function login() {
+      const email = document.getElementById('email').value
+      const password = document.getElementById('senha').value
+      const mensagem = document.getElementById('mensagem')
+
+      try {
+        const res = await fetch('http://localhost:3000/entrar/login', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email, password })
+        })
+
+        const data = await res.json()
+
+        if (!res.ok) {
+          mensagem.textContent = data.error || 'Falha no login'
+          mensagem.style.color = 'red'
+          return
+        }
+
+        // Salva o token no navegador
+        localStorage.setItem('token', data.token)
+        mensagem.textContent = 'Login realizado com sucesso!'
+        mensagem.style.color = 'lightgreen'
+
+        // Redireciona (exemplo)
+        setTimeout(() => window.location.href = '/', 1000)
+      } catch (error) {
+        mensagem.textContent = 'Erro ao conectar ao servidor'
+        mensagem.style.color = 'red'
+      }
+    }
   </script>
 
 </body>
+
 </html>

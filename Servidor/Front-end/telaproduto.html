@@ -14,26 +14,28 @@
 </head>
 
 <body style="background-color: rgb(250, 250, 250);">
-    <header class="p-3 text-bg-primary">
-        <div class="container">
-            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-                <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+    <header class="p-3 text-bg-primary header-home" style="background-color: #0096eb !important;">
+        <div class="container d-flex align-items-center justify-content-between">
+
+            <a href="home.html" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+                <img src="../imagens/icones/logo.png" class="logo-header" alt="">
+
+            </a>
+
+            <form class="d-flex ms-1 flex-grow-1 search" role="search" style="max-width: 500px;">
+                <input type="search" class="form-control form-control-dark text-bg-light" placeholder="Buscar">
+            </form>
+
+            <div class="col-13">
+                <a href="peskclub.html">
+                    <button type="button" style="background-color: #ff8b43 !important; border: none;" class="btn btn-warning me-2 rounded-pill assineja">Assine-já<span
+                            class="estrela">✦</span></button>
                 </a>
-                <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-                    <li>
-                        <img src="../imagens/icones/logo.png" class="logo-header" alt="">
-                    </li>
-                </ul>
-                <div class="alinhar-searchbar"></div>
-                <form class="col-12 col-lg-4 mb-5 mb-lg-0 me-lg-4" role="search">
-                    <input type="search" class="form-control form-control-dark text-bg-light" placeholder="Buscar"
-                        aria-label="Search">
-                </form>
-                <div class="text-end">
-                    <a href="../peskclub.html"><button type="button" class="btn btn-warning me-2">Assine-já</button></a>
-                    <a href="../cadastro.html"><img src="../imagens/icones/icon-perfil.png" class="icon-perfil"></a>
-                    <a href="../carrinho.html"><img src="../imagens/icones/icon-carrinho.png" class="icon-carrinho"></a>
-                </div>
+            </div>
+
+            <div class="col-14">
+                <a href="cadastro.html"><img src="../imagens/icones/icon-perfil.png" class="icon-perfil"></a>
+                <a href="carrinho.html"><img src="../imagens/icones/icon-carrinho.png" class="icon-carrinho"></a>
             </div>
         </div>
     </header>
@@ -62,7 +64,7 @@
                     <div class="carousel-inner">
                         <div class="carousel-item active">
                             <img src="../imagens/Produtos/imagens[0]" class="d-block w-100" alt="Vara Shimano - Padrão">
-                        </div>
+                        </div>f
                         <div class="carousel-item">
                             <img src="../imagens/Produtos/imagens[1]" class="d-block w-100"
                                 alt="Vara Shimano - Detalhe 1">
@@ -88,7 +90,7 @@
                 <h3>[nome]</h3>
                 <p class="h6">[descricao]</p>
                 <h1> R$[preco] <button type="button" id="botaoAdicionarAoCarrinho" class="btn btn-primary btn-lg"
-                        style="font-size: 33px ;"> Adicionar
+                        style="font-size: 33px ; background-color: #0096eb;"> Adicionar
                         ao carrinho. </button>
                 </h1>
 
@@ -98,13 +100,13 @@
     </div>
 
 
-    <footer class="py-3 text-bg-primary">
+    <footer class="py-3 text-bg-primary" style="font-weight: bold; background-color: #0096eb !important;">
         <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-            <li class="nav-item"><a href="../home.html" class="nav-link px-2 " style="color: white;">Home</a></li>
+            <li class="nav-item"><a href="home.html" class="nav-link px-2 " style="color: white;">Home</a></li>
             <li class="nav-item"><a href="#" class="nav-link px-2 " style="color: white;">Catalogo</a></li>
-            <li class="nav-item"><a href="#" class="nav-link px-2 " style="color: white;">PeskClube</a></li>
+            <li class="nav-item"><a href="peskclub.html" class="nav-link px-2 " style="color: white;">PeskClub</a></li>
             <li class="nav-item"><a href="#" class="nav-link px-2 " style="color: white;">PFQs</a></li>
-            <li class="nav-item"><a href="#" class="nav-link px-2 " style="color: white;">Sobre</a></li>
+            <li class="nav-item"><a href="sobre.html" class="nav-link px-2 " style="color: white;">Sobre</a></li>
         </ul>
         <p class="text-center " style="color: white;">© 2025 Pesk</p>
     </footer>

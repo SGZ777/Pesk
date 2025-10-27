@@ -22,9 +22,9 @@
                 <input type="search" class="form-control form-control-dark text-bg-light" placeholder="Buscar">
             </form>
 
-            <div class="col-13 ">
+            <div class="col-13">
                 <a href="peskclub.html">
-                    <button type="button" class="btn btn-warning me-2 rounded-pill assineja">Assine-já<span
+                    <button type="button" style="background-color: #ff8b43 !important; border: none;" class="btn btn-warning me-2 rounded-pill assineja">Assine-já<span
                             class="estrela">✦</span></button>
                 </a>
             </div>
@@ -47,7 +47,7 @@
             <li class="nav-item"><a href="#" class="nav-link px-2 text-white">Catálogo</a></li>
             <li class="nav-item"><a href="peskclub.html" class="nav-link px-2 text-white">PeskClub</a></li>
             <li class="nav-item"><a href="#" class="nav-link px-2 text-white">PFQs</a></li>
-            <li class="nav-item"><a href="#" class="nav-link px-2 text-white">Sobre</a></li>
+            <li class="nav-item"><a href="sobre.html" class="nav-link px-2 text-white">Sobre</a></li>
         </ul>
         <p class="text-center text-white">© 2025 Pesk</p>
     </footer>
@@ -67,6 +67,20 @@
 
             const produtos = await res.json();
             lista.innerHTML = '';
+
+            // ✅ Verifica se o carrinho está vazio
+            if (!produtos || produtos.length === 0) {
+                lista.innerHTML = `
+                    <div class="text-center my-5">
+                        <img src="imagens/icones/icon-carrinho.png" alt="Carrinho vazio" width="100" class="mb-3 opacity-75">
+                        <h4 class="fw-bold">Seu carrinho está vazio 🛒</h4>
+                        <p class="text-muted">Adicione produtos para começar suas compras!</p>
+                        <a href="home.html" class="btn btn-primary mt-3">Voltar à Loja</a>
+                    </div>
+                `;
+                return;
+            }
+
             let subtotal = 0;
 
             produtos.forEach(p => {
