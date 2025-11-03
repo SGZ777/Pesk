@@ -153,6 +153,9 @@
     "id": 22,
     "email": "arthursgz77@gmail.com",
     "password": "1234567",
-    "nome": "bilau"
+    "nome": "bilau",
+    "produtos": [
+      49
+    ]
   }
 ]

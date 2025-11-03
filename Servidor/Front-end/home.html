@@ -19,9 +19,10 @@
                 <img src="imagens/icones/logo.png" class="logo-header" alt="">
             </a>
 
-            <form class="d-flex ms-1 flex-grow-1 search" role="search" style="max-width: 500px;">
-                <input type="search"  id="buscar"class="form-control form-control-dark text-bg-light" placeholder="Buscar">
+            <form id="form-buscar" class="d-flex ms-1 flex-grow-1 search" role="search" style="max-width: 500px;">
+                <input type="search" id="buscar" class="form-control form-control-dark text-bg-light" placeholder="Buscar">
             </form>
+            
 
             <div class="col-13">
                 <a href="peskclub.html">
@@ -293,7 +294,40 @@ function highlightText(element, text) {
         element.childNodes.forEach(child => highlightText(child, text));
     }
 }</script>
-      
+
+
+
+      <script>
+        const form = document.getElementById('form-buscar');
+        const input = document.getElementById('buscar');
+        
+        // mapa de termos para páginas
+        const paginas = {
+          "vara": "varas.html",
+          "varas": "varas.html",
+          "isca": "iscas.html",
+          "iscas": "iscas.html",
+          "carretilha": "carretilhas.html",
+          "carretilhas": "carretilhas.html",
+          "molinete": "molinetes.html",
+          "molinetes": "molinetes.html",
+          "linha": "linhas.html",
+          "linhas": "linhas.html",
+          "outro": "outros.html",
+          "outros": "outros.html"
+        };
+        
+         form.addEventListener('submit', e => {// e=evento
+            e.preventDefault();  //nn atualiza a pag
+            const termo = input.value.trim().toLowerCase();
+        
+            if (paginas[termo]) {
+                window.location.href = paginas[termo]; //redireciona
+            } else {
+                alert("Página não encontrada, verifique se escreveu certo.");
+            }
+        });
+        </script>
 
 </body>
 

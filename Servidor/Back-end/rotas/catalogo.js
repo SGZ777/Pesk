@@ -29,9 +29,6 @@ router.get('/:id', (req, res) => {
                     res.status(500).send('Erro ao carregar página.');
                     return;
                 }
-                
-                // Cria a parcela e arredonda
-                const p5 = idCerta.preco/5
 
                 let paginaFinal = null 
                 
@@ -45,7 +42,7 @@ router.get('/:id', (req, res) => {
                     paginaFinal = paginaFinal.replaceAll('imagens[0]', idCerta.imagens[0])
                     paginaFinal = paginaFinal.replaceAll('imagens[1]', idCerta.imagens[1])
                     paginaFinal = paginaFinal.replaceAll('imagens[2]', idCerta.imagens[2])
-                    paginaFinal = paginaFinal.replaceAll('[parcelas]', p5.toFixed(2))
+                    paginaFinal = paginaFinal.replaceAll('[parcelas]', (idCerta.preco/5).toFixed(2))
                 } catch (error) {
                     
                 }

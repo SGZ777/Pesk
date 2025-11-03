@@ -80,7 +80,19 @@
             </div>
         </div class="secao-troca">
         <div class="club-botao">
-            <a href="telapagamento.html"><p>Faça parte do Club</p></a>
+            <button type="button" id="botaoAdicionarAoCarrinho" class="btn btn-primary btn-lg"
+                style="font-size: 33px ; display: inline-block;
+                padding: 0.7rem 6rem;
+                background: linear-gradient(to right, #ffde59, #ff914d);
+                color: #000000;
+                font-weight: bold;
+                height: 70px !important;
+                font-size: 25px;
+                text-align: center;
+                border-radius: 7px;
+                text-decoration: none;
+                transition: 0.3s; margin-left: 25px;
+                border: none !important ;"> Faça parte do Club</button>
         </div>
         <p class="obs-club">Fatura recorrente. Cancele quando quiser.</p>
 
@@ -98,6 +110,23 @@
             </ul>
             <p class="text-center " style="color: white;">© 2025 Pesk</p>
         </footer>
+        <script>
+            document.getElementById('botaoAdicionarAoCarrinho').addEventListener('click', () => {
+                const token = localStorage.getItem('token'); // token do usuário logado
+
+                fetch('http://localhost:3000/carrinho/adicionar', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': `Bearer ${token}`
+                    },
+                    body: JSON.stringify({ produtoId: 49 })
+                })
+                    .then(res => res.json())
+                    .then(data => alert(data.mensagem || data.error))
+                    .catch(err => console.error(err));
+            })
+        </script>
 
 </body>
 

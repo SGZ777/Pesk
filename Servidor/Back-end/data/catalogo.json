@@ -225,9 +225,9 @@
     "preco": 39.90,
     "descricao": "A Vara Telescópica Gomo Longo Traíra 3,00 M da Jaú Pesca é ideal para pescadores que buscam praticidade e leveza. Com estrutura telescópica de fácil transporte, alcança até 3 metros de comprimento e suporta até 10 lbs. Feita em fibra de vidro resistente, garante ótimo equilíbrio entre flexibilidade e força. Ideal para pescarias de barranco, lagos e represas.",
     "imagens": [
-      "Varas/varaTelescopiaGomo3m/img1.png",
-      "Varas/varaTelescopiaGomo3m/img2.png",
-      "Varas/varaTelescopiaGomo3m/img3.png"
+      "Varas/varaTelescopiaGomo3m21/img1.png",
+      "Varas/varaTelescopiaGomo3m21/img2.png",
+      "Varas/varaTelescopiaGomo3m21/img3.png"
     ]
   },
   {
@@ -525,6 +525,15 @@
       "Linhas/Linha48/img1.png",
       "Linhas/Linha48/img2.png",
       "Linhas/Linha48/img3.png"
+    ]
+  },
+  {
+    "id": 49,
+    "nome": "Assinatura Pesk Club",
+    "preco": 79.90,
+    "descricao": "ASSINE O PESK CLUB E LEVE SUA PAIXÃO PELA PESCA A OUTRO NÍVEL!",
+    "imagens": [
+      "Outros/Peskclub-49/PESKclub.png"
     ]
   }
 ]

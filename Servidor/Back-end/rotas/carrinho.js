@@ -90,6 +90,33 @@ router.post('/remover', autenticar, (req, res) => {
     });
 });
 
+router.post('/remover-todos', autenticar, (req, res) => {
+    const { produtoId } = req.body;
+    if (!produtoId) return res.status(400).json({ mensagem: 'Produto não informado.' });
+
+    fs.readFile(usersPath, 'utf8', (err, data) => {
+        if (err) return res.status(500).json({ mensagem: 'Erro ao ler usuários.' });
+
+        const clientes = JSON.parse(data);
+        const cliente = clientes.find(c => c.id === req.usuarioId);
+        if (!cliente) return res.status(404).json({ mensagem: 'Usuário não encontrado.' });
+
+        // Remove TODAS as ocorrências do produto
+        const produtosAntes = cliente.produtos.length;
+        cliente.produtos = cliente.produtos.filter(id => id !== produtoId);
+        const produtosDepois = cliente.produtos.length;
+
+        if (produtosAntes === produtosDepois) {
+            return res.status(404).json({ mensagem: 'Produto não encontrado no carrinho.' });
+        }
+
+        fs.writeFile(usersPath, JSON.stringify(clientes, null, 2), 'utf8', err => {
+            if (err) return res.status(500).json({ mensagem: 'Erro ao salvar carrinho.' });
+            res.json({ mensagem: 'Todos os produtos removidos com sucesso.' });
+        });
+    });
+});
+
 router.post('/alterar-quantidade', autenticar, (req, res) => {
     const { produtoId, quantidade } = req.body;
     if (!produtoId || quantidade < 0) return res.status(400).json({ mensagem: 'Dados inválidos.' });

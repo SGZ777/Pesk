@@ -56,7 +56,7 @@ router.post('/cadastro', (req, res) => {
                 return res.status(400).json({ error: 'Email já cadastrado' });
             }
             const novoUsuario = {
-                id: usuarios.length + 1, email: email, password: password, nome: nomeCompleto
+                id: usuarios.length + 1, email: email, password: password, nome: nomeCompleto, produtos: []
             }
             usuarios.push(novoUsuario)
             // Adiciona o novo user ao Json

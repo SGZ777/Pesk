@@ -15,16 +15,16 @@
 
 <body class="body-home">
     <header class="p-3 text-bg-primary header-home" style="background-color: #0096eb !important;">
-        <div class="container d-flex align-items-center justify-content-between">
-
+        <div class="container d-flex align-items-center justify-content-between flex-wrap">
             <a href="../home.html" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
                 <img src="../imagens/icones/logo.png" class="logo-header" alt="">
-
             </a>
 
-            <form class="d-flex ms-1 flex-grow-1 search" role="search" style="max-width: 500px;">
-                <input type="search" class="form-control form-control-dark text-bg-light" placeholder="Buscar">
+            <form id="form-buscar" class="d-flex ms-1 flex-grow-1 search" role="search" style="max-width: 500px;">
+                <input type="search" id="buscar" class="form-control form-control-dark text-bg-light"
+                    placeholder="Buscar">
             </form>
+
 
             <div class="col-13">
                 <a href="../peskclub.html">
@@ -44,22 +44,19 @@
     <div class="container"
         style="margin-top: 75px; background-color: white; padding-top: 50px; padding-bottom: 35px; border-radius: 20px;">
         <div class="row">
-            <div class="col-2 col-md-1">
+            <div class="col-2 col-md-1" sty>
                 <div id="thumb-gallery" class="list-group" role="tablist">
                     <button class="list-group-item list-group-item-action active"
                         data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0">
-                        <img src="../imagens/Produtos/imagens[0]" class="d-block w-100"
-                            alt="Vara Shimano - Padrão">
+                        <img src="../imagens/Produtos/imagens[0]" class="d-block w-100" alt="Vara Shimano - Padrão">
                     </button>
                     <button class="list-group-item list-group-item-action" data-bs-target="#carouselExampleIndicators"
                         data-bs-slide-to="1">
-                        <img src="../imagens/Produtos/imagens[1]" class="d-block w-100"
-                            alt="Vara Shimano - Detalhe 1">
+                        <img src="../imagens/Produtos/imagens[1]" class="d-block w-100" alt="Vara Shimano - Detalhe 1">
                     </button>
                     <button class="list-group-item list-group-item-action" data-bs-target="#carouselExampleIndicators"
                         data-bs-slide-to="2">
-                        <img src="../imagens/Produtos/imagens[2]" class="d-block w-100"
-                            alt="Vara Shimano - Detalhe 2">
+                        <img src="../imagens/Produtos/imagens[2]" class="d-block w-100" alt="Vara Shimano - Detalhe 2">
                     </button>
                 </div>
             </div>
@@ -70,8 +67,7 @@
                     <div class="carousel-inner">
                         <div class="carousel-item active"
                             style="width: 500px; height: 500px; object-fit: cover; border-radius: 10px; align-items: center;">
-                            <img src="../imagens/Produtos/imagens[0]" class="d-block w-100"
-                                alt="Vara Shimano - Padrão">
+                            <img src="../imagens/Produtos/imagens[0]" class="d-block w-100" alt="Vara Shimano - Padrão">
                         </div>
                         <div class="carousel-item"
                             style="width: 500px; height: 500px; object-fit: cover; border-radius: 10px; align-items: center;">
@@ -85,12 +81,14 @@
                         </div>
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-                        data-bs-slide="prev">
+                        data-bs-slide="prev"
+                        style="filter: invert(46%) sepia(87%) saturate(1907%) hue-rotate(180deg) brightness(95%) contrast(97%);">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                         <span class="visually-hidden">Anterior</span>
                     </button>
                     <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-                        data-bs-slide="next">
+                        data-bs-slide="next"
+                        style="filter: invert(46%) sepia(87%) saturate(1907%) hue-rotate(180deg) brightness(95%) contrast(97%);">
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
                         <span class="visually-hidden">Próximo</span>
                     </button>
@@ -98,27 +96,33 @@
             </div>
             <div class="col-12 col-md-6">
                 <h3 style="text-align: left;">[nome]</h3>
-                <div class="linha-tp" style="border: none; height: 1.4px; background-color: #e0e0e0; margin: 1.5rem 0;"></div>
+                <div class="linha-tp" style="border: none; height: 1.4px; background-color: #e0e0e0; margin: 1.5rem 0;">
+                </div>
                 <p class="h6">[descricao]</p>
-                    <div class="linha-tp" style="border: none; height: 1.2px; background-color: #e0e0e0; margin: 1.5rem 0;"></div>
-                    <h1 style="font-weight: bold; margin-left: 25px; margin-bottom: 10px; margin-top: -15px;">R$ [preco]</h1>
-                    <h2 style="margin-left: 25px; margin-bottom: -15px; font-size: 20px;">ou em 5x de: <span style="color: #eb8d00 !important;">R$ [parcelas]</span></h2>
+                <div class="linha-tp" style="border: none; height: 1.2px; background-color: #e0e0e0; margin: 1.5rem 0;">
+                </div>
+                <h1 style="font-weight: bold; margin-left: 25px; margin-bottom: 10px; margin-top: -15px;">R$ [preco]
+                </h1>
+                <h2 style="margin-left: 25px; margin-bottom: -15px; font-size: 20px;">ou em 5x de: <span
+                        style="color: #eb8d00 !important;">R$ [parcelas]</span></h2>
 
-                <div class="linha-tp" style="border: none; height: 1.4px; background-color: #e0e0e0; margin: 1.5rem 0;"></div>
+                <div class="linha-tp" style="border: none; height: 1.4px; background-color: #e0e0e0; margin: 1.5rem 0;">
+                </div>
                 <button type="button" id="botaoAdicionarAoCarrinho" class="btn btn-primary btn-lg"
-                    style="font-size: 33px ; background-color: #0096eb; margin-left: 25px;"> Adicionar ao carrinho.</button>
+                    style="font-size: 33px ; background-color: #0096eb; margin-left: 25px;"> Adicionar ao
+                    carrinho.</button>
 
             </div>
         </div>
     </div>
-    <!-- </div> -->
     </div>
 
     <footer class="py-3 text-bg-primary" style="font-weight: bold; background-color: #0096eb !important;">
         <ul class="nav justify-content-center border-bottom pb-3 mb-3">
             <li class="nav-item"><a href="../home.html" class="nav-link px-2 " style="color: white;">Home</a></li>
             <li class="nav-item"><a href="#" class="nav-link px-2 " style="color: white;">Catalogo</a></li>
-            <li class="nav-item"><a href="../peskclub.html" class="nav-link px-2 " style="color: white;">PeskClub</a></li>
+            <li class="nav-item"><a href="../peskclub.html" class="nav-link px-2 " style="color: white;">PeskClub</a>
+            </li>
             <li class="nav-item"><a href="#" class="nav-link px-2 " style="color: white;">PFQs</a></li>
             <li class="nav-item"><a href="../sobre.html" class="nav-link px-2 " style="color: white;">Sobre</a></li>
         </ul>
@@ -187,5 +191,37 @@
         }
     </style>
 </body>
+<script>
+    //catologo /5
+    const form = document.getElementById('form-buscar');
+    const input = document.getElementById('buscar');
+
+    // mapa de termos para páginas
+    const paginas = {
+        "vara": "../../varas.html",
+        "varas": "../../varas.html",
+        "isca": "../../iscas.html",
+        "iscas": "../../iscas.html",
+        "carretilha": "../../carretilhas.html",
+        "carretilhas": "../../carretilhas.html",
+        "molinete": "../../molinetes.html",
+        "molinetes": "../../molinetes.html",
+        "linha": "../../linhas.html",
+        "linhas": "../../linhas.html",
+        "outro": "../../outros.html",
+        "outros": "../../outros.html"
+    };
+
+    form.addEventListener('submit', e => {// e=evento
+        e.preventDefault();  //nn atualiza a pag
+        const termo = input.value.trim().toLowerCase();
+
+        if (paginas[termo]) {
+            window.location.href = paginas[termo]; //redireciona
+        } else {
+            alert("Página não encontrada, verifique se escreveu certo.");
+        }
+    });
+</script>
 
 </html>
