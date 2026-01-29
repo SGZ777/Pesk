@@ -1,4 +1,4 @@
-🐟 Pesk — O maior site de pesca do Brasil
+🐟 Pesk
 
 Pesk é uma plataforma web completa para apaixonados por pesca.
 O projeto conta com frontend moderno em HTML/CSS/Bootstrap, integração com backend Node.js/Express, autenticação com JWT, logger, e armazenamento de dados em arquivos JSON.
