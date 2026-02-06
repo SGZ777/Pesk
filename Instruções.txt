@@ -1,0 +1,5 @@
+1- Abrir pasta Servidor no terminal;
+2- No terminal digitar "npm i";
+3- Ainda no terminal digitar "npm audit fix";
+4- No terminal digitar "node .\server.js";
+5- Clicar no link que aparecer no terminal.
