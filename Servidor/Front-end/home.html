@@ -1,334 +1,460 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pesk - O maior site de pesca do Brasil</title>
-    <link rel="icon" href="imagens/icones/icon.png" type="image/png">
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-</head>
+    <link rel="icon" href="imagens/icones/icon.png" type="image/png" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+  </head>
 
-<body class="body-home">
-    <header class="p-3 text-bg-primary header-home" style="background-color: #0096eb !important;">
-        <div class="container d-flex align-items-center justify-content-between flex-wrap">
-            <a href="home.html" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
-                <img src="imagens/icones/logo.png" class="logo-header" alt="">
-            </a>
+  <body class="body-home">
+    <header
+      class="p-3 text-bg-primary header-home"
+      style="background-color: #0d6efd !important"
+    >
+      <div
+        class="container d-flex align-items-center justify-content-between flex-wrap"
+      >
+        <a
+          href="home.html"
+          class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none"
+        >
+          <img src="imagens/icones/logo.png" class="logo-header" alt="" />
+        </a>
 
-            <form id="form-buscar" class="d-flex ms-1 flex-grow-1 search" role="search" style="max-width: 500px;">
-                <input type="search" id="buscar" class="form-control form-control-dark text-bg-light" placeholder="Buscar">
-            </form>
-            
+        <form
+          id="form-buscar"
+          class="d-flex ms-1 flex-grow-1 search"
+          role="search"
+          style="max-width: 500px"
+        >
+          <input
+            type="search"
+            id="buscar"
+            class="form-control form-control-dark text-bg-light"
+            placeholder="Buscar"
+          />
+        </form>
 
-            <div class="col-13">
-                <a href="peskclub.html">
-                    <button type="button" style="background-color: #ff8b43 !important; border: none;"
-                        class="btn btn-warning me-2 rounded-pill assineja">Assine-já<span
-                            class="estrela">✦</span></button>
-                </a>
-            </div>
-
-            <div class="col-14">
-                <a href="cadastro.html"><img src="imagens/icones/icon-perfil.png" class="icon-perfil"></a>
-                <a href="carrinho.html"><img src="imagens/icones/icon-carrinho.png" class="icon-carrinho"></a>
-            </div>
+        <div class="col-13">
+          <a href="peskclub.html">
+            <button
+              type="button"
+              style="background-color: #ff8b43 !important; border: none"
+              class="btn btn-warning me-2 assineja"
+            >
+              Assine-já<span class="estrela">✦</span>
+            </button>
+          </a>
         </div>
+
+        <div class="col-14">
+          <a href="cadastro.html"
+            ><img src="imagens/icones/icon-perfil.png" class="icon-perfil"
+          /></a>
+          <a href="carrinho.html"
+            ><img src="imagens/icones/icon-carrinho.png" class="icon-carrinho"
+          /></a>
+        </div>
+      </div>
     </header>
 
     <div class="carrossel-home">
-        <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active" data-bs-interval="2000">
-                    <img src="imagens/Anuncios/anuncio1.png" class="d-block w-100">
-                </div>
-                <div class="carousel-item" data-bs-interval="2000">
-                    <img src="imagens/Anuncios/anuncio2.png" class="d-block w-100">
-                </div>
-                <div class="carousel-item" data-bs-interval="2000">
-                    <img src="imagens/Anuncios/anuncio3.png" class="d-block w-100">
-                </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
-                data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval"
-                data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
+      <div
+        id="carouselExampleInterval"
+        class="carousel slide"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="2000">
+            <img src="imagens/Anuncios/anuncio1.png" class="d-block w-100" />
+          </div>
+          <div class="carousel-item" data-bs-interval="2000">
+            <img src="imagens/Anuncios/anuncio2.png" class="d-block w-100" />
+          </div>
+          <div class="carousel-item" data-bs-interval="2000">
+            <img src="imagens/Anuncios/anuncio3.png" class="d-block w-100" />
+          </div>
         </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleInterval"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleInterval"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
     </div>
 
     <div class="categorias">
-        <div class="container">
-            <div class="row alinhar-categorias">
-                <div class="col c1-a"><a href="iscas.html"><img src="imagens/Categorias/categoria1.png"
-                            class="img-fluid c1"></a>
-                    <p class="text-md-end c1-txt">Iscas</p>
-                </div>
-                <div class="col c2-a"><a href="varas.html"><img src="imagens/Categorias/categoria2.png"
-                            class="img-fluid c2"></a>
-                    <p class="text-md-end">Varas</p>
-                </div>
-                <div class="col c3-a"><a href="carretilhas.html"><img src="imagens/Categorias/categoria3.png"
-                            class="img-fluid c3"></a>
-                    <p class="text-md-end">Carretilhas</p>
-                </div>
-                <div class="col c4-a"><a href="molinetes.html"><img src="imagens/Categorias/categoria4.png"
-                            class="img-fluid c4"></a>
-                    <p class="text-md-end">Molinetes</p>
-                </div>
-                <div class="col c5-a"><a href="linhas.html"><img src="imagens/Categorias/categoria5.png"
-                            class="img-fluid c5"></a>
-                    <p class="text-md-end">Linhas</p>
-                </div>
-                <div class="col c6-a"><a href="outros.html"><img src="imagens/Categorias/categoria6.png"
-                            class="img-fluid c6"></a>
-                    <p class="text-md-end">Outros</p>
-                </div>
-            </div>
+      <div class="container">
+        <div class="row alinhar-categorias">
+          <div class="col c1-a">
+            <a href="iscas.html"
+              ><img
+                src="imagens/Categorias/categoria1.png"
+                class="img-fluid c1"
+            /></a>
+            <p class="text-md-end c1-txt">Iscas</p>
+          </div>
+          <div class="col c2-a">
+            <a href="varas.html"
+              ><img
+                src="imagens/Categorias/categoria2.png"
+                class="img-fluid c2"
+            /></a>
+            <p class="text-md-end">Varas</p>
+          </div>
+          <div class="col c3-a">
+            <a href="carretilhas.html"
+              ><img
+                src="imagens/Categorias/categoria3.png"
+                class="img-fluid c3"
+            /></a>
+            <p class="text-md-end">Carretilhas</p>
+          </div>
+          <div class="col c4-a">
+            <a href="molinetes.html"
+              ><img
+                src="imagens/Categorias/categoria4.png"
+                class="img-fluid c4"
+            /></a>
+            <p class="text-md-end">Molinetes</p>
+          </div>
+          <div class="col c5-a">
+            <a href="linhas.html"
+              ><img
+                src="imagens/Categorias/categoria5.png"
+                class="img-fluid c5"
+            /></a>
+            <p class="text-md-end">Linhas</p>
+          </div>
+          <div class="col c6-a">
+            <a href="outros.html"
+              ><img
+                src="imagens/Categorias/categoria6.png"
+                class="img-fluid c6"
+            /></a>
+            <p class="text-md-end">Outros</p>
+          </div>
         </div>
+      </div>
     </div>
 
     <h1 class="title-lancamentos">Lançamentos</h1>
 
     <div class="container my-5">
+      <div class="carousel-scroll">
+        <!-- Card 1 -->
 
-        <div class="carousel-scroll">
-            <!-- Card 1 -->
+        <a href="/catalogo/1" style="text-decoration: none">
+          <div class="card card-home">
+            <img
+              src="imagens/Produtos/Varas/varaShimanoFX6-6/VaraShimano66.png"
+              class="card-img-top"
+            />
+            <div class="card-body">
+              <p class="card-text">Vara de Pesca Shimano FX 6'6</p>
+              <p class="fw-bold mb-0">R$ 249,99</p>
+              <small>ou 5x de R$50,00</small>
+            </div>
+          </div>
+        </a>
+        <!-- Card 2 -->
+        <a href="/catalogo/11" style="text-decoration: none">
+          <div class="card card-home">
+            <img
+              src="imagens/Produtos/Carretilhas/Carretilha11/img1.png"
+              class="card-img-top"
+              alt=""
+            />
+            <div class="card-body">
+              <p class="card-text">Carretilha Daiwa Fuego CT 100HS</p>
+              <p class="fw-bold mb-0">R$ 379,99</p>
+              <small>ou 5x de R$75,99</small>
+            </div>
+          </div>
+        </a>
 
-            <a href="/catalogo/1" style="text-decoration: none;">
-                <div class="card card-home">
-                    <img src="imagens/Produtos/Varas/varaShimanoFX6-6/VaraShimano66.png" class="card-img-top">
-                    <div class="card-body">
-                        <p class="card-text">Vara de Pesca Shimano FX 6'6</p>
-                        <p class="fw-bold mb-0">R$ 249,99</p>
-                        <small>ou 5x de R$50,00</small>
-                    </div>
-                </div>
-            </a>
-            <!-- Card 2 -->
-            <a href="/catalogo/11" style="text-decoration: none;">
-                <div class="card card-home">
-                    <img src="imagens/Produtos/Carretilhas/Carretilha11/img1.png" class="card-img-top" alt="">
-                    <div class="card-body">
-                        <p class="card-text">Carretilha Daiwa Fuego CT 100HS</p>
-                        <p class="fw-bold mb-0">R$ 379,99</p>
-                        <small>ou 5x de R$75,99</small>
-                    </div>
-                </div>
-            </a>
+        <!-- Card 3 -->
+        <a href="/catalogo/11" style="text-decoration: none">
+          <div class="card card-home">
+            <img
+              src="imagens/Produtos/Linhas/Linha3/img1.png"
+              class="card-img-top"
+              alt=""
+            />
+            <div class="card-body">
+              <p class="card-text">
+                Linha Shimano Power Pro Super 8x 0,15mm (4,5kg)
+              </p>
+              <p class="fw-bold mb-0">R$ 159,90</p>
+              <small>ou 3x de R$53,96</small>
+            </div>
+          </div>
+        </a>
 
-            <!-- Card 3 -->
-            <a href="/catalogo/11" style="text-decoration: none;">
-                <div class="card card-home">
-                    <img src="imagens/Produtos/Linhas/Linha3/img1.png" class="card-img-top" alt="">
-                    <div class="card-body">
-                        <p class="card-text">Linha Shimano Power Pro Super 8x 0,15mm (4,5kg)</p>
-                        <p class="fw-bold mb-0">R$ 159,90</p>
-                        <small>ou 3x de R$53,96</small>
-                    </div>
-                </div>
-            </a>
+        <!-- Card 4 -->
+        <a href="/catalogo/4" style="text-decoration: none">
+          <div class="card card-home">
+            <img
+              src="imagens/Produtos/Iscas/Isca4/img2.png"
+              class="card-img-top"
+              alt=""
+            />
+            <div class="card-body">
+              <p class="card-text">Isca Artificial Rapala X-Rap 08</p>
+              <p class="fw-bold mb-0">R$ 89,99</p>
+              <small>ou 4x de R$22,49</small>
+            </div>
+          </div>
+        </a>
 
-            <!-- Card 4 -->
-            <a href="/catalogo/4" style="text-decoration: none;">
-                <div class="card card-home">
-                    <img src="imagens/Produtos/Iscas/Isca4/img2.png" class="card-img-top" alt="">
-                    <div class="card-body">
-                        <p class="card-text">Isca Artificial Rapala X-Rap 08</p>
-                        <p class="fw-bold mb-0">R$ 89,99</p>
-                        <small>ou 4x de R$22,49</small>
-                    </div>
-                </div>
-            </a>
-
-            <!-- Card 5 -->
-            <a href="/catalogo/5" style="text-decoration: none;">
-                <div class="card card-home">
-                    <img src="imagens/Produtos/Outros/Caixa5/img1.png" class="card-img-top" alt="">
-                    <div class="card-body">
-                        <p class="card-text">Caixa de Pesca Plano 6203</p>
-                        <p class="fw-bold mb-0">R$ 129,00</p>
-                        <small>ou 4x de R$32,49</small>
-                    </div>
-                </div>
-            </a>
-
-        </div>
+        <!-- Card 5 -->
+        <a href="/catalogo/5" style="text-decoration: none">
+          <div class="card card-home">
+            <img
+              src="imagens/Produtos/Outros/Caixa5/img1.png"
+              class="card-img-top"
+              alt=""
+            />
+            <div class="card-body">
+              <p class="card-text">Caixa de Pesca Plano 6203</p>
+              <p class="fw-bold mb-0">R$ 129,00</p>
+              <small>ou 4x de R$32,49</small>
+            </div>
+          </div>
+        </a>
+      </div>
     </div>
 
     <div class="col text-center">
-        <a href="peskclub.html"><img src="imagens//Anuncios/anuncio-peskclub.png" class="img-fluid ad-peskclub"
-                alt="ad-peskclub"></a>
+      <a href="peskclub.html"
+        ><img
+          src="imagens//Anuncios/anuncio-peskclub.png"
+          class="img-fluid ad-peskclub"
+          alt="ad-peskclub"
+      /></a>
     </div>
 
     <h1 class="title-lancamentos">Promoções</h1>
 
     <div class="container my-5">
+      <div class="carousel-scroll">
+        <!-- Card 1 -->
+        <a href="/catalogo/7" style="text-decoration: none">
+          <div class="card card-home">
+            <img
+              src="imagens/Produtos/Outros/Chapeu7/img2.png"
+              class="card-img-top"
+              alt=""
+            />
+            <div class="card-body">
+              <p class="card-text">Chapéu de Pesca com Proteção Solar UV50+</p>
+              <p class="fw-bold mb-0">R$ 69,90</p>
+            </div>
+          </div>
+        </a>
 
-        <div class="carousel-scroll">
-            <!-- Card 1 -->
-            <a href="/catalogo/7" style="text-decoration: none;">
-                <div class="card card-home">
-                    <img src="imagens/Produtos/Outros/Chapeu7/img2.png" class="card-img-top" alt="">
-                    <div class="card-body">
-                        <p class="card-text">Chapéu de Pesca com Proteção Solar UV50+</p>
-                        <p class="fw-bold mb-0">R$ 69,90</p>
-                     
-                    </div>
-                </div>
-            </a>
+        <!-- Card 2 -->
+        <a href="/catalogo/8" style="text-decoration: none">
+          <div class="card card-home">
+            <img
+              src="imagens/Produtos/Outros/Allicate8/img2.png"
+              class="card-img-top"
+              alt=""
+            />
+            <div class="card-body">
+              <p class="card-text">Alicate de Bico Inox para Pesca 6</p>
+              <p class="fw-bold mb-0">R$ 49,90</p>
+              <small></small>
+            </div>
+          </div>
+        </a>
 
-            <!-- Card 2 -->
-            <a href="/catalogo/8" style="text-decoration: none;">
-                <div class="card card-home">
-                    <img src="imagens/Produtos/Outros/Allicate8/img2.png" class="card-img-top" alt="">
-                    <div class="card-body">
-                        <p class="card-text">Alicate de Bico Inox para Pesca 6</p>
-                        <p class="fw-bold mb-0">R$ 49,90</p>
-                        <small></small>
-                    </div>
-                </div>
-            </a>
+        <!-- Card 3 -->
+        <a href="/catalogo/6" style="text-decoration: none">
+          <div class="card card-home">
+            <img
+              src="imagens/Produtos/Iscas/Anzol6/img1.png"
+              class="card-img-top"
+              alt=""
+            />
+            <div class="card-body">
+              <p class="card-text">Anzol Marine Sports Maruseigo nº 16</p>
+              <p class="fw-bold mb-0">R$ 14,90</p>
+              <small></small>
+            </div>
+          </div>
+        </a>
 
-            <!-- Card 3 -->
-            <a href="/catalogo/6" style="text-decoration: none;">
-                <div class="card card-home">
-                    <img src="imagens/Produtos/Iscas/Anzol6/img1.png" class="card-img-top" alt="">
-                    <div class="card-body">
-                        <p class="card-text">Anzol Marine Sports Maruseigo nº 16</p>
-                        <p class="fw-bold mb-0">R$ 14,90</p>
-                        <small></small>
-                    </div>
-                </div>
-            </a>
+        <!-- Card 4 -->
+        <a href="/catalogo/11" style="text-decoration: none">
+          <div class="card card-home">
+            <img
+              src="imagens/Produtos/Carretilhas/Carretilha11/img3.png"
+              class="card-img-top"
+              alt=""
+            />
+            <div class="card-body">
+              <p class="card-text">Carretilha Daiwa Fuego CT 100HS</p>
+              <p class="fw-bold mb-0">R$ 849,00</p>
+            </div>
+          </div>
+        </a>
 
-            <!-- Card 4 -->
-            <a href="/catalogo/11" style="text-decoration: none;">
-                <div class="card card-home">
-                    <img src="imagens/Produtos/Carretilhas/Carretilha11/img3.png" class="card-img-top" alt="">
-                    <div class="card-body">
-                        <p class="card-text">Carretilha Daiwa Fuego CT 100HS</p>
-                        <p class="fw-bold mb-0">R$ 849,00</p>
-                    </div>
-                </div>
-            </a>
-
-            <!-- Card 5 -->
-            <a href="/catalogo/14" style="text-decoration: none;">
-                <div class="card card-home">
-                    <img src="imagens/Produtos/Molinets/Molinete14/img1.png" class="card-img-top" alt="">
-                    <div class="card-body">
-                        <p class="card-text">Molinete Shimano Nasci FC</p>
-                        <p class="fw-bold mb-0">R$ 533,50</p>
-                    </div>
-                </div>
-            </a>
-
-        </div>
+        <!-- Card 5 -->
+        <a href="/catalogo/14" style="text-decoration: none">
+          <div class="card card-home">
+            <img
+              src="imagens/Produtos/Molinets/Molinete14/img1.png"
+              class="card-img-top"
+              alt=""
+            />
+            <div class="card-body">
+              <p class="card-text">Molinete Shimano Nasci FC</p>
+              <p class="fw-bold mb-0">R$ 533,50</p>
+            </div>
+          </div>
+        </a>
+      </div>
     </div>
 
-    <footer class="py-3 text-bg-primary" style="font-weight: bold; background-color: #0096eb !important;">
-        <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-            <li class="nav-item"><a href="home.html" class="nav-link px-2 " style="color: white;">Home</a></li>
-            <li class="nav-item"><a href="#" class="nav-link px-2 " style="color: white;">Catalogo</a></li>
-            <li class="nav-item"><a href="peskclub.html" class="nav-link px-2 " style="color: white;">PeskClub</a></li>
-            <li class="nav-item"><a href="#" class="nav-link px-2 " style="color: white;">PFQs</a></li>
-            <li class="nav-item"><a href="sobre.html" class="nav-link px-2 " style="color: white;">Sobre</a></li>
-        </ul>
-        <p class="text-center " style="color: white;">© 2025 Pesk</p>
+    <footer
+      class="py-3 text-bg-primary"
+      style="font-weight: bold; background-color: #0d6efd !important"
+    >
+      <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+        <li class="nav-item">
+          <a href="home.html" class="nav-link px-2" style="color: white"
+            >Home</a
+          >
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link px-2" style="color: white">Catalogo</a>
+        </li>
+        <li class="nav-item">
+          <a href="peskclub.html" class="nav-link px-2" style="color: white"
+            >PeskClub</a
+          >
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link px-2" style="color: white">PFQs</a>
+        </li>
+        <li class="nav-item">
+          <a href="sobre.html" class="nav-link px-2" style="color: white"
+            >Sobre</a
+          >
+        </li>
+      </ul>
+      <p class="text-center" style="color: white">© 2025 Pesk</p>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-        crossorigin="anonymous">
-    const inputBuscar = document.getElementById('buscar');
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    >
+          const inputBuscar = document.getElementById('buscar');
 
-inputBuscar.addEventListener('input', () => {
-    const termo = inputBuscar.value.trim();
-    removeHighlights(document.body);
+      inputBuscar.addEventListener('input', () => {
+          const termo = inputBuscar.value.trim();
+          removeHighlights(document.body);
 
-    if (!termo) return;
-    highlightText(document.body, termo);
-});
+          if (!termo) return;
+          highlightText(document.body, termo);
+      });
 
-function removeHighlights(element) {
-    const marks = element.querySelectorAll('mark');
-    marks.forEach(mark => {
-        mark.replaceWith(...mark.childNodes);
-    });
-}
+      function removeHighlights(element) {
+          const marks = element.querySelectorAll('mark');
+          marks.forEach(mark => {
+              mark.replaceWith(...mark.childNodes);
+          });
+      }
 
-function highlightText(element, text) {
-    if (element.nodeType === 3) { // text node
-        const regex = new RegExp(text, 'gi');
-        const match = element.data.match(regex);
-        if (match) {
-            const span = document.createElement('mark');
-            const newNode = document.createDocumentFragment();
-            let lastIndex = 0;
+      function highlightText(element, text) {
+          if (element.nodeType === 3) { // text node
+              const regex = new RegExp(text, 'gi');
+              const match = element.data.match(regex);
+              if (match) {
+                  const span = document.createElement('mark');
+                  const newNode = document.createDocumentFragment();
+                  let lastIndex = 0;
 
-            element.data.replace(regex, (m, offset) => {
-                if (offset > lastIndex) {
-                    newNode.appendChild(document.createTextNode(element.data.slice(lastIndex, offset)));
-                }
-                const mark = document.createElement('mark');
-                mark.textContent = m;
-                newNode.appendChild(mark);
-                lastIndex = offset + m.length;
-            });
-            if (lastIndex < element.data.length) {
-                newNode.appendChild(document.createTextNode(element.data.slice(lastIndex)));
-            }
+                  element.data.replace(regex, (m, offset) => {
+                      if (offset > lastIndex) {
+                          newNode.appendChild(document.createTextNode(element.data.slice(lastIndex, offset)));
+                      }
+                      const mark = document.createElement('mark');
+                      mark.textContent = m;
+                      newNode.appendChild(mark);
+                      lastIndex = offset + m.length;
+                  });
+                  if (lastIndex < element.data.length) {
+                      newNode.appendChild(document.createTextNode(element.data.slice(lastIndex)));
+                  }
 
-            element.replaceWith(newNode);
+                  element.replaceWith(newNode);
+              }
+          } else if (element.nodeType === 1 && element.childNodes && !['SCRIPT','STYLE','NOSCRIPT'].includes(element.tagName)) {
+              element.childNodes.forEach(child => highlightText(child, text));
+          }
+      }
+    </script>
+
+    <script>
+      const form = document.getElementById("form-buscar");
+      const input = document.getElementById("buscar");
+
+      // mapa de termos para páginas
+      const paginas = {
+        vara: "varas.html",
+        varas: "varas.html",
+        isca: "iscas.html",
+        iscas: "iscas.html",
+        carretilha: "carretilhas.html",
+        carretilhas: "carretilhas.html",
+        molinete: "molinetes.html",
+        molinetes: "molinetes.html",
+        linha: "linhas.html",
+        linhas: "linhas.html",
+        outro: "outros.html",
+        outros: "outros.html",
+      };
+
+      form.addEventListener("submit", (e) => {
+        // e=evento
+        e.preventDefault(); //nn atualiza a pag
+        const termo = input.value.trim().toLowerCase();
+
+        if (paginas[termo]) {
+          window.location.href = paginas[termo]; //redireciona
+        } else {
+          alert("Página não encontrada, verifique se escreveu certo.");
         }
-    } else if (element.nodeType === 1 && element.childNodes && !['SCRIPT','STYLE','NOSCRIPT'].includes(element.tagName)) {
-        element.childNodes.forEach(child => highlightText(child, text));
-    }
-}</script>
-
-
-
-      <script>
-        const form = document.getElementById('form-buscar');
-        const input = document.getElementById('buscar');
-        
-        // mapa de termos para páginas
-        const paginas = {
-          "vara": "varas.html",
-          "varas": "varas.html",
-          "isca": "iscas.html",
-          "iscas": "iscas.html",
-          "carretilha": "carretilhas.html",
-          "carretilhas": "carretilhas.html",
-          "molinete": "molinetes.html",
-          "molinetes": "molinetes.html",
-          "linha": "linhas.html",
-          "linhas": "linhas.html",
-          "outro": "outros.html",
-          "outros": "outros.html"
-        };
-        
-         form.addEventListener('submit', e => {// e=evento
-            e.preventDefault();  //nn atualiza a pag
-            const termo = input.value.trim().toLowerCase();
-        
-            if (paginas[termo]) {
-                window.location.href = paginas[termo]; //redireciona
-            } else {
-                alert("Página não encontrada, verifique se escreveu certo.");
-            }
-        });
-        </script>
-
-</body>
-
+      });
+    </script>
+  </body>
 </html>
