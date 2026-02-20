@@ -1,75 +1,94 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Carrinho - Pesk</title>
-    <link rel="icon" href="imagens/icones/icon.png" type="image/png">
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
-</head>
+    <link rel="icon" href="imagens/icones/icon.png" type="image/png" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
 
-<body class="body-home">
-    <header class="p-3 text-bg-primary header-home" style="background-color: #0096eb !important;">
-        <div class="container d-flex align-items-center justify-content-between flex-wrap">
-            <a href="home.html" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
-                <img src="imagens/icones/logo.png" class="logo-header" alt="">
-            </a>
+  <body class="body-home">
+    <header class="p-3 text-bg-primary header-home">
+      <div
+        class="container d-flex align-items-center justify-content-between flex-wrap"
+      >
+        <a
+          href="home.html"
+          class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none"
+        >
+          <img src="imagens/icones/logo.png" class="logo-header" alt="" />
+        </a>
 
-            <form id="form-buscar" class="d-flex ms-1 flex-grow-1 search" role="search" style="max-width: 500px;">
-                <input type="search" id="buscar" class="form-control form-control-dark text-bg-light" placeholder="Buscar">
-            </form>
+        <form
+          id="form-buscar"
+          class="d-flex ms-1 flex-grow-1 search"
+          role="search"
+          style="max-width: 500px"
+        >
+          <input
+            type="search"
+            id="buscar"
+            class="form-control form-control-dark text-bg-light"
+            placeholder="Buscar"
+          />
+        </form>
 
-            <div class="col-13">
-                <a href="peskclub.html">
-                    <button type="button" style="background-color: #ff8b43 !important; border: none;" class="btn btn-warning me-2 rounded-pill assineja">Assine-já<span
-                            class="estrela">✦</span></button>
-                </a>
-            </div>
-
-            <div class="col-14">
-                <a href="cadastro.html"><img src="imagens/icones/icon-perfil.png" class="icon-perfil"></a>
-                <a href="carrinho.html"><img src="imagens/icones/icon-carrinho.png" class="icon-carrinho"></a>
-            </div>
+        <div class="col-13">
+          <a href="peskclub.html">
+            <button
+              type="button"
+              style="background-color: #ff8b43 !important; border: none"
+              class="btn btn-warning me-2 assineja"
+            >
+              Assine-já<span class="estrela">✦</span>
+            </button>
+          </a>
         </div>
+
+        <div class="col-14">
+          <a href="cadastro.html"
+            ><img src="imagens/icones/icon-perfil.png" class="icon-perfil"
+          /></a>
+          <a href="carrinho.html"
+            ><img src="imagens/icones/icon-carrinho.png" class="icon-carrinho"
+          /></a>
+        </div>
+      </div>
     </header>
 
     <div class="container my-5 produtos-carrinhos">
-        <h2 class="mb-4 fw-bold">Seu Carrinho</h2>
-        <div class="row gy-3" id="lista-produtos"></div>
+      <h2 class="mb-4 fw-bold">Seu Carrinho</h2>
+      <div class="row gy-3" id="lista-produtos"></div>
     </div>
 
-    <footer class="py-3 text-bg-primary" style="font-weight: bold; background-color: #0096eb !important;">
-        <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-            <li class="nav-item"><a href="home.html" class="nav-link px-2 text-white">Home</a></li>
-            <li class="nav-item"><a href="#" class="nav-link px-2 text-white">Catálogo</a></li>
-            <li class="nav-item"><a href="peskclub.html" class="nav-link px-2 text-white">PeskClub</a></li>
-            <li class="nav-item"><a href="#" class="nav-link px-2 text-white">PFQs</a></li>
-            <li class="nav-item"><a href="sobre.html" class="nav-link px-2 text-white">Sobre</a></li>
-        </ul>
-        <p class="text-center text-white">© 2025 Pesk</p>
-    </footer>
-
     <script>
-        const API = 'http://localhost:3000/carrinho';
-        const token = localStorage.getItem('token');
+      const API = "http://localhost:3000/carrinho";
+      const token = localStorage.getItem("token");
 
-        async function carregarCarrinho() {
-            const lista = document.getElementById('lista-produtos');
-            lista.innerHTML = '<p>Carregando...</p>';
+      async function carregarCarrinho() {
+        const lista = document.getElementById("lista-produtos");
+        lista.innerHTML = "<p>Carregando...</p>";
 
-            const res = await fetch(API, {
-                headers: { 'Authorization': 'Bearer ' + token }
-            });
-            if (!res.ok) return lista.innerHTML = '<p>Erro ao carregar carrinho.</p>';
+        const res = await fetch(API, {
+          headers: { Authorization: "Bearer " + token },
+        });
+        if (!res.ok)
+          return (lista.innerHTML = "<p>Não há nenhum item no carrinho.</p>");
 
-            const produtos = await res.json();
-            lista.innerHTML = '';
+        const produtos = await res.json();
+        lista.innerHTML = "";
 
-            if (!produtos || produtos.length === 0) {
-                lista.innerHTML = `
+        if (!produtos || produtos.length === 0) {
+          lista.innerHTML = `
                     <div class="text-center my-5" style="justify-self:center;">
                         <img src="imagens/icones/icon-carrinho.png" alt="Carrinho vazio" width="100" class="mb-3 opacity-75">
                         <h4 class="fw-bold">Seu carrinho está vazio</h4>
@@ -77,22 +96,21 @@
                         <a href="home.html" class="btn btn-primary mt-3">Voltar à Loja</a>
                     </div>
                 `;
-                return;
-            }
+          return;
+        }
 
-            let subtotal = 0;
+        let subtotal = 0;
 
-            produtos.forEach(p => {
-                subtotal += p.preco * p.quantidade;
-                const card = document.createElement('div');
-                card.className = 'col-12 col-md-8';
-                card.innerHTML = 
-                `<div class="card p-3 shadow-sm d-flex flex-row align-items-center justify-content-between">
+        produtos.forEach((p) => {
+          subtotal += p.preco * p.quantidade;
+          const card = document.createElement("div");
+          card.className = "col-12 col-md-8";
+          card.innerHTML = `<div class="card p-3 shadow-sm d-flex flex-row align-items-center justify-content-between">
                     <div class="d-flex align-items-center">
                         <img src="/imagens/produtos/${p.imagens[0]}" alt="${p.nome}" class="img-fluid rounded me-3" style="width:80px;height:80px;">
                         <div>
                             <h6 class="fw-bold mb-1">${p.nome}</h6>
-                            <p class="text-muted mb-1">${p.descricao || ''}</p>
+                            <p class="text-muted mb-1">${p.descricao || ""}</p>
                             <p class="text-primary fw-bold mb-0">R$ ${p.preco.toFixed(2)}</p>
                         </div>
                     </div>
@@ -103,74 +121,81 @@
                         <button class="btn btn-link text-danger ms-3" onclick="remover(${p.id})">Remover</button>
                     </div>
                 </div>`;
-                lista.appendChild(card);
-            });
+          lista.appendChild(card);
+        });
 
-            // Resumo
-            const resumo = document.createElement('div');
-            resumo.className = 'col-12 col-md-4';
-            resumo.innerHTML = `
+        // Resumo
+        const resumo = document.createElement("div");
+        resumo.className = "col-12 col-md-4";
+        resumo.innerHTML = `
             <div class="card p-3 shadow-sm">
                 <h5 class="fw-bold">Resumo</h5>
                 <hr>
                 <p class="d-flex justify-content-between mb-2"><span>Subtotal</span><span>R$ ${subtotal.toFixed(2)}</span></p>
                 <p class="d-flex justify-content-between mb-1"><span>Frete</span><span>R$ 19,90</span></p>
                 <hr>
-                <p class="d-flex justify-content-between fw-bold fs-5"><span>Total</span><span>R$ ${(subtotal + 19.90).toFixed(2)}</span></p>
+                <p class="d-flex justify-content-between fw-bold fs-5"><span>Total</span><span>R$ ${(subtotal + 19.9).toFixed(2)}</span></p>
                 <button class="btn btn-warning w-100 fw-bold mt-2">Finalizar Compra</button>
             </div>`;
-            lista.appendChild(resumo);
-        }
+        lista.appendChild(resumo);
+      }
 
-        async function alterarQtd(produtoId, novaQtd) {
-            if (novaQtd < 0) return;
-            await fetch(API + '/alterar-quantidade', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + token },
-                body: JSON.stringify({ produtoId, quantidade: novaQtd })
-            });
-            carregarCarrinho();
-        }
-        async function remover(produtoId) {
-            await fetch(API + '/remover-todos', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + token },
-                body: JSON.stringify({ produtoId })
-            });
-            carregarCarrinho();
-        }
-        window.onload = carregarCarrinho;
+      async function alterarQtd(produtoId, novaQtd) {
+        if (novaQtd < 0) return;
+        await fetch(API + "/alterar-quantidade", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: "Bearer " + token,
+          },
+          body: JSON.stringify({ produtoId, quantidade: novaQtd }),
+        });
+        carregarCarrinho();
+      }
+      async function remover(produtoId) {
+        await fetch(API + "/remover-todos", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: "Bearer " + token,
+          },
+          body: JSON.stringify({ produtoId }),
+        });
+        carregarCarrinho();
+      }
+      window.onload = carregarCarrinho;
     </script>
-</body>
-<script>
-    const form = document.getElementById('form-buscar');
-    const input = document.getElementById('buscar');
-    
+  </body>
+  <script>
+    const form = document.getElementById("form-buscar");
+    const input = document.getElementById("buscar");
+
     // mapa de termos para páginas
     const paginas = {
-      "vara": "varas.html",
-      "varas": "varas.html",
-      "isca": "iscas.html",
-      "iscas": "iscas.html",
-      "carretilha": "carretilhas.html",
-      "carretilhas": "carretilhas.html",
-      "molinete": "molinetes.html",
-      "molinetes": "molinetes.html",
-      "linha": "linhas.html",
-      "linhas": "linhas.html",
-      "outro": "outros.html",
-      "outros": "outros.html"
+      vara: "varas.html",
+      varas: "varas.html",
+      isca: "iscas.html",
+      iscas: "iscas.html",
+      carretilha: "carretilhas.html",
+      carretilhas: "carretilhas.html",
+      molinete: "molinetes.html",
+      molinetes: "molinetes.html",
+      linha: "linhas.html",
+      linhas: "linhas.html",
+      outro: "outros.html",
+      outros: "outros.html",
     };
-    
-     form.addEventListener('submit', e => {// e=evento
-        e.preventDefault();  //nn atualiza a pag
-        const termo = input.value.trim().toLowerCase();
-    
-        if (paginas[termo]) {
-            window.location.href = paginas[termo]; //redireciona
-        } else {
-            alert("Página não encontrada, verifique se escreveu certo.");
-        }
+
+    form.addEventListener("submit", (e) => {
+      // e=evento
+      e.preventDefault(); //nn atualiza a pag
+      const termo = input.value.trim().toLowerCase();
+
+      if (paginas[termo]) {
+        window.location.href = paginas[termo]; //redireciona
+      } else {
+        alert("Página não encontrada, verifique se escreveu certo.");
+      }
     });
-    </script>
+  </script>
 </html>

@@ -1,6 +1,9 @@
 /*------------------------------- PESK ------------------------------------ PESK -------------------------------------- PESK ------------------ PESK----------------*/
 /*↓↓↓↓↓↓↓↓↓↓↓↓ ------------------ HOME ------------------------------------ HOME -------------------------------------- HOME ------------------ HOME----↓↓↓↓↓↓↓↓↓↓↓↓*/
-
+html, body {
+   height: 100%;
+   margin: 0;
+}
 .body-home {
     width: 100%;
     height: 100%;
@@ -10,7 +13,7 @@
 
 .header-home {
     height: 130px;
-    background-color: #0096eb !important;
+    background-color: #0d6efd !important;
 }
 
 .container1 {
@@ -24,13 +27,13 @@
 }
 
 .icon-perfil {
-    width: 32px;
+    width: 50px;
     margin-right: 20px;
     margin-top: 5px;
 }
 
 .icon-carrinho {
-    width: 40px;
+    width: 50px;
     margin-top: 5px;
     transition: transform 0.5s ease, width 0.5s ease, height 0.5s ease;
 }
@@ -97,7 +100,8 @@
 .c4,
 .c5,
 .c6 {
-    border-radius: 20px;
+    border-radius: 10px;
+    width: 200px;
 }
 
 .c1-a,
@@ -208,7 +212,7 @@
 }
 
 .cadastro-branco {
-    position: relative;
+
     width: 100%;
     max-width: 700px;
     background: white;
@@ -220,7 +224,7 @@
 }
 
 .cad-tcadastro h1 {
-    color: #0096eb;
+    color: #0d6efd;
     font-weight: bold;
     font-size: 2rem;
     text-align: center;
@@ -245,7 +249,7 @@
 
   
 #cad-icon {
-    position: absolute;
+
     top: 50%;
     right: 20px;
     transform: translateY(-50%);
@@ -283,17 +287,9 @@
     box-shadow: 0 0 10px #ffffff88;
 }
 
-.cad-tcadas {
-    text-align: center;
-    font-size: 1.1rem;
-    color: #fff;
-    margin-top: -6.9rem;
-}
-
 .cad-tcadas a {
     color: orange;
     font-weight: bold;
-
 }
 
 .cad-tcadas a:hover {
@@ -301,16 +297,12 @@
 }
 
 .cad-tcadas {
-    position: absolute;
-    top: 75%;
-    left: 50%;
-
-    transform: translateX(-50%);
     text-align: center;
     color: rgb(255, 255, 255);
     font-size: 25px;
     font-weight: bold;
     z-index: 2;
+    margin-top: 20px;
 }
 
 
@@ -328,8 +320,6 @@
     position: absolute;
     top: 100%;
     left: 50%;
-
-    transform: translateX(-50%);
     text-align: center;
     color: rgb(255, 255, 255);
     font-size: 100%;
@@ -338,18 +328,13 @@
 }
 
 .login-branco {
-    position: absolute;
-    top: 15%;
-    left: 50%;
-    transform: translateX(-50%);
     width: 100%;
     max-width: 700px;
-    height: 30rem;
+    height: 22rem;
     background-color: white;
     border-radius: 30px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
     z-index: 0;
-    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -361,14 +346,12 @@
     text-align: center;
     font-size: 24px;
     color: #ffffff;
-    margin-top: 0%;
+    margin-top: 0;
 }
 
 .cad-tlogin a {
     color: orange;
-
     font-weight: bold;
-
 }
 
 .cad-tlogin a:hover {
@@ -379,20 +362,16 @@
 .cad-tloginn {
     text-align: center;
     font-size: 2rem;
-    color: #0096eb;
-    top: 100%;
+    color: #0d6efd; 
     z-index: 3;
     font-weight: bold;
-    margin-top: 25px;
-
-
+    margin: 25px;
 }
 
 .cad-tloginn a {
     color: orange;
     text-decoration: none;
     font-weight: bold;
-
 }
 
 .cad-tloginn a:hover {
@@ -406,7 +385,7 @@
 }
 
 .cad-botao button {
-    background: rgb(39, 187, 255);
+    background: #0d6efd;
     color: white;
     font-weight: bold;
     font-size: 1.2rem;
@@ -458,7 +437,7 @@ body {
 }
 
 .header-club {
-    background: #2495ed;
+    background: #0d6efd;
     padding: 0.1rem 0;
     display: flex;
     justify-content: center;
@@ -613,7 +592,6 @@ body {
 }
 .obs-club{
     justify-self: center;
-    font-weight: bold;
     margin-top: 5px;
     color: rgb(160, 160, 160);
 }

@@ -1,103 +1,134 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="imagens/icones/icon.png" type="image/png" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <title>Cadastro</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <link rel="icon" href="imagens/icones/icon.png" type="image/png">
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
-  <title>Cadastro</title>
-</head>
+  <body class="body-cadastro">
+    <a href="home.html">
+      <div class="cadastro-logo"><img src="imagens/icones/logo.png" /></div>
+    </a>
 
-<body class="body-cadastro">
+    <div class="cadastro-branco">
+      <div class="cad-tcadastro">
+        <h1>Cadastro</h1>
+      </div>
 
-  <a href="home.html">
-    <div class="cadastro-logo"><img src="imagens/icones/logo.png"></div>
-  </a>
+      <div class="cadastro-inputi">
+        <div class="input-group mb-4">
+          <span class="input-group-text"
+            ><i class="bi bi-person-fill"></i
+          ></span>
+          <input
+            type="text"
+            id="nomeCompleto"
+            class="form-control"
+            placeholder="Nome completo"
+            aria-label="Nome completo"
+          />
+        </div>
 
-  <div class="cadastro-branco">
-    <div class="cad-tcadastro">
-      <h1>Cadastro</h1>
+        <div class="input-group mb-4">
+          <span class="input-group-text"
+            ><i class="bi bi-envelope-fill"></i
+          ></span>
+          <input
+            type="text"
+            id="email"
+            class="form-control"
+            placeholder="Email"
+            aria-label="Email"
+          />
+        </div>
+
+        <div class="input-group mb-4 position-relative">
+          <span class="input-group-text"><i class="bi bi-lock-fill"></i></span>
+          <input
+            type="password"
+            id="cad-password"
+            class="form-control"
+            placeholder="Senha"
+          />
+          <i
+            class="bi bi-eye-fill"
+            id="toggleSenhaCad"
+            style="
+              position: absolute;
+              right: 15px;
+              top: 50%;
+              transform: translateY(-50%);
+              cursor: pointer;
+              z-index: 8;
+            "
+          ></i>
+        </div>
+
+        <div class="cad-botao">
+          <button type="submit" onclick="cadastrar()">Entrar</button>
+        </div>
+        <div class="mensagem" id="mensagem"></div>
+      </div>
     </div>
+    <p class="cad-tcadas">Já possui conta? <a href="login.html">Entrar</a></p>
+    <script>
+      const senhaCad = document.getElementById("cad-password");
+      const toggleCad = document.getElementById("toggleSenhaCad");
 
-    <div class="cadastro-inputi">
-      <div class="input-group mb-4">
-        <span class="input-group-text"><i class="bi bi-person-fill"></i></span>
-        <input type="text" id="nomeCompleto" class="form-control" placeholder="Nome completo" aria-label="Nome completo">
-      </div>
+      toggleCad.addEventListener("click", () => {
+        const tipo =
+          senhaCad.getAttribute("type") === "password" ? "text" : "password";
+        senhaCad.setAttribute("type", tipo);
+        toggleCad.classList.toggle("bi-eye-fill");
+        toggleCad.classList.toggle("bi-eye-slash-fill");
+      });
 
-      <div class="input-group mb-4">
-        <span class="input-group-text"><i class="bi bi-envelope-fill"></i></span>
-        <input type="text" id="email" class="form-control" placeholder="Email" aria-label="Email">
-      </div>
+      async function cadastrar() {
+        const nomeCompleto = document.getElementById("nomeCompleto").value;
+        const email = document.getElementById("email").value;
+        const password = document.getElementById("cad-password").value;
+        const mensagem = document.getElementById("mensagem");
 
-      <div class="input-group mb-4 position-relative">
-        <span class="input-group-text"><i class="bi bi-lock-fill"></i></span>
-        <input type="password" id="cad-password" class="form-control" placeholder="Senha">
-        <i class="bi bi-eye-fill" id="toggleSenhaCad"
-           style="position:absolute; right:15px; top:50%; transform:translateY(-50%); cursor:pointer; z-index:8"></i>
-      </div>
-      
+        try {
+          const res = await fetch("http://localhost:3000/entrar/cadastro", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ nomeCompleto, email, password }),
+          });
 
-      
+          const data = await res.json();
 
-      <div class="cad-botao">
-        <button type="submit" onclick="cadastrar()">Entrar</button>
-      </div>
-      <div class="mensagem" id="mensagem"></div>
-    </div>
-  </div>
+          if (!res.ok) {
+            mensagem.textContent = data.error || "Erro no cadastro";
+            mensagem.style.color = "red";
+            return;
+          }
 
-  <p class="cad-tcadas">Já possui conta? <a href="login.html">Entrar</a></p>
+          localStorage.setItem("token", data.token);
+          mensagem.textContent = "Cadastro realizado com sucesso!";
+          mensagem.style.color = "lightgreen";
 
-  <script>
-  const senhaCad = document.getElementById("cad-password");
-const toggleCad = document.getElementById("toggleSenhaCad");
-
-toggleCad.addEventListener("click", () => {
-  const tipo = senhaCad.getAttribute("type") === "password" ? "text" : "password";
-  senhaCad.setAttribute("type", tipo);
-  toggleCad.classList.toggle("bi-eye-fill");
-  toggleCad.classList.toggle("bi-eye-slash-fill");
-});
-
-
-    async function cadastrar() {
-      const nomeCompleto = document.getElementById('nomeCompleto').value
-      const email = document.getElementById('email').value
-      const password = document.getElementById('cad-password').value
-      const mensagem = document.getElementById('mensagem')
-
-      try {
-        const res = await fetch('http://localhost:3000/entrar/cadastro', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ nomeCompleto, email, password })
-        })
-
-        const data = await res.json()
-
-        if (!res.ok) {
-          mensagem.textContent = data.error || 'Erro no cadastro'
-          mensagem.style.color = 'red'
-          return
+          setTimeout(() => (window.location.href = "/"), 1000);
+        } catch (error) {
+          mensagem.textContent = "Erro ao conectar ao servidor";
+          mensagem.style.color = "red";
         }
-
-        localStorage.setItem('token', data.token)
-        mensagem.textContent = 'Cadastro realizado com sucesso!'
-        mensagem.style.color = 'lightgreen'
-
-        setTimeout(() => window.location.href = '/', 1000)
-      } catch (error) {
-        mensagem.textContent = 'Erro ao conectar ao servidor'
-        mensagem.style.color = 'red'
       }
-    }
-  </script>
-
-</body>
-
+    </script>
+  </body>
 </html>
