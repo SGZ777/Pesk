@@ -190,34 +190,55 @@
         crossorigin="anonymous"></script>
 </body>
 <script>
-    const form = document.getElementById('form-buscar');
-    const input = document.getElementById('buscar');
+     
+
     
-    // mapa de termos para páginas
-    const paginas = {
-      "vara": "varas.html",
-      "varas": "varas.html",
-      "isca": "iscas.html",
-      "iscas": "iscas.html",
-      "carretilha": "carretilhas.html",
-      "carretilhas": "carretilhas.html",
-      "molinete": "molinetes.html",
-      "molinetes": "molinetes.html",
-      "linha": "linhas.html",
-      "linhas": "linhas.html",
-      "outro": "outros.html",
-      "outros": "outros.html"
-    };
-    
-     form.addEventListener('submit', e => {// e=evento
-        e.preventDefault();  //nn atualiza a pag
-        const termo = input.value.trim().toLowerCase();
-    
-        if (paginas[termo]) {
-            window.location.href = paginas[termo]; //redireciona
-        } else {
-            alert("Página não encontrada, verifique se escreveu certo.");
+const inputBusca = document.getElementById('buscar');
+
+// Mapeamento de termos e atalhos
+const rotasDeBusca = {
+    "moli": "molinetes.html",
+    "vara": "varas.html",
+    "isca": "iscas.html",
+    "line": "linhas.html",
+    "linh": "linhas.html",
+    "carr": "carretilhas.html",
+    "pesk": "peskclub.html",
+    "ass": "peskclub.html",
+
+    "mol": "molinetes.html",
+    "var": "varas.html",
+    "isc": "iscas.html",
+    "lin": "linhas.html",
+    "lin": "linhas.html",
+    "car": "carretilhas.html",
+    "pes": "peskclub.html",
+    "as": "peskclub.html",
+
+
+
+};
+
+inputBusca.addEventListener('input', (e) => {
+    const termo = e.target.value.toLowerCase().trim();
+
+   //começa a partir de 3 caractees
+    if (termo.length >= 2) {
+        
+       
+        for (let chave in rotasDeBusca) {
+          
+            if (termo.startsWith(chave) || chave.startsWith(termo)) {
+                console.log(`Redirecionando para: ${rotasDeBusca[chave]}`);
+                window.location.href = rotasDeBusca[chave];
+                break; 
+            }
         }
-    });
+    }
+});
+
+
+   
+
     </script>
 </html>
