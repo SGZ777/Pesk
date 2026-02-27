@@ -236,6 +236,7 @@
         crossorigin="anonymous"></script>
 </body>
 <script>
+<<<<<<< HEAD:Servidor/Front/linhas.html
     const form = document.getElementById('form-buscar');
     const input = document.getElementById('buscar');
 
@@ -267,4 +268,59 @@
     });
 </script>
 
+=======
+     
+
+    
+const inputBusca = document.getElementById('buscar');
+
+// Mapeamento de termos e atalhos
+const rotasDeBusca = {
+    "moli": "molinetes.html",
+    "vara": "varas.html",
+    "isca": "iscas.html",
+    "line": "linhas.html",
+    "linh": "linhas.html",
+    "carr": "carretilhas.html",
+    "pesk": "peskclub.html",
+    "ass": "peskclub.html",
+    "outr": "outros.html",
+    "out": "outros.html",
+    
+    "mol": "molinetes.html",
+    "var": "varas.html",
+    "isc": "iscas.html",
+    "lin": "linhas.html",
+    "lin": "linhas.html",
+    "car": "carretilhas.html",
+    "pes": "peskclub.html",
+    "as": "peskclub.html",
+
+
+
+};
+
+inputBusca.addEventListener('input', (e) => {
+    const termo = e.target.value.toLowerCase().trim();
+
+   //começa a partir de 3 caractees
+    if (termo.length >= 2) {
+        
+       
+        for (let chave in rotasDeBusca) {
+          
+            if (termo.startsWith(chave) || chave.startsWith(termo)) {
+                console.log(`Redirecionando para: ${rotasDeBusca[chave]}`);
+                window.location.href = rotasDeBusca[chave];
+                break; 
+            }
+        }
+    }
+});
+
+
+   
+
+    </script>
+>>>>>>> d607ff83be577031f909d8fc185ad017ce1f490c:Servidor/Front-end/linhas.html
 </html>

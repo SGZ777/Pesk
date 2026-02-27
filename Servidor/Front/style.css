@@ -306,7 +306,6 @@ html, body {
 }
 
 
-
 /*↑↑↑↑↑↑↑↑↑↑↑↑ ------------------Cadastro --------------------------------- Cadastro ----------------------------------- Cadastro --------------- Cadastro-↑↑↑↑↑↑↑↑↑↑↑↑*/
 /*↓↓↓↓↓↓↓↓↓↓↓↓ ------------------Login ------------------------------------ Login -------------------------------------- Login ------------------ Login----↓↓↓↓↓↓↓↓↓↓↓↓*/
 
@@ -317,14 +316,12 @@ html, body {
 }
 
 .cad-tlogin {
-    position: absolute;
-    top: 100%;
+    padding-top: 50px;
     left: 50%;
     text-align: center;
     color: rgb(255, 255, 255);
     font-size: 100%;
     font-weight: bold;
-    z-index: 2;
 }
 
 .login-branco {
@@ -700,8 +697,6 @@ z-index: 10;
 }
 
 .sobre-branco {
-    position: absolute;
-    top: 15%;
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
