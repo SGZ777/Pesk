@@ -22,14 +22,16 @@ router.get('/:id', async (req, res) => {
         const produto = rows[0]
         if (!produto) return res.status(404).send('Produto não encontrado.')
 
-        fs.readFile('./Front-end/telaproduto.html', 'utf8', (err, html) => {
-            if (err) return res.status(500).send('Erro ao carregar página.')
+        fs.readFile('./Front/telaproduto.html', 'utf8', (err, html) => {
+            if (err) return (
+                res.status(500).send('Erro ao carregar página.')
+            )
 
             const paginaFinal = html
                 .replaceAll('[nome]', produto.nome)
                 .replaceAll('[descricao]', produto.descr)
-                .replaceAll('[preco]', produto.preco.toFixed(2))
-                .replaceAll('[parcelas]', (produto.preco / 5).toFixed(2))
+                .replaceAll('[preco]', (parseFloat(produto.preco) || 0).toFixed(2))
+                .replaceAll('[parcelas]', ((parseFloat(produto.preco) || 0) / 5).toFixed(2))
                 .replaceAll('imagens[0]', JSON.parse(produto.imagens)[0])
                 .replaceAll('imagens[1]', JSON.parse(produto.imagens)[1])
                 .replaceAll('imagens[2]', JSON.parse(produto.imagens)[2])

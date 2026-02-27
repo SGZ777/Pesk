@@ -1,182 +1,134 @@
 <!doctype html>
 <html lang="pt-br">
-  <head>
-    <script src="https://unpkg.com/imask"></script>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="icon" href="imagens/icones/icon.png" type="image/png" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
-      rel="stylesheet"
-    />
-    <title>Cadastro</title>
-  </head>
 
-  <body class="body-cadastro">
-    <a href="home.html">
-      <div class="cadastro-logo"><img src="imagens/icones/logo.png" /></div>
-    </a>
+<head>
+  <script src="https://unpkg.com/imask"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="imagens/icones/icon.png" type="image/png" />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+  <title>Cadastro</title>
+</head>
 
-    <div class="cadastro-branco">
-      <div class="cad-tcadastro">
-        <h1>Cadastro</h1>
+<body class="body-cadastro">
+  <a href="home.html">
+    <div class="cadastro-logo"><img src="imagens/icones/logo.png" /></div>
+  </a>
+
+  <div class="cadastro-branco">
+    <div class="cad-tcadastro">
+      <h1>Cadastro</h1>
+    </div>
+
+    <div class="cadastro-inputi">
+      <div class="input-group mb-4">
+        <span class="input-group-text"><i class="bi bi-person-fill"></i></span>
+        <input type="text" id="nomeCompleto" class="form-control" placeholder="Nome completo"
+          aria-label="Nome completo" />
+      </div>
+      <div class="input-group mb-4">
+        <span class="input-group-text"><i class="bi bi-person-fill"></i></span>
+        <input type="text" id="CPF" class="form-control" placeholder="CPF" aria-label="CPF" />
       </div>
 
-      <div class="cadastro-inputi">
-        <div class="input-group mb-4">
-          <span class="input-group-text"
-            ><i class="bi bi-person-fill"></i
-          ></span>
-          <input
-            type="text"
-            id="nomeCompleto"
-            class="form-control"
-            placeholder="Nome completo"
-            aria-label="Nome completo"
-          />
-        </div>
-        <div class="input-group mb-4">
-          <span class="input-group-text"
-            ><i class="bi bi-person-fill"></i
-          ></span>
-          <input
-            type="text"
-            id="CPF"
-            class="form-control"
-            placeholder="CPF"
-            aria-label="CPF"
-            maxlength="11"
-            minlength="11"
-          />
-        </div>
+      <div class="input-group mb-4">
+        <span class="input-group-text"><i class="bi bi-person-fill"></i></span>
+        <input type="tel" id="numeroTelefone" class="form-control" placeholder="Número de telefone (com DDD)"
+          aria-label="Número de telefone (com DDD)" />
+      </div>
 
-        <div class="input-group mb-4">
-          <span class="input-group-text"
-            ><i class="bi bi-person-fill"></i
-          ></span>
-          <input
-            type="tel"
-             id="numeroTelefone"
-             class="form-control"
-              placeholder="Número de telefone (com DDD)"
-  aria-label="Número de telefone (com DDD)"
-          />
-        </div>
+      <div class="input-group mb-4">
+        <span class="input-group-text"><i class="bi bi-envelope-fill"></i></span>
+        <input type="text" id="email" class="form-control" placeholder="Email" aria-label="Email" />
+      </div>
 
-        <div class="input-group mb-4">
-          <span class="input-group-text"
-            ><i class="bi bi-envelope-fill"></i
-          ></span>
-          <input
-            type="text"
-            id="email"
-            class="form-control"
-            placeholder="Email"
-            aria-label="Email"
-          />
-        </div>
-
-        <div class="input-group mb-4 position-relative">
-          <span class="input-group-text"><i class="bi bi-lock-fill"></i></span>
-          <input
-            type="password"
-            id="cad-password"
-            class="form-control"
-            placeholder="Senha"
-          />
-          <i
-            class="bi bi-eye-fill"
-            id="toggleSenhaCad"
-            style="
+      <div class="input-group mb-4 position-relative">
+        <span class="input-group-text"><i class="bi bi-lock-fill"></i></span>
+        <input type="password" id="cad-password" class="form-control" placeholder="Senha" />
+        <i class="bi bi-eye-fill" id="toggleSenhaCad" style="
               position: absolute;
               right: 15px;
               top: 50%;
               transform: translateY(-50%);
               cursor: pointer;
               z-index: 8;
-            "
-          ></i>
-        </div>
-
-        <div class="cad-botao">
-          <button type="submit" onclick="cadastrar()">Cadastrar</button>
-        </div>
-        <div class="mensagem" id="mensagem"></div>
+            "></i>
       </div>
+
+      <div class="cad-botao">
+        <button type="submit" onclick="cadastrar()">Cadastrar</button>
+      </div>
+      <div class="mensagem" id="mensagem"></div>
     </div>
-    <p class="cad-tcadas">Já possui conta? <a href="login.html">Entrar</a></p>
-    <script>
-      const senhaCad = document.getElementById("cad-password");
-      const toggleCad = document.getElementById("toggleSenhaCad");
+  </div>
+  <p class="cad-tcadas">Já possui conta? <a href="login.html">Entrar</a></p>
+  <script>
+    const senhaCad = document.getElementById("cad-password");
+    const toggleCad = document.getElementById("toggleSenhaCad");
 
-      toggleCad.addEventListener("click", () => {
-        const tipo =
-          senhaCad.getAttribute("type") === "password" ? "text" : "password";
-        senhaCad.setAttribute("type", tipo);
-        toggleCad.classList.toggle("bi-eye-fill");
-        toggleCad.classList.toggle("bi-eye-slash-fill");
-      });
-
-      async function cadastrar() {
-        const nomeCompleto = document.getElementById("nomeCompleto").value;
-        const email = document.getElementById("email").value;
-        const password = document.getElementById("cad-password").value;
-        const mensagem = document.getElementById("mensagem");
-
-        try {
-          const res = await fetch("http://localhost:3000/entrar/cadastro", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ nomeCompleto, email, password }),
-          });
-
-          const data = await res.json();
-
-          if (!res.ok) {
-            mensagem.textContent = data.error || "Erro no cadastro";
-            mensagem.style.color = "red";
-            return;
-          }
-
-          localStorage.setItem("token", data.token);
-          mensagem.textContent = "Cadastro realizado com sucesso!";
-          mensagem.style.color = "lightgreen";
-
-          setTimeout(() => (window.location.href = "/"), 1000);
-        } catch (error) {
-          mensagem.textContent = "Erro ao conectar ao servidor";
-          mensagem.style.color = "red";
-        }
-      }
-//MASCARA (CELULAR E CPF)
-document.addEventListener("DOMContentLoaded", () => {
-  // Máscara do CPF
-  const inputCPF = document.getElementById('CPF');
-  if (inputCPF) {
-    IMask(inputCPF, { mask: '000.000.000-00' });
-  }
-
-  // Máscara do Telefone 
-  const inputTelefone = document.getElementById('numeroTelefone');
-  if (inputTelefone) {
-    IMask(inputTelefone, {
-      mask: [
-
-        { mask: '(00) 00000-0000' } 
-      ]
+    toggleCad.addEventListener("click", () => {
+      const tipo =
+        senhaCad.getAttribute("type") === "password" ? "text" : "password";
+      senhaCad.setAttribute("type", tipo);
+      toggleCad.classList.toggle("bi-eye-fill");
+      toggleCad.classList.toggle("bi-eye-slash-fill");
     });
-  }
-});
 
-    </script>
-  </body>
+    async function cadastrar() {
+      const nomeCompleto = document.getElementById("nomeCompleto").value;
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("cad-password").value;
+      const mensagem = document.getElementById("mensagem");
+
+      try {
+        const res = await fetch("http://localhost:3000/entrar/cadastro", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ nomeCompleto, email, password, CPF,  numeroTelefone}),
+        });
+
+        const data = await res.json();
+
+        if (!res.ok) {
+          mensagem.textContent = data.error || "Erro no cadastro";
+          mensagem.style.color = "red";
+          return;
+        }
+
+        localStorage.setItem("token", data.token);
+        mensagem.textContent = "Cadastro realizado com sucesso!";
+        mensagem.style.color = "lightgreen";
+
+        setTimeout(() => (window.location.href = "/"), 1000);
+      } catch (error) {
+        mensagem.textContent = "Erro ao conectar ao servidor";
+        mensagem.style.color = "red";
+      }
+    }
+    //MASCARA (CELULAR E CPF)
+    document.addEventListener("DOMContentLoaded", () => {
+      // Máscara do CPF
+      const inputCPF = document.getElementById('CPF');
+      if (inputCPF) {
+        IMask(inputCPF, { mask: '000.000.000-00' });
+      }
+
+      // Máscara do Telefone 
+      const inputTelefone = document.getElementById('numeroTelefone');
+      if (inputTelefone) {
+        IMask(inputTelefone, {
+          mask: [
+
+            { mask: '(00) 00000-0000' }
+          ]
+        });
+      }
+    });
+
+  </script>
+</body>
+
 </html>

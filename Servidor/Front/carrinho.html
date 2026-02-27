@@ -127,7 +127,7 @@
         card.className = "col-12 col-md-8";
         card.innerHTML = `<div class="card p-3 shadow-sm d-flex flex-row align-items-center justify-content-between">
                     <div class="d-flex align-items-center">
-                        <img src="/imagens/produtos/${p.imagens[0]}" alt="${p.nome}" class="img-fluid rounded me-3" style="width:80px;height:80px;">
+                        <img src="/imagens/produtos/${JSON.parse(p.imagens)[0]}" alt="${p.nome}" class="img-fluid rounded me-3" style="width:80px;height:80px;">
                         <div>
                             <h6 class="fw-bold mb-1">${p.nome}</h6>
                             <p class="text-muted mb-1">${p.descricao || ""}</p>

@@ -33,6 +33,7 @@ router.get('/', autenticar, async (req, res) => {
              WHERE ip.nro_pedido = ?`,
             [nroPedido]
         )
+        console.log(itens)
         res.json(itens)
     } catch (err) {
         console.error(err)
