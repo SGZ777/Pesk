@@ -1,81 +1,65 @@
 const express = require('express')
 const router = express.Router()
-const fs = require('fs')
-const { console } = require('inspector')
-const path = require('path')
-const { json } = require('stream/consumers')
+const pool = require('../config/database')
 const tokensAtivos = require('../middlewares/token')
-
+const bcrypt = require('bcryptjs')
 
 router.use(express.json())
 
 function gerarToken() {
-    return Math.random().toString(36).substr(2) + Date.now().toString(36);
+    return Math.random().toString(36).substr(2) + Date.now().toString(36)
 }
 
-router.post('/login', (req, res) => {
-    // Coleta os dados enviados do FrontEnd
+router.post('/login', async (req, res) => {
     const { email, password } = req.body
-    console.log(email, password)
+    if (!email || !password) return res.status(400).json({ error: 'Email e senha obrigatórios.' })
 
-    fs.readFile('./Back-end/data/users.json', 'utf8', (err, users) => {
-        if (err) {
-            res.status(500).send(`Falha ao ler o arquivo JSON: ${err}`)
-            console.error(`Falha ao ler o arquivo JSON: ${err}`)
-            return
-        }
-        const usuarios = JSON.parse(users)
-        // Verifica se o usuario coincide com alfum do banco de dados do Json
-        const usuario = usuarios.find(function (user) {
-            return (user.email === email && user.password === password)
-        })
-        if (!usuario) return res.status(401).json({ error: "Usuário ou senha incorretos" })
+    try {
+        const [rows] = await pool.query('SELECT * FROM user WHERE email = ?', [email])
+        const usuario = rows[0]
 
-        // Gera o Token para verificar o login do usuario
+        if (!usuario) return res.status(401).json({ error: 'Usuário ou senha incorretos' })
+
+        const senhaCorreta = await bcrypt.compare(password, usuario.senha)
+        if (!senhaCorreta) return res.status(401).json({ error: 'Usuário ou senha incorretos' })
+
         const token = gerarToken()
-        tokensAtivos[token] = usuario.id
-        res.json({ token })
-    })
+        tokensAtivos[token] = { id: usuario.id, role: usuario.role }
+
+        res.json({ token, role: usuario.role, nome: usuario.nome })
+
+    } catch (err) {
+        console.error(err)
+        res.status(500).json({ error: 'Erro interno do servidor' })
+    }
 })
 
-router.post('/cadastro', (req, res) => {
-    // coleta os dados Vindo do frontEnd
-    const { nomeCompleto, email, password } = req.body;
-    console.log('sla', email)
+router.post('/cadastro', async (req, res) => {
+    const { nomeCompleto, email, password, CPF, tel } = req.body
+    if (!nomeCompleto || !email || !password || !CPF) {
+        return res.status(400).json({ error: 'Campos obrigatórios faltando.' })
+    }
 
-    fs.readFile('./Back-end/data/users.json', 'utf8', (err, data) => {
-        if (err) {
-            console.error(`Falha ao ler o arquivo JSON: ${err}`);
-            return res.status(500).json({ error: 'Falha ao ler o arquivo JSON' });
-        }
-        try {
-            const usuarios = JSON.parse(data);
-            console.log('sla', nomeCompleto)
-            // Verifica se usuario já existe
-            if (usuarios.some(u => u.email === email)) {
-                return res.status(400).json({ error: 'Email já cadastrado' });
-            }
-            const novoUsuario = {
-                id: usuarios.length + 1, email: email, password: password, nome: nomeCompleto, produtos: []
-            }
-            usuarios.push(novoUsuario)
-            // Adiciona o novo user ao Json
-            fs.writeFile('./Back-end/data/users.json', JSON.stringify(usuarios, null, 2), err => {
-                if (err) {
-                    console.error(`Falha ao escrever o arquivo: ${err}`);
-                    return res.status(500).json({ error: 'Falha ao criar usuário' });
-                }
+    try {
+        const [existe] = await pool.query('SELECT id FROM user WHERE email = ?', [email])
+        if (existe.length > 0) return res.status(400).json({ error: 'Email já cadastrado' })
 
-                // Gera o Token para verificar o login do usuario
-                const token = gerarToken();
-                tokensAtivos[token] = novoUsuario.id;
-                res.json({ token });
-            });
-        } catch (error) {
-            console.error("Erro ao converter JSON:", error);
-            res.status(500).json({ error: 'Erro ao converter o arquivo JSON' });
-        }
-    });
+        const hash = await bcrypt.hash(password, 10)
+
+        const [result] = await pool.query(
+            'INSERT INTO user (nome, email, CPF, tel, senha, role) VALUES (?, ?, ?, ?, ?, ?)',
+            [nomeCompleto, email, CPF || '00000000000', tel || null, hash, 'user']
+        )
+
+        const token = gerarToken()
+        tokensAtivos[token] = { id: result.insertId, role: 'user' }
+
+        res.json({ token, role: 'user', nome: nomeCompleto })
+
+    } catch (err) {
+        console.error(err)
+        res.status(500).json({ error: 'Erro interno do servidor' })
+    }
 })
 
 module.exports = router

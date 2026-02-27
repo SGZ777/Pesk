@@ -13,6 +13,40 @@
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
 
+<script>
+    // Cole este script no final do <body> de cada página que tem o header
+    (function ajustarHeader() {
+        const token = localStorage.getItem('token')
+        const role = localStorage.getItem('role')
+
+        if (!token) return // não logado: mostra apenas "Entrar" (padrão)
+
+        // Está logado: esconde botão de login, mostra sair
+        const elLogin = document.getElementById('btn-login')
+        const elLogout = document.getElementById('btn-logout')
+        if (elLogin) elLogin.style.display = 'none'
+        if (elLogout) elLogout.style.display = 'inline-block'
+
+        if (role === 'admin') {
+            // Admin: mostra link do painel, esconde carrinho e meus pedidos
+            const el = document.getElementById('link-admin')
+            if (el) el.style.display = 'inline-block'
+
+        } else if (role === 'user') {
+            // Usuário comum: mostra carrinho e meus pedidos
+            const elPedidos = document.getElementById('link-meus-pedidos')
+            const elCarrinho = document.getElementById('link-carrinho')
+            if (elPedidos) elPedidos.style.display = 'inline-block'
+            if (elCarrinho) elCarrinho.style.display = 'inline-block'
+        }
+    })()
+
+    function logout() {
+        localStorage.clear()
+        window.location.href = '/login.html'
+    }
+</script>
+
 <body class="body-home">
     <header class="p-3 text-bg-primary header-home">
         <div class="container d-flex align-items-center justify-content-between flex-wrap">
@@ -29,17 +63,63 @@
             <div class="col-13">
                 <a href="../peskclub.html">
                     <button type="button" style="background-color: #ff8b43 !important; border: none;"
-                        class="btn btn-warning me-2 assineja">Assine-já<span
-                            class="estrela">✦</span></button>
+                        class="btn btn-warning me-2 assineja">Assine-já<span class="estrela">✦</span></button>
                 </a>
             </div>
 
-            <div class="col-14">
-                <a href="../cadastro.html"><img src="../imagens/icones/icon-perfil.png" class="icon-perfil"></a>
-                <a href="../carrinho.html"><img src="../imagens/icones/icon-carrinho.png" class="icon-carrinho"></a>
-            </div>
+            <nav>
+                <a href="/">Início</a>
+                <a href="/catalogo">Catálogo</a>
+
+                <!-- Visível apenas para usuários comuns (role = 'user') -->
+                <a href="/meus-pedidos.html" id="link-meus-pedidos" style="display:none">Meus Pedidos</a>
+
+                <!-- Visível apenas para admins (role = 'admin') -->
+                <a href="/admin.html" id="link-admin" style="display:none">⚡ Painel Admin</a>
+
+                <!-- Troque pelo seu link de carrinho existente -->
+                <a href="/carrinho.html" id="link-carrinho" style="display:none">Carrinho</a>
+
+                <!-- Botões de login/logout -->
+                <a href="/login.html" id="btn-login">Entrar</a>
+                <button id="btn-logout" style="display:none" onclick="logout()">Sair</button>
+            </nav>
         </div>
     </header>
+
+    <script>
+        // Cole este script no final do <body> de cada página que tem o header
+        (function ajustarHeader() {
+            const token = localStorage.getItem('token')
+            const role = localStorage.getItem('role')
+
+            if (!token) return // não logado: mostra apenas "Entrar" (padrão)
+
+            // Está logado: esconde botão de login, mostra sair
+            const elLogin = document.getElementById('btn-login')
+            const elLogout = document.getElementById('btn-logout')
+            if (elLogin) elLogin.style.display = 'none'
+            if (elLogout) elLogout.style.display = 'inline-block'
+
+            if (role === 'admin') {
+                // Admin: mostra link do painel, esconde carrinho e meus pedidos
+                const el = document.getElementById('link-admin')
+                if (el) el.style.display = 'inline-block'
+
+            } else if (role === 'user') {
+                // Usuário comum: mostra carrinho e meus pedidos
+                const elPedidos = document.getElementById('link-meus-pedidos')
+                const elCarrinho = document.getElementById('link-carrinho')
+                if (elPedidos) elPedidos.style.display = 'inline-block'
+                if (elCarrinho) elCarrinho.style.display = 'inline-block'
+            }
+        })()
+
+        function logout() {
+            localStorage.clear()
+            window.location.href = '/login.html'
+        }
+    </script>
 
     <div class="container"
         style="margin-top: 75px; background-color: white; padding-top: 50px; padding-bottom: 35px; border-radius: 20px;">
@@ -71,13 +151,11 @@
                         </div>
                         <div class="carousel-item"
                             style="height: 500px; object-fit: cover; border-radius: 10px; align-items: center;">
-                            <img src="../imagens/Produtos/imagens[1]" class="d-block w-100"
-                                alt="[nome] - Detalhe 1">
+                            <img src="../imagens/Produtos/imagens[1]" class="d-block w-100" alt="[nome] - Detalhe 1">
                         </div>
                         <div class="carousel-item"
                             style="height: 500px; object-fit: cover; border-radius: 10px; align-items: center;">
-                            <img src="../imagens/Produtos/imagens[2]" class="d-block w-100"
-                                alt="[nome] - Detalhe 2">
+                            <img src="../imagens/Produtos/imagens[2]" class="d-block w-100" alt="[nome] - Detalhe 2">
                         </div>
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"

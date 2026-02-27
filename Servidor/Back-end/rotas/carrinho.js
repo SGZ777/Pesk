@@ -1,141 +1,158 @@
 const express = require('express')
 const router = express.Router()
-const fs = require('fs')
-const path = require('path')
-const autenticar = require('../middlewares/autenticacao')
+const pool = require('../config/database')
+const { autenticar } = require('../middlewares/autenticacao')
 
-router.use(express.json());
 
-const usersPath = path.join(__dirname, '../data/users.json');
-const catalogoPath = path.join(__dirname, '../data/catalogo.json')
+router.use(express.json())
 
-router.get('/', autenticar, (req, res) => {
-    fs.readFile(usersPath, 'utf8', (err, usersData) => {
-        if (err) return res.status(500).json({ mensagem: 'Erro ao ler usuários.' });
+// Busca ou cria o pedido-carrinho do usuário
+async function getPedidoCarrinho(userId) {
+    const [rows] = await pool.query(
+        "SELECT nro_pedido FROM pedido WHERE id_cliente = ? AND status = 'Carrinho' LIMIT 1",
+        [userId]
+    )
+    if (rows.length > 0) return rows[0].nro_pedido
 
-        const usuarios = JSON.parse(usersData);
-        const usuario = usuarios.find(u => u.id === req.usuarioId);
-        if (!usuario) return res.status(404).json({ mensagem: 'Usuário não encontrado.' });
+    const [result] = await pool.query(
+        "INSERT INTO pedido (id_cliente, status) VALUES (?, 'Carrinho')",
+        [userId]
+    )
+    return result.insertId
+}
 
-        fs.readFile(catalogoPath, 'utf8', (err, catalogoData) => {
-            if (err) return res.status(500).json({ mensagem: 'Erro ao ler catálogo.' });
-            const catalogo = JSON.parse(catalogoData);
+// GET /carrinho — listar itens
+router.get('/', autenticar, async (req, res) => {
+    try {
+        const nroPedido = await getPedidoCarrinho(req.usuarioId)
 
-            // Conta quantidades
-            const counts = {};
-            usuario.produtos.forEach(id => counts[id] = (counts[id] || 0) + 1);
-
-            // Monta lista detalhada, caso haja produtos repetidos eles são contados no mesmo 
-            const carrinhoDetalhado = Object.entries(counts).map(([id, qtd]) => {
-                const produto = catalogo.find(p => p.id === parseInt(id));
-                if (!produto) return null;
-                return { ...produto, quantidade: qtd };
-            }).filter(Boolean);
-
-            res.json(carrinhoDetalhado);
-        });
-    });
-});
-
-router.post('/adicionar', autenticar, (req, res) => {
-    const { produtoId } = req.body;
-
-    if (!produtoId) {
-        return res.status(400).json({ mensagem: 'Cliente ou produto não informado.' });
+        const [itens] = await pool.query(
+            `SELECT p.id, p.nome, p.descr as descricao, p.preco, ip.qtd as quantidade
+             FROM item_pedido ip
+             JOIN produto p ON p.id = ip.id_produto
+             WHERE ip.nro_pedido = ?`,
+            [nroPedido]
+        )
+        res.json(itens)
+    } catch (err) {
+        console.error(err)
+        res.status(500).json({ mensagem: 'Erro ao buscar carrinho.' })
     }
+})
 
-    // Adiciona um novo produto ao carrinho, podendo ser repetido
+// POST /carrinho/adicionar
+router.post('/adicionar', autenticar, async (req, res) => {
+    const { produtoId } = req.body
+    if (!produtoId) return res.status(400).json({ mensagem: 'Produto não informado.' })
 
-    fs.readFile('./Back-end/data/users.json', 'utf8', (err, data) => {
-        if (err) {
-            console.error('Erro ao ler arquivo de clientes:', err)
-            res.status(500).json({ mensagem: 'Erro ao ler arquivo de clientes.' })
-            return
+    try {
+        const nroPedido = await getPedidoCarrinho(req.usuarioId)
+
+        const [existe] = await pool.query(
+            'SELECT qtd FROM item_pedido WHERE nro_pedido = ? AND id_produto = ?',
+            [nroPedido, produtoId]
+        )
+
+        if (existe.length > 0) {
+            await pool.query(
+                'UPDATE item_pedido SET qtd = qtd + 1 WHERE nro_pedido = ? AND id_produto = ?',
+                [nroPedido, produtoId]
+            )
+        } else {
+            await pool.query(
+                'INSERT INTO item_pedido (nro_pedido, id_cliente, id_produto, qtd) VALUES (?, ?, ?, 1)',
+                [nroPedido, req.usuarioId, produtoId]
+            )
         }
 
-        let clientes = JSON.parse(data);
-        const cliente = clientes.find(c => c.id === req.usuarioId)
+        res.json({ mensagem: 'Produto adicionado ao carrinho!' })
+    } catch (err) {
+        console.error(err)
+        res.status(500).json({ mensagem: 'Erro ao adicionar produto.' })
+    }
+})
 
-        if (!cliente) return res.status(404).json({ mensagem: 'Cliente não encontrado.' });
+// POST /carrinho/remover — remove 1 unidade
+router.post('/remover', autenticar, async (req, res) => {
+    const { produtoId } = req.body
+    if (!produtoId) return res.status(400).json({ mensagem: 'Produto não informado.' })
 
+    try {
+        const nroPedido = await getPedidoCarrinho(req.usuarioId)
 
-        cliente.produtos.push(produtoId);
+        const [item] = await pool.query(
+            'SELECT qtd FROM item_pedido WHERE nro_pedido = ? AND id_produto = ?',
+            [nroPedido, produtoId]
+        )
 
-        fs.writeFile('./Back-end/data/users.json', JSON.stringify(clientes, null, 2), 'utf8', (err) => {
-            if (err) return res.status(500).json({ mensagem: 'Erro ao salvar carrinho.' });
+        if (item.length === 0) return res.status(404).json({ mensagem: 'Produto não encontrado no carrinho.' })
 
-            res.json({ mensagem: 'Produto adicionado ao carrinho com sucesso!' });
-        });
-    })
-});
-
-router.post('/remover', autenticar, (req, res) => {
-    const { produtoId } = req.body;
-    if (!produtoId) return res.status(400).json({ mensagem: 'Produto não informado.' });
-
-    fs.readFile(usersPath, 'utf8', (err, data) => {
-        if (err) return res.status(500).json({ mensagem: 'Erro ao ler usuários.' });
-
-        const clientes = JSON.parse(data);
-        const cliente = clientes.find(c => c.id === req.usuarioId);
-        if (!cliente) return res.status(404).json({ mensagem: 'Usuário não encontrado.' });
-
-        const index = cliente.produtos.indexOf(produtoId);
-        if (index !== -1) cliente.produtos.splice(index, 1);
-
-        fs.writeFile(usersPath, JSON.stringify(clientes, null, 2), 'utf8', err => {
-            if (err) return res.status(500).json({ mensagem: 'Erro ao salvar carrinho.' });
-            res.json({ mensagem: 'Produto removido com sucesso.' });
-        });
-    });
-});
-
-router.post('/remover-todos', autenticar, (req, res) => {
-    const { produtoId } = req.body;
-    if (!produtoId) return res.status(400).json({ mensagem: 'Produto não informado.' });
-
-    fs.readFile(usersPath, 'utf8', (err, data) => {
-        if (err) return res.status(500).json({ mensagem: 'Erro ao ler usuários.' });
-
-        const clientes = JSON.parse(data);
-        const cliente = clientes.find(c => c.id === req.usuarioId);
-        if (!cliente) return res.status(404).json({ mensagem: 'Usuário não encontrado.' });
-
-        // Remove TODAS as ocorrências do produto
-        const produtosAntes = cliente.produtos.length;
-        cliente.produtos = cliente.produtos.filter(id => id !== produtoId);
-        const produtosDepois = cliente.produtos.length;
-
-        if (produtosAntes === produtosDepois) {
-            return res.status(404).json({ mensagem: 'Produto não encontrado no carrinho.' });
+        if (item[0].qtd > 1) {
+            await pool.query(
+                'UPDATE item_pedido SET qtd = qtd - 1 WHERE nro_pedido = ? AND id_produto = ?',
+                [nroPedido, produtoId]
+            )
+        } else {
+            await pool.query(
+                'DELETE FROM item_pedido WHERE nro_pedido = ? AND id_produto = ?',
+                [nroPedido, produtoId]
+            )
         }
 
-        fs.writeFile(usersPath, JSON.stringify(clientes, null, 2), 'utf8', err => {
-            if (err) return res.status(500).json({ mensagem: 'Erro ao salvar carrinho.' });
-            res.json({ mensagem: 'Todos os produtos removidos com sucesso.' });
-        });
-    });
-});
+        res.json({ mensagem: 'Produto removido com sucesso.' })
+    } catch (err) {
+        console.error(err)
+        res.status(500).json({ mensagem: 'Erro ao remover produto.' })
+    }
+})
 
-router.post('/alterar-quantidade', autenticar, (req, res) => {
-    const { produtoId, quantidade } = req.body;
-    if (!produtoId || quantidade < 0) return res.status(400).json({ mensagem: 'Dados inválidos.' });
+// POST /carrinho/remover-todos — remove todas as unidades do produto
+router.post('/remover-todos', autenticar, async (req, res) => {
+    const { produtoId } = req.body
+    if (!produtoId) return res.status(400).json({ mensagem: 'Produto não informado.' })
 
-    fs.readFile(usersPath, 'utf8', (err, data) => {
-        if (err) return res.status(500).json({ mensagem: 'Erro ao ler usuários.' });
+    try {
+        const nroPedido = await getPedidoCarrinho(req.usuarioId)
 
-        const clientes = JSON.parse(data);
-        const cliente = clientes.find(c => c.id === req.usuarioId);
-        if (!cliente) return res.status(404).json({ mensagem: 'Usuário não encontrado.' });
+        await pool.query(
+            'DELETE FROM item_pedido WHERE nro_pedido = ? AND id_produto = ?',
+            [nroPedido, produtoId]
+        )
 
-        cliente.produtos = cliente.produtos.filter(id => id !== produtoId);
-        for (let i = 0; i < quantidade; i++) cliente.produtos.push(produtoId);
+        res.json({ mensagem: 'Todos os produtos removidos com sucesso.' })
+    } catch (err) {
+        console.error(err)
+        res.status(500).json({ mensagem: 'Erro ao remover produtos.' })
+    }
+})
 
-        fs.writeFile(usersPath, JSON.stringify(clientes, null, 2), 'utf8', err => {
-            if (err) return res.status(500).json({ mensagem: 'Erro ao salvar carrinho.' });
-            res.json({ mensagem: 'Quantidade atualizada com sucesso.' });
-        });
-    });
-});
+// POST /carrinho/alterar-quantidade
+router.post('/alterar-quantidade', autenticar, async (req, res) => {
+    const { produtoId, quantidade } = req.body
+    if (!produtoId || quantidade < 0) return res.status(400).json({ mensagem: 'Dados inválidos.' })
+
+    try {
+        const nroPedido = await getPedidoCarrinho(req.usuarioId)
+
+        if (quantidade === 0) {
+            await pool.query(
+                'DELETE FROM item_pedido WHERE nro_pedido = ? AND id_produto = ?',
+                [nroPedido, produtoId]
+            )
+        } else {
+            await pool.query(
+                `INSERT INTO item_pedido (nro_pedido, id_cliente, id_produto, qtd)
+                 VALUES (?, ?, ?, ?)
+                 ON DUPLICATE KEY UPDATE qtd = ?`,
+                [nroPedido, req.usuarioId, produtoId, quantidade, quantidade]
+            )
+        }
+
+        res.json({ mensagem: 'Quantidade atualizada com sucesso.' })
+    } catch (err) {
+        console.error(err)
+        res.status(500).json({ mensagem: 'Erro ao atualizar quantidade.' })
+    }
+})
 
 module.exports = router

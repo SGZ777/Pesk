@@ -12,6 +12,7 @@
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
 
+
 <body class="body-home">
     <header class="p-3 text-bg-primary header-home">
         <div class="container d-flex align-items-center justify-content-between flex-wrap">
@@ -20,151 +21,199 @@
             </a>
 
             <form id="form-buscar" class="d-flex ms-1 flex-grow-1 search" role="search" style="max-width: 500px;">
-                <input type="search" id="buscar" class="form-control form-control-dark text-bg-light" placeholder="Buscar">
+                <input type="search" id="buscar" class="form-control form-control-dark text-bg-light"
+                    placeholder="Buscar">
             </form>
+
 
             <div class="col-13">
                 <a href="peskclub.html">
                     <button type="button" style="background-color: #ff8b43 !important; border: none;"
-                        class="btn btn-warning me-2 assineja">Assine-já<span
-                            class="estrela">✦</span></button>
+                        class="btn btn-warning me-2 assineja">Assine-já<span class="estrela">✦</span></button>
                 </a>
             </div>
 
-            <div class="col-14">
-                <a href="cadastro.html"><img src="imagens/icones/icon-perfil.png" class="icon-perfil"></a>
-                <a href="carrinho.html"><img src="imagens/icones/icon-carrinho.png" class="icon-carrinho"></a>
-            </div>
+            <nav>
+                <a href="/">Início</a>
+                <a href="/catalogo">Catálogo</a>
+
+                <!-- Visível apenas para usuários comuns (role = 'user') -->
+                <a href="/meus-pedidos.html" id="link-meus-pedidos" style="display:none">Meus Pedidos</a>
+
+                <!-- Visível apenas para admins (role = 'admin') -->
+                <a href="/admin.html" id="link-admin" style="display:none">⚡ Painel Admin</a>
+
+                <!-- Troque pelo seu link de carrinho existente -->
+                <a href="/carrinho.html" id="link-carrinho" style="display:none">Carrinho</a>
+
+                <!-- Botões de login/logout -->
+                <a href="/login.html" id="btn-login">Entrar</a>
+                <button id="btn-logout" style="display:none" onclick="logout()">Sair</button>
+            </nav>
         </div>
     </header>
 
-    <h1 class="title-categorias">Molinetes</h1>
+    <script>
+        // Cole este script no final do <body> de cada página que tem o header
+        (function ajustarHeader() {
+            const token = localStorage.getItem('token')
+            const role = localStorage.getItem('role')
+
+            if (!token) return // não logado: mostra apenas "Entrar" (padrão)
+
+            // Está logado: esconde botão de login, mostra sair
+            const elLogin = document.getElementById('btn-login')
+            const elLogout = document.getElementById('btn-logout')
+            if (elLogin) elLogin.style.display = 'none'
+            if (elLogout) elLogout.style.display = 'inline-block'
+
+            if (role === 'admin') {
+                // Admin: mostra link do painel, esconde carrinho e meus pedidos
+                const el = document.getElementById('link-admin')
+                if (el) el.style.display = 'inline-block'
+
+            } else if (role === 'user') {
+                // Usuário comum: mostra carrinho e meus pedidos
+                const elPedidos = document.getElementById('link-meus-pedidos')
+                const elCarrinho = document.getElementById('link-carrinho')
+                if (elPedidos) elPedidos.style.display = 'inline-block'
+                if (elCarrinho) elCarrinho.style.display = 'inline-block'
+            }
+        })()
+
+        function logout() {
+            localStorage.clear()
+            window.location.href = '/login.html'
+        }
+    </script>
+
+    <h1 class="title-categorias">Outros</h1>
     <div class="container my-4" style="padding-bottom: 30px;">
         <div class="row row-cols-2 row-cols-md-4 g-4">
 
             <div class="col">
-                <a href="/catalogo/14" style="text-decoration: none;">
+                <a href="/catalogo/5" style="text-decoration: none;">
                     <div class="card h-100 text-center">
                         <div class="ratio ratio-1x1 bg-white">
-                            <img src="imagens/Produtos/Molinets/Molinete14/img1.png"
+                            <img src="imagens/Produtos/Outros/Caixa5/img1.png"
                                 class="card-img-top p-3 object-fit-contain" alt="">
                         </div>
                         <div class="card-body">
-                            <p class="card-text">Molinete Shimano Nasci FC</p>
-                            <p class="fw-bold mb-0">R$ 533.50</p>
-                            <small>ou 10x de R$ 53,35</small>
+                            <p class="card-text">Caixa de Pesca Plano 6203</p>
+                            <p class="fw-bold mb-0">R$ 129,00</p>
+                            <small>ou 3x de R$43,00</small>
                         </div>
                     </div>
                 </a>
             </div>
 
             <div class="col">
-                <a href="/catalogo/26" style="text-decoration: none;">
+                <a href="/catalogo/7" style="text-decoration: none;">
                     <div class="card h-100 text-center">
                         <div class="ratio ratio-1x1 bg-white">
-                            <img src="imagens/Produtos/Molinets/Molinete26/img1.png"
+                            <img src="imagens/Produtos/Outros/Chapeu7/img2.png"
                                 class="card-img-top p-3 object-fit-contain" alt="">
                         </div>
                         <div class="card-body">
-                            <p class="card-text">Molinete Daiwa Crossfire LT 2500</p>
-                            <p class="fw-bold mb-0">R$ 279,99</p>
-                            <small>ou 6x de R$ 46,66</small>
+                            <p class="card-text">Chapéu de Pesca com Proteção Solar UV50+</p>
+                            <p class="fw-bold mb-0">R$ 69,90</p>
+                            <small>ou 4x de R$17,47</small>
                         </div>
                     </div>
                 </a>
             </div>
 
             <div class="col">
-                <a href="/catalogo/27" style="text-decoration: none;">
+                <a href="/catalogo/8" style="text-decoration: none;">
                     <div class="card h-100 text-center">
                         <div class="ratio ratio-1x1 bg-white">
-                            <img src="imagens/Produtos/Molinets/Molinete27/img1.png"
+                            <img src="imagens/Produtos/Outros/Allicate8/img1.png"
                                 class="card-img-top p-3 object-fit-contain" alt="">
                         </div>
                         <div class="card-body">
-                            <p class="card-text">Molinete Shimano Sahara FJ 3000</p>
-                            <p class="fw-bold mb-0">R$ 469,99</p>
-                            <small>ou 8x de R$ 58,74</small>
+                            <p class="card-text">Alicate de Bico Inox para Pesca 6</p>
+                            <p class="fw-bold mb-0">R$ 49,90</p>
+                            <small>ou 2x de R$24,95</small>
                         </div>
                     </div>
                 </a>
             </div>
 
             <div class="col">
-                <a href="/catalogo/28" style="text-decoration: none;">
+                <a href="/catalogo/12" style="text-decoration: none;">
                     <div class="card h-100 text-center">
                         <div class="ratio ratio-1x1 bg-white">
-                            <img src="imagens/Produtos/Molinets/Molinete28/img1.png"
+                            <img src="imagens/Produtos/Outros/Caixa12/img1.png"
                                 class="card-img-top p-3 object-fit-contain" alt="">
                         </div>
                         <div class="card-body">
-                            <p class="card-text">Molinete Okuma Ceymar C-40</p>
-                            <p class="fw-bold mb-0">R$ 369,99</p>
-                            <small>ou 7x de R$ 52,85</small>
+                            <p class="card-text">Caixa Térmica Coleman 26L</p>
+                            <p class="fw-bold mb-0">R$ 299,90</p>
+                            <small>ou 6x de R$49,98</small>
                         </div>
                     </div>
                 </a>
             </div>
 
             <div class="col">
-                <a href="/catalogo/29" style="text-decoration: none;">
+                <a href="/catalogo/13" style="text-decoration: none;">
                     <div class="card h-100 text-center">
                         <div class="ratio ratio-1x1 bg-white">
-                            <img src="imagens/Produtos/Molinets/Molinete29/img1.png"
+                            <img src="imagens/Produtos/Outros/Cadeira13/img1.png"
                                 class="card-img-top p-3 object-fit-contain" alt="">
                         </div>
                         <div class="card-body">
-                            <p class="card-text">Molinete Marine Sports Brisa 3000</p>
-                            <p class="fw-bold mb-0">R$ 249,99</p>
-                            <small>ou 5x de R$ 49,99</small>
+                            <p class="card-text">Cadeira Dobrável Nautika Aventura</p>
+                            <p class="fw-bold mb-0">R$ 159,90</p>
+                            <small>ou 5x de R$31,98</small>
                         </div>
                     </div>
                 </a>
             </div>
 
             <div class="col">
-                <a href="/catalogo/30" style="text-decoration: none;">
+                <a href="/catalogo/19" style="text-decoration: none;">
                     <div class="card h-100 text-center">
                         <div class="ratio ratio-1x1 bg-white">
-                            <img src="imagens/Produtos/Molinets/Molinete30/img1.png"
+                            <img src="imagens/Produtos/Outros/Camisa19/img1.png"
                                 class="card-img-top p-3 object-fit-contain" alt="">
                         </div>
                         <div class="card-body">
-                            <p class="card-text">Molinete Saint Plus Shark 5000</p>
-                            <p class="fw-bold mb-0">R$ 219,99</p>
-                            <small>ou 4x de R$ 54,99</small>
+                            <p class="card-text">Camiseta de Pesca Manga Longa UV50+</p>
+                            <p class="fw-bold mb-0">R$ 119,00</p>
+                            <small>ou 4x de R$29,75</small>
                         </div>
                     </div>
                 </a>
             </div>
 
             <div class="col">
-                <a href="/catalogo/31" style="text-decoration: none;">
+                <a href="/catalogo/20" style="text-decoration: none;">
                     <div class="card h-100 text-center">
                         <div class="ratio ratio-1x1 bg-white">
-                            <img src="imagens/Produtos/Molinets/Molinete31/img1.png"
+                            <img src="imagens/Produtos/Outros/Balanca20/img1.png"
                                 class="card-img-top p-3 object-fit-contain" alt="">
                         </div>
                         <div class="card-body">
-                            <p class="card-text">Molinete Albatroz Viper 4000</p>
-                            <p class="fw-bold mb-0">R$ 189,99</p>
-                            <small>ou 3x de R$ 63,33</small>
+                            <p class="card-text">Balança Digital de Pesca 40kg</p>
+                            <p class="fw-bold mb-0">R$ 89,90</p>
+                            <small>ou 3x de R$29,96</small>
                         </div>
                     </div>
                 </a>
             </div>
 
             <div class="col">
-                <a href="/catalogo/2" style="text-decoration: none;">
+                <a href="/catalogo/22" style="text-decoration: none;">
                     <div class="card h-100 text-center">
                         <div class="ratio ratio-1x1 bg-white">
-                            <img src="imagens/Produtos/Molinets/Molinete2/img1.png"
+                            <img src="imagens/Produtos/Outros/Lanterna22/img1.png"
                                 class="card-img-top p-3 object-fit-contain" alt="">
                         </div>
                         <div class="card-body">
-                            <p class="card-text">Molinete Marine Sports Arena 4000</p>
-                            <p class="fw-bold mb-0">R$ 199,50</p>
-                            <small>ou 5x de R$ 39,90</small>
+                            <p class="card-text">Lanterna de Cabeça Recarregável 300lm</p>
+                            <p class="fw-bold mb-0">R$ 119,90</p>
+                            <small>ou 2x de R$59,95</small>
                         </div>
                     </div>
                 </a>
@@ -191,32 +240,33 @@
 <script>
     const form = document.getElementById('form-buscar');
     const input = document.getElementById('buscar');
-    
+
     // mapa de termos para páginas
     const paginas = {
-      "vara": "varas.html",
-      "varas": "varas.html",
-      "isca": "iscas.html",
-      "iscas": "iscas.html",
-      "carretilha": "carretilhas.html",
-      "carretilhas": "carretilhas.html",
-      "molinete": "molinetes.html",
-      "molinetes": "molinetes.html",
-      "linha": "linhas.html",
-      "linhas": "linhas.html",
-      "outro": "outros.html",
-      "outros": "outros.html"
+        "vara": "varas.html",
+        "varas": "varas.html",
+        "isca": "iscas.html",
+        "iscas": "iscas.html",
+        "carretilha": "carretilhas.html",
+        "carretilhas": "carretilhas.html",
+        "molinete": "molinetes.html",
+        "molinetes": "molinetes.html",
+        "linha": "linhas.html",
+        "linhas": "linhas.html",
+        "outro": "outros.html",
+        "outros": "outros.html"
     };
-    
-     form.addEventListener('submit', e => {// e=evento
+
+    form.addEventListener('submit', e => {// e=evento
         e.preventDefault();  //nn atualiza a pag
         const termo = input.value.trim().toLowerCase();
-    
+
         if (paginas[termo]) {
             window.location.href = paginas[termo]; //redireciona
         } else {
             alert("Página não encontrada, verifique se escreveu certo.");
         }
     });
-    </script>
+</script>
+
 </html>

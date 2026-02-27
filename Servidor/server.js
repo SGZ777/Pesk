@@ -1,38 +1,34 @@
 const express = require('express')
-const app = express()
-const port = 3000
 const path = require('path')
 
-app.use(express.json())
-var bodyParser = require('body-parser')
-app.use(bodyParser.json())
-app.use(bodyParser.urlencoded({ extended: false }))
-
-// Puxa as rotas do a serem utilizadas pelo servidor
-const rotaCatalogo = require('./Back-end/rotas/catalogo')
-const rotaEntrar = require('./Back-end/rotas/login')
-const rotaCarrinho = require('./Back-end/rotas/carrinho')
-
-
 const logger = require('./Back-end/middlewares/logger')
+const loginRouter = require('./Back-end/rotas/login')
+const carrinhoRouter = require('./Back-end/rotas/carrinho')
+const catalogoRouter = require('./Back-end/rotas/catalogo')
+const adminRouter = require('./Back-end/rotas/admin')
+const pedidosRouter = require('./Back-end/rotas/meusPedidos')
 
-app.use('/catalogo', rotaCatalogo)
-app.use('/entrar', rotaEntrar)
-app.use('/carrinho', rotaCarrinho)
-// Define as rotas para o servidor
+const app = express()
+const PORT = process.env.PORT || 3000
 
 app.use(express.json())
 app.use(logger)
-app.use(express.static(path.join(__dirname, 'Front-end')))
+app.use(express.static(path.join(__dirname, 'Front')))
 
-app.use('/catalogo', rotaCatalogo)
-app.use('/entrar', rotaEntrar)
+app.use('/entrar', loginRouter)
+app.use('/carrinho', carrinhoRouter)
+app.use('/catalogo', catalogoRouter)
+app.use('/admin', adminRouter)
+app.use('/meus-pedidos', pedidosRouter)
 
 app.get('/', (req, res) => {
-    res.status(200).sendFile(path.join(__dirname, 'Front-end', 'home.html'))
+    res.status(200).sendFile(path.join(__dirname, 'Front', 'home.html'))
 })
 
-// Inicia o servidor
-app.listen(port, () => {
-    console.log(`Servidor rodando em http://localhost:${port}`)
+app.use((req, res) => {
+    res.status(404).json({ error: 'Rota nao encontrada.' })
+})
+
+app.listen(PORT, () => {
+    console.log('Servidor rodando em http://localhost:' + PORT)
 })

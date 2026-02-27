@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Meus Pedidos - Pesk</title>
+  <link rel="icon" href="imagens/icones/icon.png" type="image/png" />
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+  <style>
+    body { font-family: 'Nunito', sans-serif; }
+
+    .pedido-card { border-radius: 10px; overflow: hidden; transition: box-shadow 0.2s; }
+    .pedido-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.10) !important; }
+
+    .pedido-header {
+      cursor: pointer;
+      user-select: none;
+      background-color: #fff;
+      padding: 1rem 1.25rem;
+      border-bottom: 1px solid #dee2e6;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .pedido-header:hover { background-color: #f8f9fa; }
+
+    .pedido-body { display: none; padding: 1rem 1.25rem; background: #fff; }
+    .pedido-card.open .pedido-body { display: block; }
+
+    .chevron { transition: transform 0.25s; color: #6c757d; }
+    .pedido-card.open .chevron { transform: rotate(180deg); }
+
+    .status-badge {
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 0.3rem 0.7rem;
+      border-radius: 20px;
+    }
+
+    .badge-Pendente   { background-color: #fff3cd; color: #856404; }
+    .badge-Cancelado  { background-color: #f8d7da; color: #842029; }
+    .badge-Finalizado { background-color: #d1e7dd; color: #0f5132; }
+
+    .itens-table th { font-size: 0.78rem; color: #6c757d; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; }
+    .itens-table td { font-size: 0.9rem; vertical-align: middle; }
+  </style>
+</head>
+<body class="body-home">
+
+<!-- HEADER (mesmo padrão do projeto) -->
+<header class="p-3 text-bg-primary header-home" style="background-color: #0d6efd !important;">
+  <div class="container d-flex align-items-center justify-content-between flex-wrap">
+    <a href="home.html" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+      <img src="imagens/icones/logo.png" class="logo-header" alt="">
+    </a>
+
+    <form id="form-buscar" class="d-flex ms-1 flex-grow-1 search" role="search" style="max-width: 500px;">
+      <input type="search" id="buscar" class="form-control form-control-dark text-bg-light" placeholder="Buscar">
+    </form>
+
+    <div class="col-13">
+      <a href="peskclub.html">
+        <button type="button" style="background-color: #ff8b43 !important; border: none;"
+          class="btn btn-warning me-2 assineja">Assine-já<span class="estrela">✦</span>
+        </button>
+      </a>
+    </div>
+
+    <div class="col-14">
+      <a href="cadastro.html"><img src="imagens/icones/icon-perfil.png" class="icon-perfil"></a>
+      <a href="carrinho.html"><img src="imagens/icones/icon-carrinho.png" class="icon-carrinho"></a>
+    </div>
+  </div>
+</header>
+
+<!-- CONTEÚDO -->
+<div class="container my-5 produtos-carrinhos">
+  <div class="d-flex align-items-center justify-content-between mb-4">
+    <h2 class="fw-bold mb-0"><i class="bi bi-clock-history text-primary me-2"></i>Meus Pedidos</h2>
+    <span id="subtitulo" class="text-muted"></span>
+  </div>
+
+  <div id="conteudo">
+    <div class="text-center py-5">
+      <div class="spinner-border text-primary" role="status"></div>
+      <p class="text-muted mt-3">Buscando seus pedidos...</p>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER (mesmo padrão do projeto) -->
+<footer class="py-3 text-bg-primary" style="font-weight: bold; background-color: #0d6efd !important;">
+  <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+    <li class="nav-item"><a href="home.html" class="nav-link px-2" style="color:white;">Home</a></li>
+    <li class="nav-item"><a href="#" class="nav-link px-2" style="color:white;">Catalogo</a></li>
+    <li class="nav-item"><a href="peskclub.html" class="nav-link px-2" style="color:white;">PeskClub</a></li>
+    <li class="nav-item"><a href="#" class="nav-link px-2" style="color:white;">PFQs</a></li>
+    <li class="nav-item"><a href="sobre.html" class="nav-link px-2" style="color:white;">Sobre</a></li>
+  </ul>
+  <p class="text-center" style="color:white;">© 2025 Pesk</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  const token = localStorage.getItem('token')
+  const role  = localStorage.getItem('role')
+
+  if (!token || role !== 'user') {
+    window.location.href = role === 'admin' ? '/admin.html' : '/login.html'
+  }
+
+  const fmtMoeda = v => `R$ ${parseFloat(v).toFixed(2).replace('.', ',')}`
+  const fmtData  = d => new Date(d).toLocaleDateString('pt-BR', { day:'2-digit', month:'2-digit', year:'numeric' })
+  const fmtHora  = d => new Date(d).toLocaleTimeString('pt-BR', { hour:'2-digit', minute:'2-digit' })
+
+  function togglePedido(card) { card.classList.toggle('open') }
+
+  async function carregarPedidos() {
+    const conteudo  = document.getElementById('conteudo')
+    const subtitulo = document.getElementById('subtitulo')
+
+    try {
+      const res = await fetch('/meus-pedidos', {
+        headers: { 'Authorization': `Bearer ${token}` }
+      })
+      const pedidos = await res.json()
+
+      if (!pedidos.length) {
+        subtitulo.textContent = 'Nenhum pedido encontrado'
+        conteudo.innerHTML = `
+          <div class="text-center my-5" style="justify-self:center;">
+            <img src="imagens/icones/icon-carrinho.png" alt="Sem pedidos" width="100" class="mb-3 opacity-75">
+            <h4 class="fw-bold">Você ainda não fez nenhum pedido</h4>
+            <p class="text-muted">Explore o catálogo e faça sua primeira compra!</p>
+            <a href="home.html" class="btn btn-primary mt-2 fw-bold">Ir às compras</a>
+          </div>`
+        return
+      }
+
+      subtitulo.textContent = `${pedidos.length} pedido${pedidos.length > 1 ? 's' : ''}`
+
+      conteudo.innerHTML = pedidos.map(p => `
+        <div class="card pedido-card shadow-sm border mb-3" id="pedido-${p.nro_pedido}">
+          <div class="pedido-header" onclick="togglePedido(this.parentElement)">
+            <div class="d-flex align-items-center gap-3 flex-wrap">
+              <span class="fw-bold text-primary">Pedido #${p.nro_pedido}</span>
+              <span class="text-muted" style="font-size:0.85rem">
+                <i class="bi bi-calendar3 me-1"></i>${fmtData(p.created_at)} às ${fmtHora(p.created_at)}
+              </span>
+            </div>
+            <div class="d-flex align-items-center gap-3">
+              <span class="fw-bold fs-5">R$ ${parseFloat(p.valor_total).toFixed(2).replace('.', ',')}</span>
+              <span class="status-badge badge-${p.status}">${p.status}</span>
+              <i class="bi bi-chevron-down chevron"></i>
+            </div>
+          </div>
+
+          <div class="pedido-body">
+            <table class="table itens-table mb-0">
+              <thead>
+                <tr>
+                  <th>Produto</th>
+                  <th>Qtd.</th>
+                  <th>Preço unit.</th>
+                  <th class="text-end">Subtotal</th>
+                </tr>
+              </thead>
+              <tbody>
+                ${p.itens.map(i => `
+                  <tr>
+                    <td class="fw-bold">${i.nome}</td>
+                    <td class="text-muted">× ${i.qtd}</td>
+                    <td class="text-muted">${fmtMoeda(i.preco)}</td>
+                    <td class="fw-bold text-end">${fmtMoeda(i.subtotal)}</td>
+                  </tr>`).join('')}
+              </tbody>
+            </table>
+            <div class="d-flex justify-content-end align-items-center gap-3 mt-3 pt-3 border-top">
+              <span class="text-muted">Total do pedido</span>
+              <span class="fw-bold fs-5 text-primary">${fmtMoeda(p.valor_total)}</span>
+            </div>
+          </div>
+        </div>
+      `).join('')
+
+    } catch (err) {
+      conteudo.innerHTML = `
+        <div class="text-center py-5">
+          <i class="bi bi-exclamation-triangle-fill text-warning fs-1"></i>
+          <h5 class="mt-3 fw-bold">Erro ao carregar pedidos</h5>
+          <p class="text-muted">Tente recarregar a página.</p>
+          <button class="btn btn-primary fw-bold mt-2" onclick="location.reload()">Tentar novamente</button>
+        </div>`
+    }
+  }
+
+  carregarPedidos()
+
+  // Busca (mesmo padrão das outras páginas)
+  const form  = document.getElementById('form-buscar')
+  const input = document.getElementById('buscar')
+  const paginas = {
+    vara:'varas.html', varas:'varas.html', isca:'iscas.html', iscas:'iscas.html',
+    carretilha:'carretilhas.html', carretilhas:'carretilhas.html',
+    molinete:'molinetes.html', molinetes:'molinetes.html',
+    linha:'linhas.html', linhas:'linhas.html', outro:'outros.html', outros:'outros.html'
+  }
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    const termo = input.value.trim().toLowerCase()
+    if (paginas[termo]) window.location.href = paginas[termo]
+    else alert('Página não encontrada, verifique se escreveu certo.')
+  })
+</script>
+</body>
+</html>
