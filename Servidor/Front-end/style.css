@@ -317,14 +317,12 @@ html, body {
 }
 
 .cad-tlogin {
-    position: absolute;
-    top: 100%;
+    padding-top: 50px;
     left: 50%;
     text-align: center;
     color: rgb(255, 255, 255);
     font-size: 100%;
     font-weight: bold;
-    z-index: 2;
 }
 
 .login-branco {
