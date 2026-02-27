@@ -65,12 +65,10 @@
           ></span>
           <input
             type="tel"
-            id="numeroTelefone"
-            class="form-control"
-            placeholder="Número de telefone (com DDD)"
-            aria-label="Número de telefone (com DDD)"
-            maxlength="11"
-            minlength="11"
+             id="numeroTelefone"
+             class="form-control"
+              placeholder="Número de telefone (com DDD)"
+  aria-label="Número de telefone (com DDD)"
           />
         </div>
 
@@ -159,17 +157,23 @@
           mensagem.style.color = "red";
         }
       }
-
-      // Seleciona o elemento
+//MASCARA (CELULAR E CPF)
 document.addEventListener("DOMContentLoaded", () => {
-  const element = document.getElementById('CPF');
-  
-  // Verifica se o elemento existe para não dar erro
-  if (element) {
-    var maskOptions = {
-      mask: '000.000.000-00'
-    };
-    var mask = IMask(element, maskOptions);
+  // Máscara do CPF
+  const inputCPF = document.getElementById('CPF');
+  if (inputCPF) {
+    IMask(inputCPF, { mask: '000.000.000-00' });
+  }
+
+  // Máscara do Telefone 
+  const inputTelefone = document.getElementById('numeroTelefone');
+  if (inputTelefone) {
+    IMask(inputTelefone, {
+      mask: [
+
+        { mask: '(00) 00000-0000' } 
+      ]
+    });
   }
 });
 
