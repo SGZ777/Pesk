@@ -103,7 +103,7 @@ cd backend
 npm install
 
 3️⃣ Rodar o servidor
-node server.js
+node server.js - utilize o comando "npm start" no terminal
 
 
 O servidor iniciará em:
