@@ -96,9 +96,8 @@ Manipulação de arquivos JSON
 ⚙️ Como rodar o projeto
 1️⃣ Clonar o repositório
 git clone https://github.com/seuusuario/pesk.git
-cd pesk
 
-2️⃣ Instalar dependências
+2️⃣ Instalar dependências na pasta "Servidor"
 cd backend
 npm install
 
