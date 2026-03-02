@@ -97,13 +97,10 @@ Manipulação de arquivos JSON
 1️⃣ Clonar o repositório
 git clone https://github.com/seuusuario/pesk.git
 
-2️⃣ Instalar dependências na pasta "Servidor"
-cd backend
-npm install
+2️⃣ Instalar dependências na pasta "Servidor" utilizando o comando "npm install"
 
 3️⃣ Rodar o servidor
 node server.js - utilize o comando "npm start" no terminal
-
 
 O servidor iniciará em:
 👉 http://localhost:3000
