@@ -3,10 +3,9 @@ const router = express.Router()
 const pool = require('../config/database')
 const { autenticar } = require('../middlewares/autenticacao')
 
-
 router.use(express.json())
 
-// Busca ou cria o pedido-carrinho do usuário
+// Busca ou cria o pedido-carrinho do usuario
 async function getPedidoCarrinho(userId) {
     const [rows] = await pool.query(
         "SELECT nro_pedido FROM pedido WHERE id_cliente = ? AND status = 'Carrinho' LIMIT 1",
@@ -21,19 +20,18 @@ async function getPedidoCarrinho(userId) {
     return result.insertId
 }
 
-// GET /carrinho — listar itens
+// GET /carrinho
 router.get('/', autenticar, async (req, res) => {
     try {
         const nroPedido = await getPedidoCarrinho(req.usuarioId)
 
         const [itens] = await pool.query(
-            `SELECT p.id, p.nome, p.descr as descricao, p.preco, ip.qtd as quantidade
+            `SELECT p.id, p.nome, p.descr as descricao, p.preco, p.imagens, ip.qtd as quantidade
              FROM item_pedido ip
              JOIN produto p ON p.id = ip.id_produto
              WHERE ip.nro_pedido = ?`,
             [nroPedido]
         )
-        console.log(itens)
         res.json(itens)
     } catch (err) {
         console.error(err)
@@ -44,7 +42,7 @@ router.get('/', autenticar, async (req, res) => {
 // POST /carrinho/adicionar
 router.post('/adicionar', autenticar, async (req, res) => {
     const { produtoId } = req.body
-    if (!produtoId) return res.status(400).json({ mensagem: 'Produto não informado.' })
+    if (!produtoId) return res.status(400).json({ mensagem: 'Produto nao informado.' })
 
     try {
         const nroPedido = await getPedidoCarrinho(req.usuarioId)
@@ -73,10 +71,10 @@ router.post('/adicionar', autenticar, async (req, res) => {
     }
 })
 
-// POST /carrinho/remover — remove 1 unidade
+// POST /carrinho/remover
 router.post('/remover', autenticar, async (req, res) => {
     const { produtoId } = req.body
-    if (!produtoId) return res.status(400).json({ mensagem: 'Produto não informado.' })
+    if (!produtoId) return res.status(400).json({ mensagem: 'Produto nao informado.' })
 
     try {
         const nroPedido = await getPedidoCarrinho(req.usuarioId)
@@ -86,7 +84,7 @@ router.post('/remover', autenticar, async (req, res) => {
             [nroPedido, produtoId]
         )
 
-        if (item.length === 0) return res.status(404).json({ mensagem: 'Produto não encontrado no carrinho.' })
+        if (item.length === 0) return res.status(404).json({ mensagem: 'Produto nao encontrado no carrinho.' })
 
         if (item[0].qtd > 1) {
             await pool.query(
@@ -107,10 +105,10 @@ router.post('/remover', autenticar, async (req, res) => {
     }
 })
 
-// POST /carrinho/remover-todos — remove todas as unidades do produto
+// POST /carrinho/remover-todos
 router.post('/remover-todos', autenticar, async (req, res) => {
     const { produtoId } = req.body
-    if (!produtoId) return res.status(400).json({ mensagem: 'Produto não informado.' })
+    if (!produtoId) return res.status(400).json({ mensagem: 'Produto nao informado.' })
 
     try {
         const nroPedido = await getPedidoCarrinho(req.usuarioId)
@@ -130,7 +128,7 @@ router.post('/remover-todos', autenticar, async (req, res) => {
 // POST /carrinho/alterar-quantidade
 router.post('/alterar-quantidade', autenticar, async (req, res) => {
     const { produtoId, quantidade } = req.body
-    if (!produtoId || quantidade < 0) return res.status(400).json({ mensagem: 'Dados inválidos.' })
+    if (!produtoId || quantidade < 0) return res.status(400).json({ mensagem: 'Dados invalidos.' })
 
     try {
         const nroPedido = await getPedidoCarrinho(req.usuarioId)

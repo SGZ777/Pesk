@@ -37,3 +37,9 @@ create table item_pedido (
     foreign key(id_cliente) references user(id),
     foreign key(id_produto) references produto(id)
 );
+
+
+-- Corrigir a tabela item_pedido
+ALTER TABLE item_pedido DROP PRIMARY KEY;
+ALTER TABLE item_pedido ADD PRIMARY KEY (nro_pedido, id_produto);
+

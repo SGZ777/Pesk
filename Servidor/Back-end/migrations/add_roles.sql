@@ -16,6 +16,17 @@ VALUES (
   'admin@pesk.com', 
   '00000000000', 
   '00000000000',
-  '$2a$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', -- senha: password (troque!)
+  '$2b$10$8Q0jPf9ujzN8RojZAIQu8uSWUdie7p9pKxFWabEWb.uPkLId8FaNS', -- senha: password (troque!)
   'admin'
 );
+
+DELETE FROM user WHERE id = 2;
+delete from produto where id = 1;
+select * from user;
+
+ALTER TABLE produto MODIFY descr TEXT NOT NULL;
+
+ALTER TABLE produto ADD COLUMN imagens JSON;
+
+DELETE FROM produto;
+
