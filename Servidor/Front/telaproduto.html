@@ -48,42 +48,76 @@
 </script>
 
 <body class="body-home">
-    <header class="p-3 text-bg-primary header-home">
-        <div class="container d-flex align-items-center justify-content-between flex-wrap">
-            <a href="../home.html" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
-                <img src="../imagens/icones/logo.png" class="logo-header">
-            </a>
+     <header
+      class="p-3 text-bg-primary header-home"
+      style="background-color: #0d6efd !important"
+    >
+      <div
+        class="container d-flex align-items-center justify-content-between flex-wrap"
+      >
+        <a
+          href="home.html"
+          class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none"
+        >
+          <img src="imagens/icones/logo.png" class="logo-header" alt="" />
+        </a>
 
-            <form id="form-buscar" class="d-flex ms-1 flex-grow-1 search" role="search" style="max-width: 500px;">
-                <input type="search" id="buscar" class="form-control form-control-dark text-bg-light"
-                    placeholder="Buscar">
-            </form>
+        <form
+          id="form-buscar"
+          class="d-flex ms-1 flex-grow-1 search"
+          role="search"
+          style="max-width: 500px"
+        >
+          <input
+            type="search"
+            id="buscar"
+            class="form-control form-control-dark text-bg-light"
+            placeholder="Buscar"
+          />
+        </form>
 
-            <div class="col-13">
-                <a href="../peskclub.html">
-                    <button type="button" style="background-color: #ff8b43 !important; border: none;"
-                        class="btn btn-warning me-2 assineja">Assine-já<span class="estrela">✦</span></button>
-                </a>
-            </div>
-
-            <nav>
-                <a href="/">Início</a>
-                <a href="/catalogo">Catálogo</a>
-
-                <!-- Visível apenas para usuários comuns (role = 'user') -->
-                <a href="/meus-pedidos.html" id="link-meus-pedidos" style="display:none">Meus Pedidos</a>
-
-                <!-- Visível apenas para admins (role = 'admin') -->
-                <a href="/admin.html" id="link-admin" style="display:none">⚡ Painel Admin</a>
-
-                <!-- Troque pelo seu link de carrinho existente -->
-                <a href="/carrinho.html" id="link-carrinho" style="display:none">Carrinho</a>
-
-                <!-- Botões de login/logout -->
-                <a href="/login.html" id="btn-login">Entrar</a>
-                <button id="btn-logout" style="display:none" onclick="logout()">Sair</button>
-            </nav>
+        <div class="col-13">
+          <a href="peskclub.html">
+            <button
+              type="button"
+              style="background-color: #ff8b43 !important; border: none"
+              class="btn btn-warning me-2 assineja"
+            >
+              Assine-já<span class="estrela">✦</span>
+            </button>
+          </a>
         </div>
+
+        <nav class="icons-header">
+          <!-- Visível apenas para usuários comuns (role = 'user') -->
+          <a
+            href="/meus-pedidos.html"
+            id="link-meus-pedidos"
+            style="display: none"
+            ><img src="imagens/icones/icon-pedidos.png"
+          /></a>
+
+          <!-- Visível apenas para admins (role = 'admin') -->
+          <a href="/admin.html" id="link-admin" 
+           style="display: none"
+            ><img src="imagens/icones/icon-adm.png"
+          /></a>
+
+          <!-- Troque pelo seu link de carrinho existente -->
+          <a href="/carrinho.html" id="link-carrinho" 
+           style="display: none"
+            ><img src="imagens/icones/icon-carrinho.png"
+          /></a>
+
+          <!-- Botões de login/logout -->
+          <a href="/login.html" id="btn-login"
+            ><img src="imagens/icones/icon-perfil.png"
+          /></a>
+          <button class="btn-logout" id="btn-logout" onclick="logout()">
+            Sair
+          </button>
+        </nav>
+      </div>
     </header>
 
     <script>
